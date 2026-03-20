@@ -208,10 +208,12 @@ def search(req: SearchRequest, conn=Depends(get_db)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Matching failed: {e}")
 
-    # Log search to intent_logs
+    # Log search to intent_logs + write pending interactions
     try:
         cur = conn.cursor()
         top = results[0] if results else None
+
+        # 1. Log to intent_logs
         cur.execute("""
             INSERT INTO intent_logs
               (user_id, raw_query, parsed_intent, results_returned,
@@ -226,9 +228,39 @@ def search(req: SearchRequest, conn=Depends(get_db)):
             top.displacement_score if top else None,
             any(r.trust_path for r in results),
         ))
+
+        # 2. Write pending interactions for ALL results shown
+        #    This is critical — outcome endpoint needs recommended_by
+        #    to update trust edges correctly.
+        #    We write outcome=None (pending) — updated when user returns feedback.
+        from datetime import datetime as dt
+        now = dt.now().isoformat()
+        for r in results:
+            recommended_by = r.trust_path.trusted_user_id if r.trust_path else None
+            trust_weight   = r.trust_path.edge_weight if r.trust_path else None
+            trust_hops     = r.trust_path.hops if r.trust_path else 0
+            cur.execute("""
+                INSERT INTO interactions
+                  (user_id, restaurant_id, recommended_by, trust_path_weight,
+                   trust_hops, intent_query, intent_parsed,
+                   outcome, outcome_score, visited_at, created_at)
+                VALUES (%s, %s, %s, %s, %s, %s, %s,
+                        NULL, NULL, NULL, %s)
+                ON CONFLICT DO NOTHING
+            """, (
+                req.user_id,
+                r.restaurant_id,
+                recommended_by,
+                trust_weight,
+                trust_hops,
+                req.query,
+                Json(intent.to_dict()),
+                now,
+            ))
+
         conn.commit()
         cur.close()
-    except Exception:
+    except Exception as e:
         pass   # logging failure should not break search
 
     elapsed = round((time.time() - start) * 1000, 1)
@@ -271,18 +303,23 @@ def record_outcome(req: OutcomeRequest, conn=Depends(get_db)):
 
     cur = conn.cursor()
 
-    # Check if there was a trust path for this restaurant → user combination
+    # Find the pending interaction written by search endpoint
+    # This gives us recommended_by (who was in the trust path)
     cur.execute("""
-        SELECT recommended_by, trust_path_weight
+        SELECT id, recommended_by, trust_path_weight, trust_hops, intent_query
         FROM interactions
         WHERE user_id       = %s
           AND restaurant_id = %s
+          AND outcome       IS NULL
         ORDER BY created_at DESC
         LIMIT 1
     """, (req.user_id, req.restaurant_id))
     row = cur.fetchone()
-    recommended_by   = row[0] if row else None
-    trust_path_weight = row[1] if row else None
+    pending_id        = row[0] if row else None
+    recommended_by    = row[1] if row else None
+    trust_path_weight = row[2] if row else None
+    trust_hops        = row[3] if row else 0
+    stored_query      = row[4] if row else req.intent_query
 
     # Record interaction
     outcome_score_map = {
@@ -294,19 +331,37 @@ def record_outcome(req: OutcomeRequest, conn=Depends(get_db)):
     outcome_score = outcome_score_map[req.outcome]
     now = datetime.now().isoformat()
 
-    cur.execute("""
-        INSERT INTO interactions
-          (user_id, restaurant_id, recommended_by, trust_path_weight,
-           trust_hops, intent_query, outcome, outcome_score,
-           outcome_notes, outcome_recorded_at, visited_at)
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-    """, (
-        req.user_id, req.restaurant_id,
-        recommended_by, trust_path_weight,
-        1 if recommended_by else 0,
-        req.intent_query, req.outcome, outcome_score,
-        req.notes, now, now,
-    ))
+    if pending_id:
+        # Update the existing pending interaction with outcome
+        cur.execute("""
+            UPDATE interactions
+            SET outcome              = %s,
+                outcome_score        = %s,
+                outcome_notes        = %s,
+                outcome_recorded_at  = %s,
+                visited_at           = %s
+            WHERE id = %s
+        """, (
+            req.outcome, outcome_score,
+            req.notes, now, now,
+            pending_id,
+        ))
+    else:
+        # No pending interaction found — create fresh record
+        cur.execute("""
+            INSERT INTO interactions
+              (user_id, restaurant_id, recommended_by, trust_path_weight,
+               trust_hops, intent_query, outcome, outcome_score,
+               outcome_notes, outcome_recorded_at, visited_at)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        """, (
+            req.user_id, req.restaurant_id,
+            recommended_by, trust_path_weight,
+            trust_hops if recommended_by else 0,
+            req.intent_query or stored_query,
+            req.outcome, outcome_score,
+            req.notes, now, now,
+        ))
 
     # Update trust edge weights based on outcome
     trust_updated = False
@@ -461,7 +516,7 @@ def get_user_trust(user_id: str, conn=Depends(get_db)):
     }
 
 
-@app.get("/users/sample")
+@app.get("/test/users")
 def get_sample_users(conn=Depends(get_db)):
     """
     Get sample users for testing — returns one user per friend group.
