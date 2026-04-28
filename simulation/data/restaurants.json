@@ -1,6 +1,6 @@
 [
   {
-    "id": "bb69c312-dff3-42fb-a710-1e0f30bdb199",
+    "id": "9dcd3ca5-0f2e-4b67-9ecf-52f3ab941680",
     "name": "Garden Bistro",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -22,12 +22,12 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
       "moderate",
-      "Continental",
       "indoor",
-      "Italian",
       "parking",
+      "casual",
+      "Italian",
+      "Continental",
       "lively"
     ],
     "avg_outcome_score": 0.74,
@@ -35,11 +35,11 @@
     "trust_citations": 18,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-29T23:06:17.351042",
-    "updated_at": "2026-03-08T23:06:17.351071"
+    "created_at": "2026-01-26T23:46:12.082758",
+    "updated_at": "2026-04-05T23:46:12.082778"
   },
   {
-    "id": "55f472f5-57cd-4dfd-9f7b-b6be502d60a9",
+    "id": "95821ed2-7496-4844-941b-372ec9beac28",
     "name": "Green Fork",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -62,23 +62,23 @@
     "parking": false,
     "tags": [
       "mid",
-      "casual",
+      "rooftop",
       "outdoor",
       "business",
-      "Italian",
+      "casual",
       "quiet",
-      "rooftop"
+      "Italian"
     ],
     "avg_outcome_score": 0.72,
     "total_visits": 14,
     "trust_citations": 14,
     "verified": true,
     "active": true,
-    "created_at": "2026-01-10T23:06:17.351088",
-    "updated_at": "2026-01-24T23:06:17.351092"
+    "created_at": "2026-02-07T23:46:12.082793",
+    "updated_at": "2026-02-21T23:46:12.082797"
   },
   {
-    "id": "33571dfc-6262-42f3-9f35-a65468107448",
+    "id": "47a4bf12-9512-49a7-93a4-58cd2ff2f1a4",
     "name": "Little Lotus",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -100,26 +100,26 @@
     ],
     "parking": true,
     "tags": [
-      "mid",
-      "casual",
-      "moderate",
-      "outdoor",
-      "indoor",
-      "quick-lunch",
-      "Pan Asian",
       "rooftop",
-      "parking"
+      "mid",
+      "moderate",
+      "quick-lunch",
+      "outdoor",
+      "Pan Asian",
+      "indoor",
+      "parking",
+      "casual"
     ],
     "avg_outcome_score": 0.37,
     "total_visits": 22,
     "trust_citations": 11,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-22T23:06:17.351107",
-    "updated_at": "2026-01-26T23:06:17.351108"
+    "created_at": "2026-01-19T23:46:12.082811",
+    "updated_at": "2026-02-23T23:46:12.082812"
   },
   {
-    "id": "cc0fcc25-f2ac-4990-9200-86a16d00cd6e",
+    "id": "9cd2a115-407f-4675-a538-a65e8df5175c",
     "name": "Kitchen Heritage",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -139,24 +139,24 @@
     ],
     "parking": true,
     "tags": [
-      "Street Food",
-      "date-night",
-      "premium",
-      "quiet",
-      "minimalist",
+      "parking",
       "rooftop",
-      "parking"
+      "minimalist",
+      "date-night",
+      "quiet",
+      "Street Food",
+      "premium"
     ],
     "avg_outcome_score": 0.35,
     "total_visits": 40,
     "trust_citations": 19,
     "verified": true,
     "active": true,
-    "created_at": "2025-07-12T23:06:17.351121",
-    "updated_at": "2026-02-05T23:06:17.351123"
+    "created_at": "2025-08-09T23:46:12.082824",
+    "updated_at": "2026-03-05T23:46:12.082826"
   },
   {
-    "id": "832f58d6-e9a4-4ba4-9c33-868fbb863cd3",
+    "id": "c1debd85-0596-48ef-9d3f-6abd6f694436",
     "name": "Corner Ember",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -178,26 +178,26 @@
     ],
     "parking": true,
     "tags": [
-      "outdoor",
-      "romantic",
-      "date-night",
-      "indoor",
-      "Italian",
-      "budget",
-      "quiet",
       "rooftop",
-      "parking"
+      "budget",
+      "outdoor",
+      "quiet",
+      "romantic",
+      "indoor",
+      "parking",
+      "Italian",
+      "date-night"
     ],
     "avg_outcome_score": 0.94,
     "total_visits": 6,
     "trust_citations": 12,
     "verified": false,
     "active": true,
-    "created_at": "2025-07-11T23:06:17.351134",
-    "updated_at": "2026-03-03T23:06:17.351136"
+    "created_at": "2025-08-08T23:46:12.082836",
+    "updated_at": "2026-03-31T23:46:12.082838"
   },
   {
-    "id": "f325df46-0f65-4e78-ac80-c5f6169b43a1",
+    "id": "4d49316f-21b9-422e-828a-f44c3eb512a5",
     "name": "Restaurant Spoon",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -220,8 +220,8 @@
       "mid",
       "moderate",
       "family-friendly",
-      "indoor",
       "Cafe",
+      "indoor",
       "family"
     ],
     "avg_outcome_score": 0.7,
@@ -229,11 +229,11 @@
     "trust_citations": 7,
     "verified": false,
     "active": true,
-    "created_at": "2025-07-03T23:06:17.351190",
-    "updated_at": "2026-02-24T23:06:17.351191"
+    "created_at": "2025-07-31T23:46:12.082847",
+    "updated_at": "2026-03-24T23:46:12.082848"
   },
   {
-    "id": "86414777-9f61-469e-a014-ba3945f09f8e",
+    "id": "7c87fe5a-6c7f-4eb1-97a9-5025a49f93c6",
     "name": "The Imperial",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -256,24 +256,24 @@
     "parking": false,
     "tags": [
       "mid",
-      "casual",
-      "loud",
-      "indoor",
       "Mexican",
       "quick-lunch",
-      "lively",
-      "trendy"
+      "indoor",
+      "loud",
+      "casual",
+      "trendy",
+      "lively"
     ],
     "avg_outcome_score": 0.45,
     "total_visits": 20,
     "trust_citations": 12,
     "verified": false,
     "active": true,
-    "created_at": "2025-09-27T23:06:17.351200",
-    "updated_at": "2026-01-14T23:06:17.351201"
+    "created_at": "2025-10-25T23:46:12.082857",
+    "updated_at": "2026-02-11T23:46:12.082858"
   },
   {
-    "id": "fe8e199d-b6da-436c-b438-b50a4283a81a",
+    "id": "e0678d69-07ab-4d56-934e-77802f2b534d",
     "name": "Kitchen Kerala",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -296,25 +296,25 @@
     ],
     "parking": false,
     "tags": [
-      "outdoor",
-      "romantic",
-      "budget",
-      "quiet",
-      "South Indian",
       "rooftop",
       "North Indian",
-      "celebration"
+      "budget",
+      "celebration",
+      "outdoor",
+      "quiet",
+      "romantic",
+      "South Indian"
     ],
     "avg_outcome_score": 0.6,
     "total_visits": 15,
     "trust_citations": 17,
     "verified": true,
     "active": true,
-    "created_at": "2025-03-20T23:06:17.351217",
-    "updated_at": "2026-02-14T23:06:17.351219"
+    "created_at": "2025-04-17T23:46:12.082873",
+    "updated_at": "2026-03-14T23:46:12.082875"
   },
   {
-    "id": "d4d7ce7a-83ba-4426-bbdb-05c8376e8933",
+    "id": "4e245824-84d7-4a0e-88fe-6f1ee8c566f7",
     "name": "Cafe Coastal",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -336,22 +336,22 @@
     "parking": false,
     "tags": [
       "mid",
-      "outdoor",
       "friends-hangout",
       "Mexican",
-      "quiet",
-      "cozy"
+      "outdoor",
+      "cozy",
+      "quiet"
     ],
     "avg_outcome_score": 0.63,
     "total_visits": 3,
     "trust_citations": 3,
     "verified": false,
     "active": true,
-    "created_at": "2025-10-24T23:06:17.351228",
-    "updated_at": "2026-01-22T23:06:17.351229"
+    "created_at": "2025-11-21T23:46:12.082884",
+    "updated_at": "2026-02-19T23:46:12.082885"
   },
   {
-    "id": "d36bb1e7-133c-4e45-ad48-8bf7484dd144",
+    "id": "05ee03bf-4c45-44bb-af8a-35528374b7a5",
     "name": "Green Olive",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -374,26 +374,26 @@
     ],
     "parking": false,
     "tags": [
+      "rooftop",
       "moderate",
+      "family",
+      "budget",
+      "celebration",
       "Continental",
       "indoor",
-      "Italian",
-      "budget",
-      "rooftop",
       "trendy",
-      "family",
-      "celebration"
+      "Italian"
     ],
     "avg_outcome_score": 0.46,
     "total_visits": 43,
     "trust_citations": 3,
     "verified": true,
     "active": true,
-    "created_at": "2025-04-14T23:06:17.351238",
-    "updated_at": "2026-01-24T23:06:17.351239"
+    "created_at": "2025-05-12T23:46:12.082894",
+    "updated_at": "2026-02-21T23:46:12.082895"
   },
   {
-    "id": "6e379d64-09bd-409d-8007-d8c861271398",
+    "id": "e3f8a605-f1e5-4e54-a890-feb817ced99f",
     "name": "Garden Harvest",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -416,25 +416,25 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
-      "family-friendly",
-      "friends-hangout",
-      "Continental",
       "moderate",
-      "indoor",
+      "friends-hangout",
       "cozy",
-      "parking"
+      "family-friendly",
+      "indoor",
+      "parking",
+      "casual",
+      "Continental"
     ],
     "avg_outcome_score": 0.92,
     "total_visits": 32,
     "trust_citations": 5,
     "verified": true,
     "active": true,
-    "created_at": "2025-11-20T23:06:17.351247",
-    "updated_at": "2026-01-17T23:06:17.351248"
+    "created_at": "2025-12-18T23:46:12.082904",
+    "updated_at": "2026-02-14T23:46:12.082905"
   },
   {
-    "id": "011af3e7-add6-4e16-8bd8-98891fef3e46",
+    "id": "3f3c3568-897d-493c-bea7-256682c9cda1",
     "name": "Green Bistro",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -458,26 +458,26 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
-      "outdoor",
       "friends-hangout",
-      "romantic",
-      "Continental",
-      "indoor",
-      "Italian",
+      "outdoor",
       "quiet",
-      "parking"
+      "romantic",
+      "indoor",
+      "parking",
+      "casual",
+      "Italian",
+      "Continental"
     ],
     "avg_outcome_score": 0.8,
     "total_visits": 0,
     "trust_citations": 19,
     "verified": false,
     "active": true,
-    "created_at": "2026-01-04T23:06:17.351256",
-    "updated_at": "2026-03-06T23:06:17.351257"
+    "created_at": "2026-02-01T23:46:12.082912",
+    "updated_at": "2026-04-03T23:46:12.082913"
   },
   {
-    "id": "23c7b84a-5969-475d-b773-7c053faea8d7",
+    "id": "b0e8301b-6a3b-42d6-bb41-a683616b235d",
     "name": "Royal Heritage",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -497,11 +497,11 @@
     ],
     "parking": false,
     "tags": [
-      "family-friendly",
-      "indoor",
       "Mexican",
       "quick-lunch",
       "budget",
+      "family-friendly",
+      "indoor",
       "quiet"
     ],
     "avg_outcome_score": 0.36,
@@ -509,11 +509,11 @@
     "trust_citations": 17,
     "verified": true,
     "active": true,
-    "created_at": "2025-11-09T23:06:17.351265",
-    "updated_at": "2026-01-30T23:06:17.351266"
+    "created_at": "2025-12-07T23:46:12.082921",
+    "updated_at": "2026-02-27T23:46:12.082922"
   },
   {
-    "id": "418e02fb-687e-4338-9fa2-6ec4367b2375",
+    "id": "31485c4a-2789-4d17-8678-6ed6a571449a",
     "name": "Garden Table",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -533,23 +533,23 @@
     ],
     "parking": false,
     "tags": [
-      "Street Food",
-      "business",
+      "rooftop",
       "budget",
-      "quiet",
       "minimalist",
-      "rooftop"
+      "business",
+      "quiet",
+      "Street Food"
     ],
     "avg_outcome_score": 0.93,
     "total_visits": 48,
     "trust_citations": 6,
     "verified": true,
     "active": true,
-    "created_at": "2025-06-23T23:06:17.351274",
-    "updated_at": "2026-01-30T23:06:17.351275"
+    "created_at": "2025-07-21T23:46:12.082929",
+    "updated_at": "2026-02-27T23:46:12.082931"
   },
   {
-    "id": "9812cf86-1394-4db9-ad56-5f9f3bae80a3",
+    "id": "d38c61a5-9031-434f-805c-182f28de3c9a",
     "name": "House of Olive",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -571,26 +571,26 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "family-friendly",
-      "date-night",
-      "Continental",
-      "premium",
       "moderate",
       "outdoor",
+      "family-friendly",
+      "premium",
+      "parking",
+      "casual",
       "Italian",
-      "parking"
+      "Continental",
+      "date-night"
     ],
     "avg_outcome_score": 0.45,
     "total_visits": 37,
     "trust_citations": 17,
     "verified": false,
     "active": true,
-    "created_at": "2025-09-23T23:06:17.351282",
-    "updated_at": "2026-03-13T23:06:17.351283"
+    "created_at": "2025-10-21T23:46:12.082938",
+    "updated_at": "2026-04-10T23:46:12.082939"
   },
   {
-    "id": "3bdd03e0-9226-49b4-af26-bee925f691fb",
+    "id": "eca95cd7-3547-45f1-a695-1c2c88e953fb",
     "name": "Cafe Pepper",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -612,26 +612,26 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
+      "rooftop",
       "friends-hangout",
-      "romantic",
-      "indoor",
       "budget",
       "quiet",
-      "South Indian",
-      "rooftop",
-      "parking"
+      "indoor",
+      "parking",
+      "casual",
+      "romantic",
+      "South Indian"
     ],
     "avg_outcome_score": 0.86,
     "total_visits": 15,
     "trust_citations": 8,
     "verified": true,
     "active": true,
-    "created_at": "2025-09-26T23:06:17.351290",
-    "updated_at": "2026-02-07T23:06:17.351291"
+    "created_at": "2025-10-24T23:46:12.082946",
+    "updated_at": "2026-03-07T23:46:12.082947"
   },
   {
-    "id": "f95a678a-ec0f-4d4b-a1e5-3577b1af7bb5",
+    "id": "9613d3e1-1905-4e73-bd43-f004eabad90e",
     "name": "Bistro Lotus",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -653,25 +653,25 @@
     ],
     "parking": true,
     "tags": [
-      "Chinese",
-      "mid",
-      "romantic",
-      "quiet",
       "rooftop",
+      "mid",
+      "celebration",
+      "Chinese",
+      "quiet",
       "parking",
-      "family",
-      "celebration"
+      "romantic",
+      "family"
     ],
     "avg_outcome_score": 0.82,
     "total_visits": 6,
     "trust_citations": 13,
     "verified": false,
     "active": true,
-    "created_at": "2025-06-17T23:06:17.351298",
-    "updated_at": "2026-02-12T23:06:17.351299"
+    "created_at": "2025-07-15T23:46:12.082953",
+    "updated_at": "2026-03-12T23:46:12.082955"
   },
   {
-    "id": "42fd9953-4cbc-4b32-b1bd-c5cc469ae679",
+    "id": "b7823fb4-409f-48ee-acc2-b249d25711ec",
     "name": "The Old Mango",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -692,24 +692,24 @@
     ],
     "parking": false,
     "tags": [
+      "rooftop",
       "mid",
-      "casual",
-      "romantic",
-      "indoor",
-      "quiet",
       "Mediterranean",
-      "rooftop"
+      "quiet",
+      "indoor",
+      "casual",
+      "romantic"
     ],
     "avg_outcome_score": 0.34,
     "total_visits": 6,
     "trust_citations": 7,
     "verified": false,
     "active": true,
-    "created_at": "2025-04-14T23:06:17.351306",
-    "updated_at": "2026-02-13T23:06:17.351307"
+    "created_at": "2025-05-12T23:46:12.082962",
+    "updated_at": "2026-03-13T23:46:12.082963"
   },
   {
-    "id": "1bdc602f-1743-42c8-a3cd-572d938aeae5",
+    "id": "d8327c9d-1b57-4752-850a-923e028bf231",
     "name": "Corner Golden",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -729,11 +729,11 @@
     ],
     "parking": false,
     "tags": [
-      "Chinese",
-      "moderate",
-      "business",
-      "budget",
       "rooftop",
+      "moderate",
+      "budget",
+      "Chinese",
+      "business",
       "trendy"
     ],
     "avg_outcome_score": 0.83,
@@ -741,11 +741,11 @@
     "trust_citations": 1,
     "verified": true,
     "active": true,
-    "created_at": "2025-04-12T23:06:17.351316",
-    "updated_at": "2026-01-19T23:06:17.351317"
+    "created_at": "2025-05-10T23:46:12.082971",
+    "updated_at": "2026-02-16T23:46:12.082972"
   },
   {
-    "id": "12c00e9d-41d2-4ac1-8448-c7e2a68cde01",
+    "id": "ddce326f-6f5d-420b-8841-b066eb80350b",
     "name": "Restaurant Coriander",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -765,24 +765,24 @@
     ],
     "parking": true,
     "tags": [
-      "moderate",
-      "budget",
       "rooftop",
       "North Indian",
+      "moderate",
+      "budget",
       "parking",
-      "lively",
-      "family"
+      "family",
+      "lively"
     ],
     "avg_outcome_score": 0.89,
     "total_visits": 0,
     "trust_citations": 12,
     "verified": false,
     "active": true,
-    "created_at": "2025-05-26T23:06:17.351325",
-    "updated_at": "2026-02-23T23:06:17.351326"
+    "created_at": "2025-06-23T23:46:12.082980",
+    "updated_at": "2026-03-23T23:46:12.082981"
   },
   {
-    "id": "a95714d3-d6ea-490b-aba7-1d5d3a8a8c27",
+    "id": "f17d193e-fa03-4807-9df6-6cdce2cc3214",
     "name": "Royal Kerala",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -805,26 +805,26 @@
     ],
     "parking": true,
     "tags": [
+      "rooftop",
+      "Biryani",
+      "quick-lunch",
+      "quiet",
+      "indoor",
+      "parking",
       "casual",
       "romantic",
-      "premium",
-      "indoor",
-      "quick-lunch",
-      "Biryani",
-      "quiet",
-      "rooftop",
-      "parking"
+      "premium"
     ],
     "avg_outcome_score": 0.73,
     "total_visits": 12,
     "trust_citations": 9,
     "verified": false,
     "active": true,
-    "created_at": "2025-12-15T23:06:17.351333",
-    "updated_at": "2026-02-04T23:06:17.351334"
+    "created_at": "2026-01-12T23:46:12.082987",
+    "updated_at": "2026-03-04T23:46:12.082988"
   },
   {
-    "id": "61c2cf53-ac52-41bc-a434-1f35a8e97088",
+    "id": "7227e07f-807f-44c4-96f1-06d4c82cea7f",
     "name": "Garden Spoon",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -847,13 +847,13 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
-      "indoor",
-      "Cafe",
-      "quiet",
-      "minimalist",
       "rooftop",
+      "minimalist",
+      "quiet",
+      "Cafe",
+      "indoor",
       "parking",
+      "casual",
       "Desserts"
     ],
     "avg_outcome_score": 0.61,
@@ -861,11 +861,11 @@
     "trust_citations": 1,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-03T23:06:17.351341",
-    "updated_at": "2026-01-18T23:06:17.351342"
+    "created_at": "2025-12-31T23:46:12.082996",
+    "updated_at": "2026-02-15T23:46:12.082997"
   },
   {
-    "id": "82993d4b-786f-4bab-9b61-96038c7c4008",
+    "id": "73c53307-7b30-4c99-861f-73e75cfbcac8",
     "name": "Urban Bamboo",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -887,25 +887,25 @@
     ],
     "parking": false,
     "tags": [
-      "Chinese",
-      "loud",
-      "indoor",
-      "budget",
       "rooftop",
-      "lively",
+      "budget",
+      "celebration",
+      "Chinese",
+      "indoor",
+      "loud",
       "family",
-      "celebration"
+      "lively"
     ],
     "avg_outcome_score": 0.46,
     "total_visits": 39,
     "trust_citations": 2,
     "verified": true,
     "active": true,
-    "created_at": "2025-03-21T23:06:17.351349",
-    "updated_at": "2026-02-05T23:06:17.351351"
+    "created_at": "2025-04-18T23:46:12.083006",
+    "updated_at": "2026-03-05T23:46:12.083008"
   },
   {
-    "id": "57616224-153a-4af9-9b39-fa2dd0e3a91a",
+    "id": "9bfd46fa-3dd6-4a4a-b079-0128c4498197",
     "name": "Spice Mango",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -926,25 +926,25 @@
     ],
     "parking": true,
     "tags": [
-      "Chinese",
-      "family-friendly",
+      "rooftop",
+      "North Indian",
       "moderate",
       "quick-lunch",
       "budget",
-      "rooftop",
-      "parking",
-      "North Indian"
+      "Chinese",
+      "family-friendly",
+      "parking"
     ],
     "avg_outcome_score": 0.39,
     "total_visits": 29,
     "trust_citations": 10,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-07T23:06:17.351358",
-    "updated_at": "2026-03-13T23:06:17.351359"
+    "created_at": "2026-01-04T23:46:12.083015",
+    "updated_at": "2026-04-10T23:46:12.083016"
   },
   {
-    "id": "faf0c244-aa3b-4f96-8ebc-f0bb0d665b41",
+    "id": "4cba4b50-912c-478d-abe7-2205773693f3",
     "name": "Green Saffron",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -966,25 +966,25 @@
     ],
     "parking": true,
     "tags": [
-      "Street Food",
-      "premium",
-      "indoor",
-      "quiet",
+      "celebration",
       "cozy",
+      "indoor",
       "parking",
+      "Street Food",
+      "quiet",
       "family",
-      "celebration"
+      "premium"
     ],
     "avg_outcome_score": 0.65,
     "total_visits": 8,
     "trust_citations": 11,
     "verified": true,
     "active": true,
-    "created_at": "2025-09-10T23:06:17.351365",
-    "updated_at": "2026-02-18T23:06:17.351367"
+    "created_at": "2025-10-08T23:46:12.083023",
+    "updated_at": "2026-03-18T23:46:12.083024"
   },
   {
-    "id": "ccd77eed-ba1b-46ef-b063-fa8176b44172",
+    "id": "dde90412-3a88-4033-b09c-2812d20eb96a",
     "name": "New Bistro",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1006,25 +1006,25 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "moderate",
-      "date-night",
-      "premium",
-      "Continental",
-      "indoor",
       "rooftop",
-      "parking"
+      "moderate",
+      "parking",
+      "indoor",
+      "date-night",
+      "casual",
+      "Continental",
+      "premium"
     ],
     "avg_outcome_score": 0.94,
     "total_visits": 0,
     "trust_citations": 17,
     "verified": false,
     "active": true,
-    "created_at": "2025-11-21T23:06:17.351374",
-    "updated_at": "2026-01-16T23:06:17.351375"
+    "created_at": "2025-12-19T23:46:12.083031",
+    "updated_at": "2026-02-13T23:46:12.083033"
   },
   {
-    "id": "2f754264-cc38-49af-826b-ea5100d7b865",
+    "id": "cf954a8b-3988-4dfc-add1-ade99dda2d12",
     "name": "Kitchen Orient",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1045,25 +1045,25 @@
     ],
     "parking": true,
     "tags": [
-      "Chinese",
-      "outdoor",
-      "romantic",
-      "premium",
-      "date-night",
-      "quiet",
       "rooftop",
-      "parking"
+      "outdoor",
+      "Chinese",
+      "romantic",
+      "parking",
+      "quiet",
+      "date-night",
+      "premium"
     ],
     "avg_outcome_score": 0.66,
     "total_visits": 38,
     "trust_citations": 6,
     "verified": true,
     "active": true,
-    "created_at": "2025-10-01T23:06:17.351381",
-    "updated_at": "2026-01-29T23:06:17.351382"
+    "created_at": "2025-10-29T23:46:12.083039",
+    "updated_at": "2026-02-26T23:46:12.083040"
   },
   {
-    "id": "7e0283b2-fb7e-4799-bc06-746b695272cf",
+    "id": "c9d63165-f388-48ca-b2d6-60602eab9fcd",
     "name": "Little Harvest",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1086,24 +1086,24 @@
     "parking": true,
     "tags": [
       "mid",
+      "quick-lunch",
+      "minimalist",
       "Continental",
       "indoor",
-      "quick-lunch",
-      "Italian",
+      "parking",
       "quiet",
-      "minimalist",
-      "parking"
+      "Italian"
     ],
     "avg_outcome_score": 0.36,
     "total_visits": 2,
     "trust_citations": 0,
     "verified": false,
     "active": true,
-    "created_at": "2025-11-08T23:06:17.351392",
-    "updated_at": "2026-02-01T23:06:17.351393"
+    "created_at": "2025-12-06T23:46:12.083047",
+    "updated_at": "2026-03-01T23:46:12.083048"
   },
   {
-    "id": "918fe865-1f87-4a05-844c-ce7645afa58f",
+    "id": "852e01f5-bbf3-4aa8-ae08-7e70ea791af4",
     "name": "Garden Thyme",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1124,24 +1124,24 @@
     ],
     "parking": false,
     "tags": [
+      "rooftop",
       "mid",
-      "casual",
       "moderate",
-      "Continental",
-      "indoor",
       "quick-lunch",
-      "rooftop"
+      "indoor",
+      "casual",
+      "Continental"
     ],
     "avg_outcome_score": 0.35,
     "total_visits": 34,
     "trust_citations": 1,
     "verified": true,
     "active": true,
-    "created_at": "2025-03-21T23:06:17.351401",
-    "updated_at": "2026-02-06T23:06:17.351402"
+    "created_at": "2025-04-18T23:46:12.083056",
+    "updated_at": "2026-03-06T23:46:12.083057"
   },
   {
-    "id": "4a3ec1a9-2fde-4e3c-aeaf-ebc1b8f5b56d",
+    "id": "36f2e4e9-5dae-46ec-96bb-9901b47d43b9",
     "name": "Bistro Jade",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1161,11 +1161,11 @@
     ],
     "parking": false,
     "tags": [
-      "Chinese",
       "moderate",
+      "budget",
+      "Chinese",
       "business",
       "indoor",
-      "budget",
       "trendy"
     ],
     "avg_outcome_score": 0.88,
@@ -1173,11 +1173,11 @@
     "trust_citations": 3,
     "verified": false,
     "active": true,
-    "created_at": "2025-04-02T23:06:17.351410",
-    "updated_at": "2026-01-16T23:06:17.351412"
+    "created_at": "2025-04-30T23:46:12.083065",
+    "updated_at": "2026-02-13T23:46:12.083066"
   },
   {
-    "id": "fa27ffeb-ff87-4e74-9790-bbbbc21f5769",
+    "id": "64ee9f48-4cec-4d77-aae4-eaa4bd0ae9d2",
     "name": "New Pepper",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1199,24 +1199,24 @@
     "parking": true,
     "tags": [
       "mid",
-      "loud",
-      "outdoor",
+      "celebration",
       "Mediterranean",
-      "trendy",
+      "outdoor",
       "parking",
-      "family",
-      "celebration"
+      "loud",
+      "trendy",
+      "family"
     ],
     "avg_outcome_score": 0.93,
     "total_visits": 26,
     "trust_citations": 0,
     "verified": false,
     "active": true,
-    "created_at": "2025-07-27T23:06:17.351419",
-    "updated_at": "2026-01-22T23:06:17.351420"
+    "created_at": "2025-08-24T23:46:12.083074",
+    "updated_at": "2026-02-19T23:46:12.083075"
   },
   {
-    "id": "a8a1d79b-2f89-43cc-b3dc-1a5ae05fb2de",
+    "id": "5baa67e0-7dff-4180-8ac1-7049379ecde7",
     "name": "The Old Olive",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1238,26 +1238,26 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "loud",
-      "outdoor",
       "friends-hangout",
-      "premium",
-      "indoor",
       "Mexican",
+      "outdoor",
+      "indoor",
       "parking",
-      "trendy"
+      "loud",
+      "casual",
+      "trendy",
+      "premium"
     ],
     "avg_outcome_score": 0.4,
     "total_visits": 24,
     "trust_citations": 1,
     "verified": true,
     "active": true,
-    "created_at": "2025-09-22T23:06:17.351427",
-    "updated_at": "2026-03-01T23:06:17.351428"
+    "created_at": "2025-10-20T23:46:12.083082",
+    "updated_at": "2026-03-29T23:46:12.083083"
   },
   {
-    "id": "c8c7dd53-82b7-413c-a1e8-d8dc12e02e34",
+    "id": "a6ea0dda-811a-473a-a12f-59f4ed4f93dc",
     "name": "Little Mango",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1278,23 +1278,23 @@
     "parking": true,
     "tags": [
       "moderate",
-      "indoor",
-      "budget",
-      "Mediterranean",
-      "parking",
       "rustic",
-      "celebration"
+      "budget",
+      "celebration",
+      "Mediterranean",
+      "indoor",
+      "parking"
     ],
     "avg_outcome_score": 0.73,
     "total_visits": 17,
     "trust_citations": 2,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-24T23:06:17.351436",
-    "updated_at": "2026-02-19T23:06:17.351437"
+    "created_at": "2025-09-21T23:46:12.083091",
+    "updated_at": "2026-03-19T23:46:12.083092"
   },
   {
-    "id": "9f7ab6e0-8033-406b-b769-ac074a66f639",
+    "id": "fd2ef4d6-eb79-426c-9434-b2d0bb3ebc4f",
     "name": "Cafe Harvest",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1317,24 +1317,24 @@
     "parking": false,
     "tags": [
       "mid",
-      "outdoor",
       "friends-hangout",
-      "Continental",
+      "minimalist",
+      "outdoor",
+      "quiet",
       "indoor",
       "Italian",
-      "quiet",
-      "minimalist"
+      "Continental"
     ],
     "avg_outcome_score": 0.91,
     "total_visits": 11,
     "trust_citations": 18,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-31T23:06:17.351444",
-    "updated_at": "2026-03-11T23:06:17.351445"
+    "created_at": "2025-09-28T23:46:12.083099",
+    "updated_at": "2026-04-08T23:46:12.083100"
   },
   {
-    "id": "ff687d75-78ca-4334-9af3-dc108bb40477",
+    "id": "404ec391-4f70-46a8-9461-3169e6d58f90",
     "name": "Green Andhra",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1356,22 +1356,22 @@
     "parking": false,
     "tags": [
       "mid",
+      "rooftop",
       "friends-hangout",
-      "quiet",
-      "South Indian",
       "cozy",
-      "rooftop"
+      "quiet",
+      "South Indian"
     ],
     "avg_outcome_score": 0.69,
     "total_visits": 24,
     "trust_citations": 18,
     "verified": false,
     "active": true,
-    "created_at": "2025-12-22T23:06:17.351451",
-    "updated_at": "2026-01-27T23:06:17.351452"
+    "created_at": "2026-01-19T23:46:12.083107",
+    "updated_at": "2026-02-24T23:46:12.083108"
   },
   {
-    "id": "a33b056a-ad20-4d86-8c84-1382fbf179c7",
+    "id": "98ac90ef-06ec-4430-87b2-61f84d74971d",
     "name": "The Old Udupi",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1393,26 +1393,26 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "moderate",
-      "business",
-      "premium",
-      "outdoor",
-      "Biryani",
-      "cozy",
       "rooftop",
-      "parking"
+      "moderate",
+      "Biryani",
+      "outdoor",
+      "cozy",
+      "business",
+      "parking",
+      "casual",
+      "premium"
     ],
     "avg_outcome_score": 0.91,
     "total_visits": 23,
     "trust_citations": 13,
     "verified": false,
     "active": true,
-    "created_at": "2025-07-28T23:06:17.351459",
-    "updated_at": "2026-02-02T23:06:17.351460"
+    "created_at": "2025-08-25T23:46:12.083115",
+    "updated_at": "2026-03-02T23:46:12.083116"
   },
   {
-    "id": "3b8d1adc-df06-4231-8f0f-88dfc6b492b2",
+    "id": "379f7e5a-ea2e-4062-846d-1276069f9fba",
     "name": "The Old Little",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1435,23 +1435,23 @@
     "tags": [
       "mid",
       "moderate",
-      "date-night",
-      "Cafe",
       "rooftop",
+      "Cafe",
       "parking",
-      "lively",
-      "trendy"
+      "trendy",
+      "date-night",
+      "lively"
     ],
     "avg_outcome_score": 0.51,
     "total_visits": 35,
     "trust_citations": 4,
     "verified": false,
     "active": true,
-    "created_at": "2025-07-03T23:06:17.351468",
-    "updated_at": "2026-01-29T23:06:17.351469"
+    "created_at": "2025-07-31T23:46:12.083125",
+    "updated_at": "2026-02-26T23:46:12.083126"
   },
   {
-    "id": "98c6ec56-adcc-494f-9d85-838879178cef",
+    "id": "f1d3fce7-d065-45f1-a002-7147d2191ab6",
     "name": "Little Cozy",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1474,26 +1474,26 @@
     ],
     "parking": false,
     "tags": [
+      "rooftop",
       "mid",
       "moderate",
+      "celebration",
       "outdoor",
-      "indoor",
       "Cafe",
-      "rooftop",
+      "indoor",
       "Desserts",
-      "family",
-      "celebration"
+      "family"
     ],
     "avg_outcome_score": 0.49,
     "total_visits": 38,
     "trust_citations": 20,
     "verified": false,
     "active": true,
-    "created_at": "2025-06-01T23:06:17.351476",
-    "updated_at": "2026-02-13T23:06:17.351477"
+    "created_at": "2025-06-29T23:46:12.083134",
+    "updated_at": "2026-03-13T23:46:12.083135"
   },
   {
-    "id": "cbe22afd-7ca3-4b3a-9ca7-680ca60a7c78",
+    "id": "f78a6baa-c379-4e5d-a6e5-7f8806cced65",
     "name": "Green Forge",
     "area": "Koramangala",
     "city": "Bangalore",
@@ -1517,24 +1517,24 @@
     "parking": false,
     "tags": [
       "mid",
-      "casual",
+      "rooftop",
       "outdoor",
-      "business",
       "Continental",
-      "Italian",
+      "business",
+      "casual",
       "quiet",
-      "rooftop"
+      "Italian"
     ],
     "avg_outcome_score": 0.41,
     "total_visits": 21,
     "trust_citations": 2,
     "verified": true,
     "active": true,
-    "created_at": "2025-09-15T23:06:17.351484",
-    "updated_at": "2026-01-29T23:06:17.351485"
+    "created_at": "2025-10-13T23:46:12.083143",
+    "updated_at": "2026-02-26T23:46:12.083144"
   },
   {
-    "id": "611433f2-5e7a-4ea9-b465-1287590d030e",
+    "id": "a113a165-3933-4ce5-a5dd-0e09781be5bc",
     "name": "New Basil",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1554,23 +1554,23 @@
     ],
     "parking": true,
     "tags": [
-      "Continental",
-      "budget",
-      "quiet",
       "rooftop",
+      "family",
+      "budget",
       "parking",
-      "family"
+      "quiet",
+      "Continental"
     ],
     "avg_outcome_score": 0.7,
     "total_visits": 29,
     "trust_citations": 13,
     "verified": true,
     "active": true,
-    "created_at": "2025-03-25T23:06:17.351493",
-    "updated_at": "2026-03-01T23:06:17.351494"
+    "created_at": "2025-04-22T23:46:12.083153",
+    "updated_at": "2026-03-29T23:46:12.083154"
   },
   {
-    "id": "29bbf169-6003-4d2a-9cb5-8afffb2498b8",
+    "id": "63bc152f-ac8e-456b-916e-a27a7efe88e1",
     "name": "Garden Brew",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1593,13 +1593,13 @@
     ],
     "parking": true,
     "tags": [
-      "mid",
-      "outdoor",
-      "friends-hangout",
-      "romantic",
-      "Cafe",
-      "quiet",
       "rooftop",
+      "mid",
+      "friends-hangout",
+      "outdoor",
+      "quiet",
+      "Cafe",
+      "romantic",
       "parking",
       "Desserts"
     ],
@@ -1608,11 +1608,11 @@
     "trust_citations": 13,
     "verified": false,
     "active": true,
-    "created_at": "2025-04-23T23:06:17.351501",
-    "updated_at": "2026-02-12T23:06:17.351502"
+    "created_at": "2025-05-21T23:46:12.083162",
+    "updated_at": "2026-03-12T23:46:12.083163"
   },
   {
-    "id": "85e25e4f-a17b-4ec3-8651-2d4f9d4ff523",
+    "id": "6644bafa-1f21-4763-bc27-12cf758558ba",
     "name": "New Turmeric",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1632,24 +1632,24 @@
     ],
     "parking": true,
     "tags": [
-      "premium",
-      "indoor",
-      "quiet",
-      "minimalist",
       "North Indian",
+      "minimalist",
+      "indoor",
       "parking",
-      "family"
+      "quiet",
+      "family",
+      "premium"
     ],
     "avg_outcome_score": 0.6,
     "total_visits": 42,
     "trust_citations": 16,
     "verified": true,
     "active": true,
-    "created_at": "2025-03-15T23:06:17.351509",
-    "updated_at": "2026-02-21T23:06:17.351510"
+    "created_at": "2025-04-12T23:46:12.083169",
+    "updated_at": "2026-03-21T23:46:12.083170"
   },
   {
-    "id": "10f073d2-9f6f-4597-a0bd-826b8333d0cd",
+    "id": "76b63bf2-be80-4ee0-b496-3d7195f12bef",
     "name": "Green Panda",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1670,25 +1670,25 @@
     ],
     "parking": true,
     "tags": [
-      "loud",
-      "premium",
-      "Pan Asian",
       "rooftop",
-      "parking",
       "rustic",
+      "celebration",
+      "Pan Asian",
+      "parking",
+      "loud",
       "family",
-      "celebration"
+      "premium"
     ],
     "avg_outcome_score": 0.84,
     "total_visits": 10,
     "trust_citations": 15,
     "verified": true,
     "active": true,
-    "created_at": "2025-09-09T23:06:17.351517",
-    "updated_at": "2026-01-19T23:06:17.351518"
+    "created_at": "2025-10-07T23:46:12.083177",
+    "updated_at": "2026-02-16T23:46:12.083178"
   },
   {
-    "id": "d0af8959-4b32-47f2-a984-6ae5c44db94b",
+    "id": "589f07cb-0343-40f1-a470-2111b2c21d9c",
     "name": "Kitchen Ember",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1711,25 +1711,25 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
+      "rooftop",
+      "quiet",
       "business",
       "romantic",
-      "Continental",
+      "parking",
+      "casual",
       "Italian",
-      "quiet",
-      "rooftop",
-      "parking"
+      "Continental"
     ],
     "avg_outcome_score": 0.35,
     "total_visits": 17,
     "trust_citations": 10,
     "verified": false,
     "active": true,
-    "created_at": "2025-04-12T23:06:17.351525",
-    "updated_at": "2026-03-08T23:06:17.351526"
+    "created_at": "2025-05-10T23:46:12.083185",
+    "updated_at": "2026-04-05T23:46:12.083186"
   },
   {
-    "id": "1244deb8-a7b8-47d9-873b-a6b15b4842b4",
+    "id": "f176e574-6438-4193-88e2-a4950518d2e5",
     "name": "Little Bamboo",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1749,11 +1749,11 @@
     ],
     "parking": true,
     "tags": [
-      "Chinese",
-      "mid",
-      "quiet",
       "rooftop",
+      "mid",
+      "Chinese",
       "parking",
+      "quiet",
       "family"
     ],
     "avg_outcome_score": 0.56,
@@ -1761,11 +1761,11 @@
     "trust_citations": 13,
     "verified": false,
     "active": true,
-    "created_at": "2025-03-20T23:06:17.351537",
-    "updated_at": "2026-01-28T23:06:17.351538"
+    "created_at": "2025-04-17T23:46:12.083194",
+    "updated_at": "2026-02-25T23:46:12.083195"
   },
   {
-    "id": "6cb4f22e-11f1-4880-ad8f-d96e1cfece03",
+    "id": "a8e7408f-18ba-4212-aafe-ed35d2326629",
     "name": "Little Coriander",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1789,25 +1789,25 @@
     "parking": true,
     "tags": [
       "mid",
+      "North Indian",
+      "minimalist",
+      "celebration",
       "outdoor",
       "indoor",
-      "quiet",
-      "minimalist",
-      "family",
       "parking",
-      "North Indian",
-      "celebration"
+      "quiet",
+      "family"
     ],
     "avg_outcome_score": 0.49,
     "total_visits": 34,
     "trust_citations": 17,
     "verified": true,
     "active": true,
-    "created_at": "2025-09-23T23:06:17.351545",
-    "updated_at": "2026-02-10T23:06:17.351546"
+    "created_at": "2025-10-21T23:46:12.083202",
+    "updated_at": "2026-03-10T23:46:12.083203"
   },
   {
-    "id": "d994dce2-1acd-4763-8ac6-ffe523f7bea6",
+    "id": "8adcaca1-65d5-49a9-813e-6aa7486a2a98",
     "name": "Little Thyme",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1829,24 +1829,24 @@
     "parking": true,
     "tags": [
       "mid",
-      "outdoor",
-      "friends-hangout",
-      "romantic",
-      "Italian",
-      "quiet",
       "rooftop",
-      "parking"
+      "friends-hangout",
+      "outdoor",
+      "romantic",
+      "parking",
+      "quiet",
+      "Italian"
     ],
     "avg_outcome_score": 0.74,
     "total_visits": 29,
     "trust_citations": 4,
     "verified": true,
     "active": true,
-    "created_at": "2025-04-15T23:06:17.351553",
-    "updated_at": "2026-03-12T23:06:17.351554"
+    "created_at": "2025-05-13T23:46:12.083210",
+    "updated_at": "2026-04-09T23:46:12.083211"
   },
   {
-    "id": "96ff5db4-89fb-490e-88dd-cb1f67016748",
+    "id": "0d89dea9-aee2-47fb-bd42-81ea9e8392c2",
     "name": "Restaurant Dakshin",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1869,22 +1869,22 @@
     "tags": [
       "mid",
       "moderate",
-      "outdoor",
       "Mexican",
+      "celebration",
+      "outdoor",
       "trendy",
-      "family",
-      "celebration"
+      "family"
     ],
     "avg_outcome_score": 0.86,
     "total_visits": 16,
     "trust_citations": 12,
     "verified": false,
     "active": true,
-    "created_at": "2025-05-26T23:06:17.351562",
-    "updated_at": "2026-02-21T23:06:17.351563"
+    "created_at": "2025-06-23T23:46:12.083218",
+    "updated_at": "2026-03-21T23:46:12.083219"
   },
   {
-    "id": "e6adfcf0-b966-43d1-a461-b5b7bd6a3b43",
+    "id": "998f2142-0b14-4fa7-8e0c-ef6adfd3582e",
     "name": "The Old Spoon",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1905,24 +1905,24 @@
     ],
     "parking": false,
     "tags": [
-      "loud",
-      "family-friendly",
       "friends-hangout",
-      "indoor",
-      "Cafe",
       "budget",
-      "cozy"
+      "cozy",
+      "family-friendly",
+      "Cafe",
+      "indoor",
+      "loud"
     ],
     "avg_outcome_score": 0.61,
     "total_visits": 3,
     "trust_citations": 11,
     "verified": false,
     "active": true,
-    "created_at": "2025-12-09T23:06:17.351570",
-    "updated_at": "2026-01-23T23:06:17.351571"
+    "created_at": "2026-01-06T23:46:12.083227",
+    "updated_at": "2026-02-20T23:46:12.083228"
   },
   {
-    "id": "76f4d842-9be1-4308-ba16-d98d1b1f6c83",
+    "id": "c53e51ec-c055-41e9-8ddc-01f479b2cef2",
     "name": "Bistro Thyme",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1943,25 +1943,25 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "premium",
-      "Continental",
-      "indoor",
-      "Italian",
-      "quiet",
       "cozy",
-      "parking"
+      "quiet",
+      "indoor",
+      "parking",
+      "casual",
+      "Italian",
+      "Continental",
+      "premium"
     ],
     "avg_outcome_score": 0.7,
     "total_visits": 30,
     "trust_citations": 3,
     "verified": true,
     "active": true,
-    "created_at": "2025-09-24T23:06:17.351578",
-    "updated_at": "2026-02-12T23:06:17.351579"
+    "created_at": "2025-10-22T23:46:12.083235",
+    "updated_at": "2026-03-12T23:46:12.083236"
   },
   {
-    "id": "63ec4413-ef23-4031-9bc9-44ea09fc452d",
+    "id": "3231b360-135c-4ec9-ab35-5de0d50f2b67",
     "name": "New Bean",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -1983,25 +1983,25 @@
     ],
     "parking": false,
     "tags": [
-      "outdoor",
-      "romantic",
-      "Cafe",
-      "budget",
-      "quiet",
       "rooftop",
-      "Desserts",
-      "celebration"
+      "budget",
+      "celebration",
+      "outdoor",
+      "quiet",
+      "Cafe",
+      "romantic",
+      "Desserts"
     ],
     "avg_outcome_score": 0.77,
     "total_visits": 19,
     "trust_citations": 3,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-07T23:06:17.351586",
-    "updated_at": "2026-02-05T23:06:17.351587"
+    "created_at": "2025-09-04T23:46:12.083243",
+    "updated_at": "2026-03-05T23:46:12.083244"
   },
   {
-    "id": "848d2082-76e9-4c98-bc6a-27bd93efe3a0",
+    "id": "98a751da-fe4f-4ea3-afd8-0c6737db87e4",
     "name": "Spice Ember",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2023,26 +2023,26 @@
     ],
     "parking": true,
     "tags": [
+      "rooftop",
       "moderate",
       "friends-hangout",
-      "premium",
       "Continental",
       "indoor",
-      "Italian",
-      "rooftop",
       "parking",
-      "trendy"
+      "trendy",
+      "Italian",
+      "premium"
     ],
     "avg_outcome_score": 0.75,
     "total_visits": 6,
     "trust_citations": 9,
     "verified": true,
     "active": true,
-    "created_at": "2025-11-13T23:06:17.351594",
-    "updated_at": "2026-01-22T23:06:17.351595"
+    "created_at": "2025-12-11T23:46:12.083251",
+    "updated_at": "2026-02-19T23:46:12.083252"
   },
   {
-    "id": "81a63ba6-a608-4041-ae75-7a7d84440ffd",
+    "id": "5cfaa4e4-a337-4edb-a4ad-6b87182f8c09",
     "name": "The Saffron",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2066,26 +2066,26 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
-      "family-friendly",
+      "North Indian",
       "moderate",
-      "indoor",
-      "South Indian",
-      "cozy",
       "rooftop",
+      "cozy",
+      "family-friendly",
+      "indoor",
       "parking",
-      "North Indian"
+      "casual",
+      "South Indian"
     ],
     "avg_outcome_score": 0.72,
     "total_visits": 31,
     "trust_citations": 3,
     "verified": true,
     "active": true,
-    "created_at": "2025-07-12T23:06:17.351603",
-    "updated_at": "2026-02-01T23:06:17.351604"
+    "created_at": "2025-08-09T23:46:12.083260",
+    "updated_at": "2026-03-01T23:46:12.083261"
   },
   {
-    "id": "3d5d291b-8bf4-4149-b070-492d54b7303a",
+    "id": "37e7c9dc-6e05-4e25-a3bf-5063727bbacf",
     "name": "Spice Saffron",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2109,24 +2109,24 @@
     "parking": false,
     "tags": [
       "mid",
-      "casual",
-      "outdoor",
-      "date-night",
+      "rooftop",
       "Mexican",
-      "quiet",
       "minimalist",
-      "rooftop"
+      "outdoor",
+      "casual",
+      "quiet",
+      "date-night"
     ],
     "avg_outcome_score": 0.64,
     "total_visits": 39,
     "trust_citations": 17,
     "verified": true,
     "active": true,
-    "created_at": "2025-05-20T23:06:17.351610",
-    "updated_at": "2026-02-14T23:06:17.351612"
+    "created_at": "2025-06-17T23:46:12.083268",
+    "updated_at": "2026-03-14T23:46:12.083269"
   },
   {
-    "id": "31a10e64-03f5-4329-b332-f0a7a3dcd8a2",
+    "id": "b6e9ca58-b676-4101-a3ac-fceca3b11a2f",
     "name": "Royal Basil",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2148,25 +2148,25 @@
     ],
     "parking": false,
     "tags": [
-      "romantic",
-      "indoor",
-      "budget",
-      "quiet",
-      "Mediterranean",
       "rooftop",
-      "family",
-      "celebration"
+      "budget",
+      "celebration",
+      "Mediterranean",
+      "quiet",
+      "indoor",
+      "romantic",
+      "family"
     ],
     "avg_outcome_score": 0.48,
     "total_visits": 48,
     "trust_citations": 14,
     "verified": true,
     "active": true,
-    "created_at": "2025-07-03T23:06:17.351618",
-    "updated_at": "2026-02-20T23:06:17.351619"
+    "created_at": "2025-07-31T23:46:12.083275",
+    "updated_at": "2026-03-20T23:46:12.083276"
   },
   {
-    "id": "a070dfb3-c745-47a6-a754-3a6fe566bbe5",
+    "id": "c6e47d6a-f089-4958-a59a-9c350fd184ac",
     "name": "Urban Mango",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2187,24 +2187,24 @@
     ],
     "parking": false,
     "tags": [
+      "North Indian",
+      "rustic",
+      "budget",
+      "celebration",
       "outdoor",
       "indoor",
-      "budget",
-      "quiet",
-      "rustic",
-      "North Indian",
-      "celebration"
+      "quiet"
     ],
     "avg_outcome_score": 0.48,
     "total_visits": 35,
     "trust_citations": 0,
     "verified": true,
     "active": true,
-    "created_at": "2025-10-08T23:06:17.351627",
-    "updated_at": "2026-03-08T23:06:17.351628"
+    "created_at": "2025-11-05T23:46:12.083283",
+    "updated_at": "2026-04-05T23:46:12.083285"
   },
   {
-    "id": "ed087c2f-d5da-446c-afa3-a54f4c4f167a",
+    "id": "0bd44838-eead-48e7-b7e7-b16c157defba",
     "name": "The Old Table",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2226,24 +2226,24 @@
     ],
     "parking": false,
     "tags": [
+      "rooftop",
       "mid",
-      "outdoor",
       "friends-hangout",
-      "romantic",
-      "Italian",
+      "outdoor",
       "quiet",
-      "rooftop"
+      "romantic",
+      "Italian"
     ],
     "avg_outcome_score": 0.61,
     "total_visits": 28,
     "trust_citations": 0,
     "verified": false,
     "active": true,
-    "created_at": "2025-09-22T23:06:17.351636",
-    "updated_at": "2026-02-16T23:06:17.351638"
+    "created_at": "2025-10-20T23:46:12.083292",
+    "updated_at": "2026-03-16T23:46:12.083293"
   },
   {
-    "id": "f2743fcd-5bb4-4692-b484-c12edfa77a30",
+    "id": "ec670c0e-472d-4e2b-9ec7-2b0ef8970b43",
     "name": "Little Spoon",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2266,24 +2266,24 @@
     "parking": true,
     "tags": [
       "mid",
-      "indoor",
-      "Cafe",
-      "quick-lunch",
-      "quiet",
+      "Desserts",
       "rooftop",
+      "quick-lunch",
+      "Cafe",
+      "indoor",
       "parking",
-      "Desserts"
+      "quiet"
     ],
     "avg_outcome_score": 0.65,
     "total_visits": 21,
     "trust_citations": 11,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-28T23:06:17.351645",
-    "updated_at": "2026-02-22T23:06:17.351646"
+    "created_at": "2025-09-25T23:46:12.083300",
+    "updated_at": "2026-03-22T23:46:12.083301"
   },
   {
-    "id": "121cc4a4-6098-46b6-98b6-8c1b8ebd12fa",
+    "id": "ab8a4bea-0c58-4253-a3d6-17581b1a0f5d",
     "name": "New Thyme",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2305,23 +2305,23 @@
     "parking": true,
     "tags": [
       "mid",
-      "outdoor",
-      "date-night",
-      "Continental",
-      "quiet",
       "rooftop",
-      "parking"
+      "outdoor",
+      "parking",
+      "quiet",
+      "Continental",
+      "date-night"
     ],
     "avg_outcome_score": 0.65,
     "total_visits": 12,
     "trust_citations": 6,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-25T23:06:17.351653",
-    "updated_at": "2026-01-26T23:06:17.351654"
+    "created_at": "2025-09-22T23:46:12.083308",
+    "updated_at": "2026-02-23T23:46:12.083309"
   },
   {
-    "id": "ca2a8a69-d5fd-47b7-941e-4e572bf5ed0f",
+    "id": "e9adf44c-105e-4c07-bdf5-d399c3289d2f",
     "name": "Restaurant Chettinad",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2346,26 +2346,26 @@
     "parking": false,
     "tags": [
       "mid",
-      "casual",
-      "loud",
+      "North Indian",
+      "outdoor",
+      "cozy",
       "family-friendly",
       "business",
       "indoor",
-      "outdoor",
-      "South Indian",
-      "cozy",
-      "North Indian"
+      "loud",
+      "casual",
+      "South Indian"
     ],
     "avg_outcome_score": 0.45,
     "total_visits": 0,
     "trust_citations": 17,
     "verified": false,
     "active": true,
-    "created_at": "2025-12-21T23:06:17.351664",
-    "updated_at": "2026-03-10T23:06:17.351665"
+    "created_at": "2026-01-18T23:46:12.083316",
+    "updated_at": "2026-04-07T23:46:12.083317"
   },
   {
-    "id": "34e45fdf-4613-48f2-99a3-5f0459af2bc4",
+    "id": "c9f14f6a-5453-40a7-bf05-0ffffe2f708c",
     "name": "Royal Imperial",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2388,27 +2388,27 @@
     ],
     "parking": true,
     "tags": [
-      "Chinese",
-      "casual",
-      "outdoor",
-      "romantic",
-      "premium",
-      "quick-lunch",
-      "quiet",
       "rooftop",
+      "North Indian",
+      "quick-lunch",
+      "outdoor",
+      "Chinese",
+      "quiet",
       "parking",
-      "North Indian"
+      "casual",
+      "romantic",
+      "premium"
     ],
     "avg_outcome_score": 0.86,
     "total_visits": 0,
     "trust_citations": 18,
     "verified": false,
     "active": true,
-    "created_at": "2025-05-13T23:06:17.351672",
-    "updated_at": "2026-02-13T23:06:17.351673"
+    "created_at": "2025-06-10T23:46:12.083324",
+    "updated_at": "2026-03-13T23:46:12.083325"
   },
   {
-    "id": "0af8118d-360f-4c83-bcc8-42ca95eb556c",
+    "id": "58d689f0-e5b6-4815-8bc1-e23b81b72517",
     "name": "Cafe Cozy",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2428,24 +2428,24 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "loud",
-      "indoor",
-      "Cafe",
-      "budget",
       "rooftop",
-      "parking"
+      "budget",
+      "Cafe",
+      "indoor",
+      "parking",
+      "loud",
+      "casual"
     ],
     "avg_outcome_score": 0.56,
     "total_visits": 40,
     "trust_citations": 1,
     "verified": false,
     "active": true,
-    "created_at": "2025-03-31T23:06:17.351681",
-    "updated_at": "2026-02-22T23:06:17.351682"
+    "created_at": "2025-04-28T23:46:12.083332",
+    "updated_at": "2026-03-22T23:46:12.083333"
   },
   {
-    "id": "286742a5-3a6b-449a-9cd4-7c9927c54eba",
+    "id": "fedb2873-7d1f-440d-9a09-ca591db235a7",
     "name": "Bistro Pepper",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2467,22 +2467,22 @@
     "parking": false,
     "tags": [
       "mid",
-      "date-night",
+      "rooftop",
       "indoor",
       "quiet",
-      "South Indian",
-      "rooftop"
+      "date-night",
+      "South Indian"
     ],
     "avg_outcome_score": 0.81,
     "total_visits": 24,
     "trust_citations": 14,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-14T23:06:17.351688",
-    "updated_at": "2026-01-17T23:06:17.351689"
+    "created_at": "2025-09-11T23:46:12.083340",
+    "updated_at": "2026-02-14T23:46:12.083341"
   },
   {
-    "id": "b8ed2589-46b7-4a15-9b1f-a4fd9bba83fd",
+    "id": "11eb7b4b-64fc-406a-82eb-66d07158a1a0",
     "name": "Bistro Udupi",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2504,23 +2504,23 @@
     "parking": false,
     "tags": [
       "mid",
-      "moderate",
-      "indoor",
-      "quick-lunch",
-      "South Indian",
       "North Indian",
-      "trendy"
+      "moderate",
+      "quick-lunch",
+      "indoor",
+      "trendy",
+      "South Indian"
     ],
     "avg_outcome_score": 0.92,
     "total_visits": 16,
     "trust_citations": 2,
     "verified": false,
     "active": true,
-    "created_at": "2025-10-17T23:06:17.351696",
-    "updated_at": "2026-02-06T23:06:17.351698"
+    "created_at": "2025-11-14T23:46:12.083348",
+    "updated_at": "2026-03-06T23:46:12.083349"
   },
   {
-    "id": "94ecaee9-65f6-44ab-a35b-f51ed28b28f0",
+    "id": "9f33cba2-1a1b-40c9-9472-a856a2cc09b3",
     "name": "The Old Chettinad",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2540,23 +2540,23 @@
     ],
     "parking": false,
     "tags": [
-      "mid",
-      "casual",
+      "rooftop",
       "moderate",
+      "mid",
       "indoor",
-      "South Indian",
-      "rooftop"
+      "casual",
+      "South Indian"
     ],
     "avg_outcome_score": 0.45,
     "total_visits": 44,
     "trust_citations": 14,
     "verified": false,
     "active": true,
-    "created_at": "2025-09-16T23:06:17.351705",
-    "updated_at": "2026-01-13T23:06:17.351706"
+    "created_at": "2025-10-14T23:46:12.083356",
+    "updated_at": "2026-02-10T23:46:12.083358"
   },
   {
-    "id": "83598ede-1540-4cbb-a319-192c35f7aa1e",
+    "id": "913a9431-6c4e-4b94-90fb-ae25c6a80a93",
     "name": "Spice Thyme",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2579,25 +2579,25 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
-      "loud",
-      "family-friendly",
       "friends-hangout",
-      "Continental",
-      "indoor",
       "cozy",
-      "parking"
+      "family-friendly",
+      "indoor",
+      "parking",
+      "loud",
+      "casual",
+      "Continental"
     ],
     "avg_outcome_score": 0.65,
     "total_visits": 17,
     "trust_citations": 4,
     "verified": false,
     "active": true,
-    "created_at": "2025-10-21T23:06:17.351713",
-    "updated_at": "2026-01-22T23:06:17.351715"
+    "created_at": "2025-11-18T23:46:12.083365",
+    "updated_at": "2026-02-19T23:46:12.083366"
   },
   {
-    "id": "11a1f69b-1a3c-4655-98d1-a8fc07b9184a",
+    "id": "a278ae09-fe4a-4ba7-8e83-e350fc16b251",
     "name": "Royal Harvest",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2620,26 +2620,26 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "outdoor",
-      "Continental",
-      "premium",
       "quick-lunch",
-      "indoor",
-      "quiet",
+      "outdoor",
       "cozy",
-      "parking"
+      "indoor",
+      "parking",
+      "casual",
+      "quiet",
+      "Continental",
+      "premium"
     ],
     "avg_outcome_score": 0.59,
     "total_visits": 44,
     "trust_citations": 12,
     "verified": true,
     "active": true,
-    "created_at": "2025-05-02T23:06:17.351721",
-    "updated_at": "2026-02-07T23:06:17.351722"
+    "created_at": "2025-05-30T23:46:12.083373",
+    "updated_at": "2026-03-07T23:46:12.083374"
   },
   {
-    "id": "b8cc4617-a08f-4cd6-98f4-31e71ceef57c",
+    "id": "43de1340-68dc-4a5e-9f12-2de8e7872ed2",
     "name": "Cafe Basil",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2660,24 +2660,24 @@
     ],
     "parking": false,
     "tags": [
-      "Street Food",
       "mid",
-      "loud",
-      "date-night",
-      "indoor",
       "rooftop",
-      "rustic"
+      "rustic",
+      "indoor",
+      "loud",
+      "Street Food",
+      "date-night"
     ],
     "avg_outcome_score": 0.46,
     "total_visits": 43,
     "trust_citations": 18,
     "verified": true,
     "active": true,
-    "created_at": "2026-01-03T23:06:17.351729",
-    "updated_at": "2026-01-24T23:06:17.351730"
+    "created_at": "2026-01-31T23:46:12.083381",
+    "updated_at": "2026-02-21T23:46:12.083382"
   },
   {
-    "id": "65acef8a-e750-483e-b305-ec1dcef279cb",
+    "id": "8d8c8bbf-b4fc-4b9a-9f2b-f0131c2ec655",
     "name": "Spice Table",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2700,23 +2700,23 @@
     "parking": false,
     "tags": [
       "mid",
+      "quick-lunch",
+      "minimalist",
       "outdoor",
       "Continental",
-      "quick-lunch",
-      "Italian",
       "quiet",
-      "minimalist"
+      "Italian"
     ],
     "avg_outcome_score": 0.61,
     "total_visits": 17,
     "trust_citations": 5,
     "verified": true,
     "active": true,
-    "created_at": "2025-06-04T23:06:17.351737",
-    "updated_at": "2026-02-01T23:06:17.351738"
+    "created_at": "2025-07-02T23:46:12.083389",
+    "updated_at": "2026-03-01T23:46:12.083390"
   },
   {
-    "id": "ee44deb5-33b3-44f4-8302-53c267f86918",
+    "id": "821be3b9-9617-4933-94c9-1d7ae034eed2",
     "name": "House of Cardamom",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2738,22 +2738,22 @@
     "tags": [
       "mid",
       "moderate",
-      "date-night",
-      "indoor",
+      "rustic",
       "Mediterranean",
+      "indoor",
       "parking",
-      "rustic"
+      "date-night"
     ],
     "avg_outcome_score": 0.86,
     "total_visits": 44,
     "trust_citations": 15,
     "verified": false,
     "active": true,
-    "created_at": "2025-06-22T23:06:17.351745",
-    "updated_at": "2026-01-20T23:06:17.351746"
+    "created_at": "2025-07-20T23:46:12.083397",
+    "updated_at": "2026-02-17T23:46:12.083398"
   },
   {
-    "id": "8b9b20f3-3301-4ea7-91bf-b68f2a4360c2",
+    "id": "f83eacae-d4df-4f40-b3b2-af4b0067ffdc",
     "name": "New Noodle",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2775,24 +2775,24 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
-      "outdoor",
-      "indoor",
-      "Pan Asian",
-      "quiet",
       "minimalist",
-      "parking"
+      "outdoor",
+      "Pan Asian",
+      "indoor",
+      "parking",
+      "casual",
+      "quiet"
     ],
     "avg_outcome_score": 0.38,
     "total_visits": 32,
     "trust_citations": 0,
     "verified": true,
     "active": true,
-    "created_at": "2025-04-11T23:06:17.351753",
-    "updated_at": "2026-02-12T23:06:17.351754"
+    "created_at": "2025-05-09T23:46:12.083405",
+    "updated_at": "2026-03-12T23:46:12.083406"
   },
   {
-    "id": "d1696ec1-7ad0-4fb5-a388-cfdebfb8d9d7",
+    "id": "69a9e797-71bd-42f5-bfb4-8f86144a4026",
     "name": "Bistro Chettinad",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2814,9 +2814,9 @@
     "tags": [
       "mid",
       "moderate",
+      "rooftop",
       "Biryani",
       "cozy",
-      "rooftop",
       "family"
     ],
     "avg_outcome_score": 0.79,
@@ -2824,11 +2824,11 @@
     "trust_citations": 4,
     "verified": true,
     "active": true,
-    "created_at": "2025-06-03T23:06:17.351761",
-    "updated_at": "2026-01-16T23:06:17.351762"
+    "created_at": "2025-07-01T23:46:12.083413",
+    "updated_at": "2026-02-13T23:46:12.083414"
   },
   {
-    "id": "ee2fd3d7-e420-433a-ad37-de114274642d",
+    "id": "71a5389f-7486-42ca-9162-cef2405ab973",
     "name": "Green Mint",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2850,25 +2850,25 @@
     ],
     "parking": false,
     "tags": [
+      "rooftop",
       "moderate",
-      "date-night",
+      "rustic",
+      "budget",
       "outdoor",
       "Cafe",
-      "budget",
-      "rooftop",
-      "rustic",
-      "Desserts"
+      "Desserts",
+      "date-night"
     ],
     "avg_outcome_score": 0.4,
     "total_visits": 35,
     "trust_citations": 13,
     "verified": false,
     "active": true,
-    "created_at": "2025-11-16T23:06:17.351769",
-    "updated_at": "2026-02-12T23:06:17.351771"
+    "created_at": "2025-12-14T23:46:12.083422",
+    "updated_at": "2026-03-12T23:46:12.083423"
   },
   {
-    "id": "d89afbec-ee3f-421e-b075-bb32fe30b11a",
+    "id": "d477a048-5b77-4d0a-b215-ffe39aaff72a",
     "name": "Royal Tamarind",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2891,24 +2891,24 @@
     "parking": false,
     "tags": [
       "mid",
-      "loud",
+      "South Indian",
       "outdoor",
       "business",
       "indoor",
-      "South Indian",
-      "lively",
-      "trendy"
+      "loud",
+      "trendy",
+      "lively"
     ],
     "avg_outcome_score": 0.57,
     "total_visits": 15,
     "trust_citations": 14,
     "verified": true,
     "active": true,
-    "created_at": "2025-07-01T23:06:17.351778",
-    "updated_at": "2026-03-01T23:06:17.351779"
+    "created_at": "2025-07-29T23:46:12.083430",
+    "updated_at": "2026-03-29T23:46:12.083431"
   },
   {
-    "id": "5461960b-235a-49ae-ab7a-ab63eabc5045",
+    "id": "9689e642-3e27-44b4-aebf-6bcaabaa9487",
     "name": "New Garden",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2931,24 +2931,24 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
+      "Mexican",
+      "cozy",
       "business",
       "indoor",
-      "Mexican",
-      "quiet",
-      "cozy",
-      "parking"
+      "parking",
+      "casual",
+      "quiet"
     ],
     "avg_outcome_score": 0.48,
     "total_visits": 26,
     "trust_citations": 10,
     "verified": true,
     "active": true,
-    "created_at": "2025-04-29T23:06:17.351785",
-    "updated_at": "2026-02-24T23:06:17.351787"
+    "created_at": "2025-05-27T23:46:12.083438",
+    "updated_at": "2026-03-24T23:46:12.083439"
   },
   {
-    "id": "1dd43d74-06d6-44e3-8455-c42fc2b465a1",
+    "id": "dca223df-8ef0-444d-847e-28d86a009377",
     "name": "Restaurant Thyme",
     "area": "Indiranagar",
     "city": "Bangalore",
@@ -2970,23 +2970,23 @@
     "parking": false,
     "tags": [
       "mid",
-      "loud",
-      "outdoor",
+      "rooftop",
       "quick-lunch",
+      "outdoor",
       "Mediterranean",
       "cozy",
-      "rooftop"
+      "loud"
     ],
     "avg_outcome_score": 0.62,
     "total_visits": 34,
     "trust_citations": 15,
     "verified": false,
     "active": true,
-    "created_at": "2025-04-06T23:06:17.351794",
-    "updated_at": "2026-01-24T23:06:17.351795"
+    "created_at": "2025-05-04T23:46:12.083446",
+    "updated_at": "2026-02-21T23:46:12.083448"
   },
   {
-    "id": "8f9b4b63-0e6e-4846-9b0c-7a30adc0ab79",
+    "id": "d6fabf3a-686a-4184-ab5e-aab1b8a3fbd2",
     "name": "Little Saffron",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3009,27 +3009,27 @@
     ],
     "parking": true,
     "tags": [
-      "Chinese",
-      "casual",
-      "loud",
-      "outdoor",
-      "date-night",
-      "premium",
       "rooftop",
-      "parking",
       "North Indian",
-      "trendy"
+      "outdoor",
+      "Chinese",
+      "parking",
+      "loud",
+      "casual",
+      "trendy",
+      "date-night",
+      "premium"
     ],
     "avg_outcome_score": 0.46,
     "total_visits": 49,
     "trust_citations": 13,
     "verified": false,
     "active": true,
-    "created_at": "2025-05-16T23:06:17.351803",
-    "updated_at": "2026-01-27T23:06:17.351804"
+    "created_at": "2025-06-13T23:46:12.083456",
+    "updated_at": "2026-02-24T23:46:12.083457"
   },
   {
-    "id": "4668587e-5d7b-4a8c-936b-6aacada39085",
+    "id": "68490232-6210-4e6b-94e6-77ee4a3c8714",
     "name": "The Harvest",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3051,23 +3051,23 @@
     "parking": false,
     "tags": [
       "mid",
-      "family-friendly",
-      "friends-hangout",
       "moderate",
-      "outdoor",
+      "friends-hangout",
       "Mexican",
-      "cozy"
+      "outdoor",
+      "cozy",
+      "family-friendly"
     ],
     "avg_outcome_score": 0.62,
     "total_visits": 32,
     "trust_citations": 18,
     "verified": false,
     "active": true,
-    "created_at": "2025-11-23T23:06:17.351812",
-    "updated_at": "2026-01-17T23:06:17.351813"
+    "created_at": "2025-12-21T23:46:12.083465",
+    "updated_at": "2026-02-14T23:46:12.083466"
   },
   {
-    "id": "6d1a788b-a5ba-49a4-8dd4-e1d4323d1b1a",
+    "id": "17b4729f-dbfa-4a9a-b7ed-e0310319bab3",
     "name": "Restaurant Bamboo",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3089,21 +3089,21 @@
     "tags": [
       "mid",
       "moderate",
-      "date-night",
-      "Mediterranean",
       "rooftop",
-      "rustic"
+      "rustic",
+      "Mediterranean",
+      "date-night"
     ],
     "avg_outcome_score": 0.87,
     "total_visits": 30,
     "trust_citations": 8,
     "verified": false,
     "active": true,
-    "created_at": "2025-06-24T23:06:17.351821",
-    "updated_at": "2026-01-31T23:06:17.351822"
+    "created_at": "2025-07-22T23:46:12.083473",
+    "updated_at": "2026-02-28T23:46:12.083474"
   },
   {
-    "id": "64e2883a-3a74-4495-8689-95778b44658f",
+    "id": "fca39970-9ae3-40e7-8577-7df74f0376a5",
     "name": "House of Tamarind",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3125,25 +3125,25 @@
     ],
     "parking": true,
     "tags": [
-      "premium",
-      "indoor",
-      "quiet",
-      "minimalist",
-      "South Indian",
       "rooftop",
+      "minimalist",
+      "celebration",
+      "indoor",
       "parking",
-      "celebration"
+      "quiet",
+      "premium",
+      "South Indian"
     ],
     "avg_outcome_score": 0.55,
     "total_visits": 34,
     "trust_citations": 1,
     "verified": true,
     "active": true,
-    "created_at": "2025-09-15T23:06:17.351828",
-    "updated_at": "2026-02-01T23:06:17.351829"
+    "created_at": "2025-10-13T23:46:12.083481",
+    "updated_at": "2026-03-01T23:46:12.083483"
   },
   {
-    "id": "6df52b3c-85c8-4e23-82f6-fe936263e569",
+    "id": "95ad1fbf-3e9e-46fa-a0ca-b2dfcccc203b",
     "name": "The Old Basil",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3165,23 +3165,23 @@
     "parking": false,
     "tags": [
       "mid",
+      "family",
+      "quiet",
       "romantic",
-      "Continental",
       "indoor",
       "Italian",
-      "quiet",
-      "family"
+      "Continental"
     ],
     "avg_outcome_score": 0.79,
     "total_visits": 28,
     "trust_citations": 5,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-30T23:06:17.351836",
-    "updated_at": "2026-03-11T23:06:17.351837"
+    "created_at": "2026-01-27T23:46:12.083491",
+    "updated_at": "2026-04-08T23:46:12.083493"
   },
   {
-    "id": "179cd561-2da6-42bc-8f9b-02082c8685e5",
+    "id": "30f2eeab-67c5-47e3-a4df-0d9d37e6a736",
     "name": "Spice Bean",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3203,26 +3203,26 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "family-friendly",
+      "rooftop",
       "moderate",
-      "indoor",
-      "Cafe",
       "budget",
       "cozy",
-      "rooftop",
-      "parking"
+      "family-friendly",
+      "Cafe",
+      "indoor",
+      "parking",
+      "casual"
     ],
     "avg_outcome_score": 0.57,
     "total_visits": 10,
     "trust_citations": 5,
     "verified": false,
     "active": true,
-    "created_at": "2025-07-02T23:06:17.351844",
-    "updated_at": "2026-02-02T23:06:17.351845"
+    "created_at": "2025-07-30T23:46:12.083500",
+    "updated_at": "2026-03-02T23:46:12.083501"
   },
   {
-    "id": "c2639742-2ccc-4ebe-9a90-d20af63e0fe6",
+    "id": "7d7e1574-203f-4fd7-8e6b-357ecd73b9c9",
     "name": "Spice Harvest",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3244,25 +3244,25 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
       "outdoor",
-      "date-night",
       "Continental",
       "premium",
-      "Italian",
+      "parking",
+      "casual",
       "quiet",
-      "parking"
+      "Italian",
+      "date-night"
     ],
     "avg_outcome_score": 0.45,
     "total_visits": 29,
     "trust_citations": 8,
     "verified": true,
     "active": true,
-    "created_at": "2025-05-20T23:06:17.351851",
-    "updated_at": "2026-01-15T23:06:17.351852"
+    "created_at": "2025-06-17T23:46:12.083507",
+    "updated_at": "2026-02-12T23:46:12.083509"
   },
   {
-    "id": "1681bee4-b354-471b-9864-d72090bc9661",
+    "id": "e361326d-a31d-45f3-803b-dc037e2b7a24",
     "name": "Bistro Fork",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3285,27 +3285,27 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "moderate",
-      "business",
-      "Continental",
-      "indoor",
-      "budget",
       "rooftop",
+      "moderate",
+      "budget",
+      "business",
+      "indoor",
       "parking",
-      "lively",
-      "trendy"
+      "casual",
+      "trendy",
+      "Continental",
+      "lively"
     ],
     "avg_outcome_score": 0.49,
     "total_visits": 30,
     "trust_citations": 3,
     "verified": false,
     "active": true,
-    "created_at": "2025-03-27T23:06:17.351860",
-    "updated_at": "2026-02-19T23:06:17.351862"
+    "created_at": "2025-04-24T23:46:12.083517",
+    "updated_at": "2026-03-19T23:46:12.083518"
   },
   {
-    "id": "126cb3be-3ac2-471b-90f3-a5859ab1d9fa",
+    "id": "1ec40435-5eb0-45fe-ac89-d33e029663a9",
     "name": "The Spice",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3328,26 +3328,26 @@
     ],
     "parking": false,
     "tags": [
-      "casual",
-      "outdoor",
-      "romantic",
+      "rooftop",
+      "North Indian",
       "quick-lunch",
       "budget",
+      "outdoor",
       "quiet",
-      "South Indian",
-      "rooftop",
-      "North Indian"
+      "casual",
+      "romantic",
+      "South Indian"
     ],
     "avg_outcome_score": 0.56,
     "total_visits": 43,
     "trust_citations": 1,
     "verified": true,
     "active": true,
-    "created_at": "2025-05-04T23:06:17.351870",
-    "updated_at": "2026-01-19T23:06:17.351871"
+    "created_at": "2025-06-01T23:46:12.083524",
+    "updated_at": "2026-02-16T23:46:12.083525"
   },
   {
-    "id": "b1bdf22d-8fc3-4c61-8b8a-17b958a7b199",
+    "id": "5d0786c1-3897-49c7-9e27-21407ab372c5",
     "name": "New Chettinad",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3369,12 +3369,12 @@
     "parking": true,
     "tags": [
       "mid",
+      "rooftop",
+      "Mexican",
       "outdoor",
       "romantic",
-      "Mexican",
-      "quiet",
-      "rooftop",
       "parking",
+      "quiet",
       "family"
     ],
     "avg_outcome_score": 0.42,
@@ -3382,11 +3382,11 @@
     "trust_citations": 4,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-24T23:06:17.351879",
-    "updated_at": "2026-02-22T23:06:17.351880"
+    "created_at": "2026-01-21T23:46:12.083532",
+    "updated_at": "2026-03-22T23:46:12.083533"
   },
   {
-    "id": "24b27159-7083-445f-ad10-6e92d893c115",
+    "id": "d61e5f22-880c-40f6-be79-be318e57ef8f",
     "name": "Little Dragon",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3408,24 +3408,24 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
       "moderate",
+      "rustic",
       "outdoor",
-      "indoor",
       "Pan Asian",
+      "indoor",
       "parking",
-      "rustic"
+      "casual"
     ],
     "avg_outcome_score": 0.51,
     "total_visits": 12,
     "trust_citations": 4,
     "verified": true,
     "active": true,
-    "created_at": "2025-07-10T23:06:17.351887",
-    "updated_at": "2026-02-08T23:06:17.351888"
+    "created_at": "2025-08-07T23:46:12.083539",
+    "updated_at": "2026-03-08T23:46:12.083541"
   },
   {
-    "id": "91557a68-953f-49e9-907f-6f751e29eef9",
+    "id": "2b251739-6c6d-4a13-8280-bc8a9fd419dd",
     "name": "Kitchen Spice",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3446,24 +3446,24 @@
     ],
     "parking": false,
     "tags": [
-      "Chinese",
-      "business",
-      "romantic",
-      "budget",
-      "quiet",
       "rooftop",
-      "North Indian"
+      "North Indian",
+      "budget",
+      "Chinese",
+      "quiet",
+      "business",
+      "romantic"
     ],
     "avg_outcome_score": 0.93,
     "total_visits": 7,
     "trust_citations": 14,
     "verified": true,
     "active": true,
-    "created_at": "2025-11-02T23:06:17.351895",
-    "updated_at": "2026-01-24T23:06:17.351896"
+    "created_at": "2025-11-30T23:46:12.083547",
+    "updated_at": "2026-02-21T23:46:12.083548"
   },
   {
-    "id": "752bb76a-ad30-4150-883e-8c791711a0b1",
+    "id": "5df48ca2-c8b4-4201-b358-00904af1a4a7",
     "name": "New Fork",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3487,24 +3487,24 @@
     "parking": false,
     "tags": [
       "mid",
-      "casual",
+      "rooftop",
       "friends-hangout",
-      "indoor",
-      "Italian",
-      "quiet",
       "minimalist",
-      "rooftop"
+      "indoor",
+      "casual",
+      "quiet",
+      "Italian"
     ],
     "avg_outcome_score": 0.54,
     "total_visits": 0,
     "trust_citations": 8,
     "verified": true,
     "active": true,
-    "created_at": "2025-05-26T23:06:17.351903",
-    "updated_at": "2026-02-18T23:06:17.351904"
+    "created_at": "2025-06-23T23:46:12.083554",
+    "updated_at": "2026-03-18T23:46:12.083555"
   },
   {
-    "id": "bd85b3df-6674-4447-ac4f-ff84b8e37369",
+    "id": "9e453552-761b-46b6-9afb-5e41f90648d2",
     "name": "Cafe Ember",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3528,27 +3528,27 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "outdoor",
-      "friends-hangout",
-      "romantic",
-      "Continental",
-      "Italian",
-      "budget",
-      "quiet",
       "rooftop",
-      "parking"
+      "friends-hangout",
+      "budget",
+      "outdoor",
+      "quiet",
+      "romantic",
+      "parking",
+      "casual",
+      "Italian",
+      "Continental"
     ],
     "avg_outcome_score": 0.91,
     "total_visits": 30,
     "trust_citations": 0,
     "verified": true,
     "active": true,
-    "created_at": "2025-04-01T23:06:17.351911",
-    "updated_at": "2026-02-21T23:06:17.351912"
+    "created_at": "2025-04-29T23:46:12.083561",
+    "updated_at": "2026-03-21T23:46:12.083562"
   },
   {
-    "id": "20230cbe-3b3d-4b84-9894-e53bcf0e86ce",
+    "id": "0c63bf90-7a00-467d-8928-88c884a089b7",
     "name": "Kitchen Andhra",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3570,10 +3570,10 @@
     "parking": false,
     "tags": [
       "mid",
-      "Mexican",
-      "quiet",
-      "cozy",
       "rooftop",
+      "Mexican",
+      "cozy",
+      "quiet",
       "family"
     ],
     "avg_outcome_score": 0.89,
@@ -3581,11 +3581,11 @@
     "trust_citations": 3,
     "verified": false,
     "active": true,
-    "created_at": "2025-12-25T23:06:17.351919",
-    "updated_at": "2026-02-22T23:06:17.351920"
+    "created_at": "2026-01-22T23:46:12.083568",
+    "updated_at": "2026-03-22T23:46:12.083569"
   },
   {
-    "id": "492a0a05-4068-4da0-b041-4f14cca5ee0e",
+    "id": "12147f7e-eb9b-418d-bd32-73b254a60b13",
     "name": "Green Cardamom",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3606,13 +3606,13 @@
     ],
     "parking": true,
     "tags": [
-      "Street Food",
       "moderate",
-      "date-night",
-      "indoor",
-      "outdoor",
       "budget",
+      "outdoor",
+      "indoor",
       "parking",
+      "Street Food",
+      "date-night",
       "lively"
     ],
     "avg_outcome_score": 0.74,
@@ -3620,11 +3620,11 @@
     "trust_citations": 4,
     "verified": true,
     "active": true,
-    "created_at": "2025-11-24T23:06:17.351928",
-    "updated_at": "2026-01-19T23:06:17.351929"
+    "created_at": "2025-12-22T23:46:12.083576",
+    "updated_at": "2026-02-16T23:46:12.083577"
   },
   {
-    "id": "7686a495-177f-4eff-a271-965a3e2eecc1",
+    "id": "d97f5503-21a0-41b2-bff0-b6d74a717d89",
     "name": "House of Mint",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3646,25 +3646,25 @@
     ],
     "parking": true,
     "tags": [
-      "Street Food",
-      "outdoor",
       "friends-hangout",
-      "premium",
-      "indoor",
-      "quiet",
+      "outdoor",
       "cozy",
-      "parking"
+      "indoor",
+      "parking",
+      "quiet",
+      "Street Food",
+      "premium"
     ],
     "avg_outcome_score": 0.32,
     "total_visits": 28,
     "trust_citations": 14,
     "verified": true,
     "active": true,
-    "created_at": "2025-07-12T23:06:17.351935",
-    "updated_at": "2026-03-07T23:06:17.351936"
+    "created_at": "2025-08-09T23:46:12.083584",
+    "updated_at": "2026-04-04T23:46:12.083585"
   },
   {
-    "id": "860906c9-320a-4ed9-a095-cf15647f2b2a",
+    "id": "2221094a-1c7d-450d-97f2-f5cd06f71008",
     "name": "Bistro Basil",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3686,26 +3686,26 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
+      "moderate",
       "family-friendly",
       "business",
-      "Continental",
-      "premium",
-      "moderate",
       "indoor",
+      "parking",
+      "casual",
       "Italian",
-      "parking"
+      "Continental",
+      "premium"
     ],
     "avg_outcome_score": 0.56,
     "total_visits": 29,
     "trust_citations": 2,
     "verified": true,
     "active": true,
-    "created_at": "2025-03-14T23:06:17.351943",
-    "updated_at": "2026-03-12T23:06:17.351945"
+    "created_at": "2025-04-11T23:46:12.083592",
+    "updated_at": "2026-04-09T23:46:12.083593"
   },
   {
-    "id": "a6225933-b3fc-4d2a-be3a-4302d037540e",
+    "id": "de9b353c-a9d2-4f36-9da4-7d0e940ee506",
     "name": "Urban Saffron",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3726,24 +3726,24 @@
     ],
     "parking": false,
     "tags": [
+      "North Indian",
+      "budget",
+      "celebration",
+      "cozy",
       "family-friendly",
       "indoor",
-      "budget",
-      "quiet",
-      "cozy",
-      "North Indian",
-      "celebration"
+      "quiet"
     ],
     "avg_outcome_score": 0.84,
     "total_visits": 14,
     "trust_citations": 10,
     "verified": true,
     "active": true,
-    "created_at": "2025-03-14T23:06:17.351952",
-    "updated_at": "2026-03-13T23:06:17.351953"
+    "created_at": "2025-04-11T23:46:12.083600",
+    "updated_at": "2026-04-10T23:46:12.083601"
   },
   {
-    "id": "f0be45a1-d2a8-41fe-8ae9-35fe6a1ae659",
+    "id": "c109a683-b433-4994-becc-7b4cc8751a01",
     "name": "Restaurant Basil",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3765,25 +3765,25 @@
     ],
     "parking": true,
     "tags": [
-      "business",
-      "Continental",
-      "premium",
-      "indoor",
-      "quiet",
-      "minimalist",
       "rooftop",
-      "parking"
+      "minimalist",
+      "business",
+      "indoor",
+      "parking",
+      "quiet",
+      "Continental",
+      "premium"
     ],
     "avg_outcome_score": 0.46,
     "total_visits": 42,
     "trust_citations": 0,
     "verified": false,
     "active": true,
-    "created_at": "2025-07-14T23:06:17.351959",
-    "updated_at": "2026-01-22T23:06:17.351960"
+    "created_at": "2025-08-11T23:46:12.083607",
+    "updated_at": "2026-02-19T23:46:12.083608"
   },
   {
-    "id": "1fa57dcd-c3a9-4724-a928-75eff6888509",
+    "id": "6dd38042-b8f5-4e3f-892f-8e54581ed5b7",
     "name": "Little Golden",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3804,24 +3804,24 @@
     ],
     "parking": true,
     "tags": [
-      "indoor",
-      "Pan Asian",
       "budget",
-      "quiet",
+      "celebration",
+      "Pan Asian",
+      "indoor",
       "parking",
-      "family",
-      "celebration"
+      "quiet",
+      "family"
     ],
     "avg_outcome_score": 0.38,
     "total_visits": 7,
     "trust_citations": 2,
     "verified": true,
     "active": true,
-    "created_at": "2025-07-12T23:06:17.351967",
-    "updated_at": "2026-02-09T23:06:17.351968"
+    "created_at": "2025-08-09T23:46:12.083614",
+    "updated_at": "2026-03-09T23:46:12.083615"
   },
   {
-    "id": "a4c59e00-bfce-4a54-b4a5-58ef33e39833",
+    "id": "a6016952-cc36-4c27-8ccb-99ca38ba37ea",
     "name": "Royal Dakshin",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3845,26 +3845,26 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
-      "loud",
-      "outdoor",
-      "date-night",
+      "North Indian",
       "South Indian",
       "rooftop",
+      "outdoor",
       "parking",
-      "lively",
-      "North Indian"
+      "loud",
+      "casual",
+      "date-night",
+      "lively"
     ],
     "avg_outcome_score": 0.64,
     "total_visits": 3,
     "trust_citations": 15,
     "verified": true,
     "active": true,
-    "created_at": "2025-06-09T23:06:17.351976",
-    "updated_at": "2026-01-29T23:06:17.351977"
+    "created_at": "2025-07-07T23:46:12.083623",
+    "updated_at": "2026-02-26T23:46:12.083624"
   },
   {
-    "id": "4355f72e-5aa8-4db1-abf2-88ecc9c2a62a",
+    "id": "4f9d4c13-e019-478d-a308-87f3a6ab4e4f",
     "name": "Restaurant Andhra",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3885,25 +3885,25 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "premium",
-      "indoor",
+      "rustic",
       "quick-lunch",
-      "quiet",
-      "South Indian",
+      "indoor",
       "parking",
-      "rustic"
+      "casual",
+      "quiet",
+      "premium",
+      "South Indian"
     ],
     "avg_outcome_score": 0.51,
     "total_visits": 8,
     "trust_citations": 8,
     "verified": true,
     "active": true,
-    "created_at": "2025-03-20T23:06:17.351984",
-    "updated_at": "2026-02-06T23:06:17.351985"
+    "created_at": "2025-04-17T23:46:12.083630",
+    "updated_at": "2026-03-06T23:46:12.083631"
   },
   {
-    "id": "e29d81a4-c052-4463-b756-ce85e0384706",
+    "id": "032673ff-f785-4bf9-a6e8-8ddd857bd1b6",
     "name": "Little Brew",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3924,25 +3924,25 @@
     ],
     "parking": true,
     "tags": [
-      "family-friendly",
-      "friends-hangout",
-      "premium",
-      "moderate",
-      "Cafe",
       "rooftop",
+      "moderate",
+      "friends-hangout",
+      "family-friendly",
+      "Cafe",
       "parking",
-      "Desserts"
+      "Desserts",
+      "premium"
     ],
     "avg_outcome_score": 0.63,
     "total_visits": 50,
     "trust_citations": 3,
     "verified": true,
     "active": true,
-    "created_at": "2025-04-06T23:06:17.351994",
-    "updated_at": "2026-01-26T23:06:17.351995"
+    "created_at": "2025-05-04T23:46:12.083638",
+    "updated_at": "2026-02-23T23:46:12.083639"
   },
   {
-    "id": "890a87f9-ba43-42b9-b1a0-dd6998a337e5",
+    "id": "e490f666-fb4c-4b81-b87d-b4420b015f6f",
     "name": "Little Cardamom",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -3964,23 +3964,23 @@
     "parking": true,
     "tags": [
       "mid",
-      "outdoor",
       "friends-hangout",
-      "indoor",
-      "quiet",
+      "outdoor",
       "Mediterranean",
-      "parking"
+      "indoor",
+      "parking",
+      "quiet"
     ],
     "avg_outcome_score": 0.84,
     "total_visits": 46,
     "trust_citations": 3,
     "verified": false,
     "active": true,
-    "created_at": "2025-08-06T23:06:17.352002",
-    "updated_at": "2026-01-30T23:06:17.352003"
+    "created_at": "2025-09-03T23:46:12.083644",
+    "updated_at": "2026-02-27T23:46:12.083646"
   },
   {
-    "id": "ccbc6927-2895-4b78-9b58-f88f553b7023",
+    "id": "77419a3b-7586-492c-ba4e-4d01e5543e76",
     "name": "Cafe Garden",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4004,20 +4004,20 @@
       "moderate",
       "family-friendly",
       "business",
-      "Continental",
       "indoor",
-      "parking"
+      "parking",
+      "Continental"
     ],
     "avg_outcome_score": 0.36,
     "total_visits": 8,
     "trust_citations": 17,
     "verified": false,
     "active": true,
-    "created_at": "2025-04-01T23:06:17.352010",
-    "updated_at": "2026-02-06T23:06:17.352012"
+    "created_at": "2025-04-29T23:46:12.083652",
+    "updated_at": "2026-03-06T23:46:12.083653"
   },
   {
-    "id": "3ad7d963-b23f-470f-b9e0-059efa3a4063",
+    "id": "4099f4c7-605a-45ae-bc6f-1dddca6589bf",
     "name": "The Old Mint",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4039,23 +4039,23 @@
     "parking": false,
     "tags": [
       "mid",
-      "loud",
-      "date-night",
-      "Cafe",
       "rooftop",
-      "lively",
-      "trendy"
+      "Cafe",
+      "loud",
+      "trendy",
+      "date-night",
+      "lively"
     ],
     "avg_outcome_score": 0.86,
     "total_visits": 18,
     "trust_citations": 19,
     "verified": false,
     "active": true,
-    "created_at": "2025-11-21T23:06:17.352019",
-    "updated_at": "2026-02-05T23:06:17.352020"
+    "created_at": "2025-12-19T23:46:12.083660",
+    "updated_at": "2026-03-05T23:46:12.083661"
   },
   {
-    "id": "52aed94d-a7c1-4132-a302-e8638e62e56a",
+    "id": "598c7f9c-c1ff-4a16-885b-b9a2a3383740",
     "name": "Green Spice",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4076,24 +4076,24 @@
     ],
     "parking": true,
     "tags": [
-      "Chinese",
       "mid",
+      "North Indian",
+      "Chinese",
       "business",
       "indoor",
-      "quiet",
       "parking",
-      "North Indian"
+      "quiet"
     ],
     "avg_outcome_score": 0.53,
     "total_visits": 7,
     "trust_citations": 8,
     "verified": true,
     "active": true,
-    "created_at": "2025-06-08T23:06:17.352026",
-    "updated_at": "2026-01-18T23:06:17.352028"
+    "created_at": "2025-07-06T23:46:12.083667",
+    "updated_at": "2026-02-15T23:46:12.083668"
   },
   {
-    "id": "8bc2ebba-4b76-4925-abcf-b9f88e4d0c31",
+    "id": "cff465e8-43af-459c-81a5-afc8c6d40872",
     "name": "Kitchen Punjabi",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4117,28 +4117,28 @@
     ],
     "parking": true,
     "tags": [
-      "Chinese",
       "mid",
-      "family-friendly",
+      "North Indian",
       "moderate",
+      "rooftop",
+      "celebration",
       "outdoor",
       "cozy",
-      "rooftop",
-      "North Indian",
+      "Chinese",
+      "family-friendly",
       "parking",
-      "family",
-      "celebration"
+      "family"
     ],
     "avg_outcome_score": 0.84,
     "total_visits": 11,
     "trust_citations": 8,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-08T23:06:17.352035",
-    "updated_at": "2026-01-14T23:06:17.352036"
+    "created_at": "2025-09-05T23:46:12.083675",
+    "updated_at": "2026-02-11T23:46:12.083676"
   },
   {
-    "id": "762712fd-d771-4151-8877-2391baf4eb71",
+    "id": "a3b1ca8f-c137-4368-85fe-74b289821c94",
     "name": "Spice Mint",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4158,11 +4158,11 @@
     ],
     "parking": false,
     "tags": [
-      "casual",
-      "family-friendly",
-      "indoor",
-      "Cafe",
       "budget",
+      "family-friendly",
+      "Cafe",
+      "indoor",
+      "casual",
       "quiet"
     ],
     "avg_outcome_score": 0.39,
@@ -4170,11 +4170,11 @@
     "trust_citations": 16,
     "verified": false,
     "active": true,
-    "created_at": "2025-06-13T23:06:17.352043",
-    "updated_at": "2026-02-12T23:06:17.352044"
+    "created_at": "2025-07-11T23:46:12.083682",
+    "updated_at": "2026-03-12T23:46:12.083683"
   },
   {
-    "id": "65174648-0790-4d2b-a992-a7e04155e096",
+    "id": "de892891-3264-4346-9cc6-260e07e6e5e7",
     "name": "The Bean",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4195,23 +4195,23 @@
     ],
     "parking": false,
     "tags": [
-      "moderate",
-      "indoor",
-      "Cafe",
-      "budget",
       "rooftop",
-      "celebration"
+      "moderate",
+      "budget",
+      "celebration",
+      "Cafe",
+      "indoor"
     ],
     "avg_outcome_score": 0.36,
     "total_visits": 10,
     "trust_citations": 19,
     "verified": false,
     "active": true,
-    "created_at": "2025-12-03T23:06:17.352051",
-    "updated_at": "2026-02-24T23:06:17.352052"
+    "created_at": "2025-12-31T23:46:12.083690",
+    "updated_at": "2026-03-24T23:46:12.083691"
   },
   {
-    "id": "2585e431-246c-46eb-a493-b5414e3b3885",
+    "id": "4669336b-7b82-4a7f-b887-12e9fc723f3e",
     "name": "Little Olive",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4233,26 +4233,26 @@
     ],
     "parking": true,
     "tags": [
-      "Street Food",
       "mid",
       "moderate",
+      "rooftop",
       "friends-hangout",
       "indoor",
-      "rooftop",
       "parking",
-      "lively",
-      "trendy"
+      "trendy",
+      "Street Food",
+      "lively"
     ],
     "avg_outcome_score": 0.37,
     "total_visits": 18,
     "trust_citations": 18,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-09T23:06:17.352060",
-    "updated_at": "2026-03-11T23:06:17.352061"
+    "created_at": "2025-09-06T23:46:12.083697",
+    "updated_at": "2026-04-08T23:46:12.083699"
   },
   {
-    "id": "3dc76893-7312-4569-b535-b6bbb48efa17",
+    "id": "a48bb549-3bd1-4751-a113-a189ad3d958c",
     "name": "Kitchen Garden",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4274,23 +4274,23 @@
     "parking": false,
     "tags": [
       "moderate",
-      "outdoor",
-      "Italian",
-      "budget",
-      "trendy",
       "family",
-      "celebration"
+      "budget",
+      "celebration",
+      "outdoor",
+      "trendy",
+      "Italian"
     ],
     "avg_outcome_score": 0.8,
     "total_visits": 7,
     "trust_citations": 0,
     "verified": true,
     "active": true,
-    "created_at": "2025-06-07T23:06:17.352068",
-    "updated_at": "2026-03-02T23:06:17.352069"
+    "created_at": "2025-07-05T23:46:12.083705",
+    "updated_at": "2026-03-30T23:46:12.083706"
   },
   {
-    "id": "6dc32fc7-072d-4e72-b77b-e950e38ed137",
+    "id": "43d7fea6-daa3-4218-bfae-fd43de200f05",
     "name": "Corner Bamboo",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4312,13 +4312,13 @@
     ],
     "parking": false,
     "tags": [
-      "Chinese",
       "mid",
-      "casual",
       "moderate",
+      "outdoor",
+      "Chinese",
       "business",
       "indoor",
-      "outdoor",
+      "casual",
       "trendy"
     ],
     "avg_outcome_score": 0.35,
@@ -4326,11 +4326,11 @@
     "trust_citations": 0,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-05T23:06:17.352077",
-    "updated_at": "2026-01-17T23:06:17.352078"
+    "created_at": "2026-01-02T23:46:12.083718",
+    "updated_at": "2026-02-14T23:46:12.083719"
   },
   {
-    "id": "55f3a412-65c7-4d14-bc1b-4e0c2b3f922e",
+    "id": "ce0de3de-7fc7-429b-bbd2-6d62f8d9cd0c",
     "name": "Little Mint",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4352,22 +4352,22 @@
     "parking": false,
     "tags": [
       "mid",
+      "rooftop",
       "friends-hangout",
-      "Cafe",
-      "quiet",
       "cozy",
-      "rooftop"
+      "Cafe",
+      "quiet"
     ],
     "avg_outcome_score": 0.49,
     "total_visits": 20,
     "trust_citations": 5,
     "verified": true,
     "active": true,
-    "created_at": "2025-05-23T23:06:17.352084",
-    "updated_at": "2026-01-19T23:06:17.352086"
+    "created_at": "2025-06-20T23:46:12.083726",
+    "updated_at": "2026-02-16T23:46:12.083727"
   },
   {
-    "id": "ebb78588-3cd5-4554-83c0-6c72bef94eb2",
+    "id": "a53369b6-82fb-4f68-8eb3-49fd781e3312",
     "name": "Little Little",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4389,23 +4389,23 @@
     "parking": false,
     "tags": [
       "mid",
-      "family-friendly",
-      "date-night",
-      "Cafe",
-      "quiet",
       "rooftop",
-      "Desserts"
+      "family-friendly",
+      "quiet",
+      "Cafe",
+      "Desserts",
+      "date-night"
     ],
     "avg_outcome_score": 0.64,
     "total_visits": 47,
     "trust_citations": 10,
     "verified": false,
     "active": true,
-    "created_at": "2025-10-19T23:06:17.352093",
-    "updated_at": "2026-03-09T23:06:17.352094"
+    "created_at": "2025-11-16T23:46:12.083734",
+    "updated_at": "2026-04-06T23:46:12.083735"
   },
   {
-    "id": "d0e2268e-03f1-47a6-8174-7f8a40b639d3",
+    "id": "c9d2c4e9-3d4f-4fc1-adb5-be7791edd072",
     "name": "Corner Heritage",
     "area": "HSR Layout",
     "city": "Bangalore",
@@ -4428,26 +4428,26 @@
     ],
     "parking": false,
     "tags": [
-      "Chinese",
       "mid",
-      "moderate",
-      "date-night",
-      "indoor",
-      "outdoor",
-      "lively",
       "North Indian",
-      "trendy"
+      "moderate",
+      "outdoor",
+      "Chinese",
+      "indoor",
+      "trendy",
+      "date-night",
+      "lively"
     ],
     "avg_outcome_score": 0.77,
     "total_visits": 15,
     "trust_citations": 3,
     "verified": false,
     "active": true,
-    "created_at": "2025-10-04T23:06:17.352102",
-    "updated_at": "2026-03-02T23:06:17.352103"
+    "created_at": "2025-11-01T23:46:12.083741",
+    "updated_at": "2026-03-30T23:46:12.083742"
   },
   {
-    "id": "fb81781a-9b19-49a5-8a1c-aee9026eb461",
+    "id": "adafa399-aa51-47bc-a374-e7ede5f5cdca",
     "name": "New Spice",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4469,24 +4469,24 @@
     ],
     "parking": false,
     "tags": [
-      "casual",
-      "loud",
+      "rooftop",
+      "North Indian",
       "friends-hangout",
       "budget",
-      "South Indian",
-      "rooftop",
-      "North Indian"
+      "loud",
+      "casual",
+      "South Indian"
     ],
     "avg_outcome_score": 0.79,
     "total_visits": 28,
     "trust_citations": 18,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-01T23:06:17.352110",
-    "updated_at": "2026-01-17T23:06:17.352111"
+    "created_at": "2025-08-29T23:46:12.083749",
+    "updated_at": "2026-02-14T23:46:12.083750"
   },
   {
-    "id": "5afcea1d-4c9b-4f96-94a1-7d57f2256d0b",
+    "id": "30ef0b4f-dbaa-413c-9f88-09f4797569f8",
     "name": "House of Bistro",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4509,24 +4509,24 @@
     "parking": false,
     "tags": [
       "mid",
+      "moderate",
+      "outdoor",
       "family-friendly",
       "business",
-      "Continental",
-      "moderate",
       "indoor",
-      "outdoor",
-      "Italian"
+      "Italian",
+      "Continental"
     ],
     "avg_outcome_score": 0.68,
     "total_visits": 4,
     "trust_citations": 9,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-25T23:06:17.352119",
-    "updated_at": "2026-03-10T23:06:17.352120"
+    "created_at": "2026-01-22T23:46:12.083757",
+    "updated_at": "2026-04-07T23:46:12.083758"
   },
   {
-    "id": "c28c2fab-e545-40ab-bad2-84a796d3b948",
+    "id": "2b27bcca-7ecd-43a4-a33f-3e7abe5b73e2",
     "name": "Green Green",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4547,23 +4547,23 @@
     ],
     "parking": false,
     "tags": [
-      "indoor",
-      "Cafe",
       "quick-lunch",
       "budget",
-      "quiet",
-      "minimalist"
+      "minimalist",
+      "Cafe",
+      "indoor",
+      "quiet"
     ],
     "avg_outcome_score": 0.7,
     "total_visits": 29,
     "trust_citations": 18,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-23T23:06:17.352127",
-    "updated_at": "2026-02-13T23:06:17.352128"
+    "created_at": "2026-01-20T23:46:12.083764",
+    "updated_at": "2026-03-13T23:46:12.083765"
   },
   {
-    "id": "8163ba5f-91e6-4f14-81aa-edf8c77a7403",
+    "id": "dfe3c21d-71c8-436c-904c-ad0d35f21d3a",
     "name": "Royal Olive",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4586,24 +4586,24 @@
     "parking": false,
     "tags": [
       "mid",
-      "family-friendly",
       "moderate",
-      "outdoor",
       "Mexican",
+      "celebration",
+      "outdoor",
       "cozy",
-      "family",
-      "celebration"
+      "family-friendly",
+      "family"
     ],
     "avg_outcome_score": 0.92,
     "total_visits": 21,
     "trust_citations": 2,
     "verified": true,
     "active": true,
-    "created_at": "2025-10-17T23:06:17.352135",
-    "updated_at": "2026-03-11T23:06:17.352136"
+    "created_at": "2025-11-14T23:46:12.083772",
+    "updated_at": "2026-04-08T23:46:12.083773"
   },
   {
-    "id": "c13db2f1-e76b-4d8e-8137-66f02b98382c",
+    "id": "b1fd152f-575e-4efb-8c65-48867669015d",
     "name": "Restaurant Garden",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4626,26 +4626,26 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "romantic",
-      "date-night",
-      "premium",
-      "indoor",
-      "Italian",
-      "quiet",
       "rooftop",
-      "parking"
+      "quiet",
+      "romantic",
+      "indoor",
+      "parking",
+      "casual",
+      "Italian",
+      "date-night",
+      "premium"
     ],
     "avg_outcome_score": 0.64,
     "total_visits": 23,
     "trust_citations": 9,
     "verified": false,
     "active": true,
-    "created_at": "2025-07-24T23:06:17.352142",
-    "updated_at": "2026-01-29T23:06:17.352143"
+    "created_at": "2025-08-21T23:46:12.083779",
+    "updated_at": "2026-02-26T23:46:12.083780"
   },
   {
-    "id": "da242a70-494c-44cf-9806-5c81776bf44a",
+    "id": "eb14fcd7-6428-4cd6-9976-0059976d3379",
     "name": "Corner Kerala",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4669,26 +4669,26 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
-      "outdoor",
-      "friends-hangout",
-      "quiet",
-      "South Indian",
-      "cozy",
+      "North Indian",
       "rooftop",
+      "friends-hangout",
+      "outdoor",
+      "cozy",
       "parking",
-      "North Indian"
+      "casual",
+      "quiet",
+      "South Indian"
     ],
     "avg_outcome_score": 0.55,
     "total_visits": 21,
     "trust_citations": 2,
     "verified": true,
     "active": true,
-    "created_at": "2025-11-02T23:06:17.352151",
-    "updated_at": "2026-01-14T23:06:17.352152"
+    "created_at": "2025-11-30T23:46:12.083787",
+    "updated_at": "2026-02-11T23:46:12.083788"
   },
   {
-    "id": "fcf37af4-289d-411c-ac24-60c878c7a5b4",
+    "id": "6d19abc1-434e-4c23-bcaf-3fad98c34d5b",
     "name": "Cafe Little",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4711,25 +4711,25 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
-      "friends-hangout",
-      "romantic",
-      "indoor",
-      "Cafe",
-      "quiet",
       "rooftop",
-      "parking"
+      "friends-hangout",
+      "quiet",
+      "Cafe",
+      "indoor",
+      "parking",
+      "casual",
+      "romantic"
     ],
     "avg_outcome_score": 0.76,
     "total_visits": 35,
     "trust_citations": 12,
     "verified": true,
     "active": true,
-    "created_at": "2025-07-29T23:06:17.352159",
-    "updated_at": "2026-01-20T23:06:17.352160"
+    "created_at": "2025-08-26T23:46:12.083795",
+    "updated_at": "2026-02-17T23:46:12.083796"
   },
   {
-    "id": "afd26508-3c3d-4647-a995-1f0215744898",
+    "id": "aff354d7-de17-46f6-8ffb-1da72bd8c64b",
     "name": "Cafe Noodle",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4752,27 +4752,27 @@
     ],
     "parking": true,
     "tags": [
-      "Chinese",
-      "casual",
-      "loud",
-      "outdoor",
-      "premium",
-      "quick-lunch",
       "rooftop",
+      "quick-lunch",
+      "outdoor",
+      "Chinese",
       "parking",
-      "lively",
-      "trendy"
+      "loud",
+      "casual",
+      "trendy",
+      "premium",
+      "lively"
     ],
     "avg_outcome_score": 0.89,
     "total_visits": 32,
     "trust_citations": 11,
     "verified": false,
     "active": true,
-    "created_at": "2025-08-08T23:06:17.352167",
-    "updated_at": "2026-03-02T23:06:17.352168"
+    "created_at": "2025-09-05T23:46:12.083803",
+    "updated_at": "2026-03-30T23:46:12.083804"
   },
   {
-    "id": "eb26d3bb-92da-43c7-b4bd-caf883d86a51",
+    "id": "13beeb61-ef06-4a7a-91cc-2318ba4191d3",
     "name": "Cafe Bistro",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4794,26 +4794,26 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "loud",
-      "family-friendly",
-      "date-night",
-      "indoor",
-      "outdoor",
-      "Italian",
       "budget",
-      "parking"
+      "outdoor",
+      "family-friendly",
+      "indoor",
+      "parking",
+      "loud",
+      "casual",
+      "Italian",
+      "date-night"
     ],
     "avg_outcome_score": 0.85,
     "total_visits": 49,
     "trust_citations": 17,
     "verified": true,
     "active": true,
-    "created_at": "2025-04-19T23:06:17.352175",
-    "updated_at": "2026-03-11T23:06:17.352176"
+    "created_at": "2025-05-17T23:46:12.083811",
+    "updated_at": "2026-04-08T23:46:12.083812"
   },
   {
-    "id": "7e2bb72b-b33f-4692-b751-fdd5442677e4",
+    "id": "01d1ab49-5155-4b49-95f2-73324fbc3fad",
     "name": "The Fork",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4836,27 +4836,27 @@
     ],
     "parking": true,
     "tags": [
-      "family-friendly",
-      "moderate",
-      "Continental",
-      "outdoor",
-      "Italian",
-      "budget",
       "rooftop",
-      "parking",
+      "moderate",
       "family",
-      "celebration"
+      "budget",
+      "celebration",
+      "outdoor",
+      "family-friendly",
+      "parking",
+      "Italian",
+      "Continental"
     ],
     "avg_outcome_score": 0.8,
     "total_visits": 23,
     "trust_citations": 7,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-21T23:06:17.352184",
-    "updated_at": "2026-01-24T23:06:17.352185"
+    "created_at": "2025-09-18T23:46:12.083820",
+    "updated_at": "2026-02-21T23:46:12.083821"
   },
   {
-    "id": "5ea8c559-f562-4fe4-a0b4-e7fa5d68cf71",
+    "id": "1c167b0e-c6ce-463a-8155-4325c464379d",
     "name": "Bistro Urban",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4879,26 +4879,26 @@
     ],
     "parking": false,
     "tags": [
-      "casual",
-      "family-friendly",
-      "date-night",
-      "Cafe",
-      "budget",
-      "quiet",
-      "cozy",
       "rooftop",
-      "Desserts"
+      "budget",
+      "cozy",
+      "family-friendly",
+      "quiet",
+      "Cafe",
+      "casual",
+      "Desserts",
+      "date-night"
     ],
     "avg_outcome_score": 0.89,
     "total_visits": 43,
     "trust_citations": 18,
     "verified": true,
     "active": true,
-    "created_at": "2025-05-22T23:06:17.352193",
-    "updated_at": "2026-01-23T23:06:17.352194"
+    "created_at": "2025-06-19T23:46:12.083828",
+    "updated_at": "2026-02-20T23:46:12.083830"
   },
   {
-    "id": "be408a71-14bf-414b-9455-e2d63ddcf410",
+    "id": "73fce0ec-ad14-4384-8b69-1f9646e09f3b",
     "name": "Restaurant Harvest",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4920,24 +4920,24 @@
     "parking": true,
     "tags": [
       "mid",
-      "family-friendly",
-      "friends-hangout",
-      "Continental",
       "moderate",
+      "friends-hangout",
       "outdoor",
       "cozy",
-      "parking"
+      "family-friendly",
+      "parking",
+      "Continental"
     ],
     "avg_outcome_score": 0.82,
     "total_visits": 3,
     "trust_citations": 20,
     "verified": true,
     "active": true,
-    "created_at": "2025-07-07T23:06:17.352203",
-    "updated_at": "2026-02-06T23:06:17.352204"
+    "created_at": "2025-08-04T23:46:12.083837",
+    "updated_at": "2026-03-06T23:46:12.083838"
   },
   {
-    "id": "8d45be66-bfd0-43cc-bde9-1d69134831e5",
+    "id": "a66c6b8e-d6f7-452e-8efe-7163617f03a4",
     "name": "Restaurant Saffron",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4959,14 +4959,14 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "loud",
-      "outdoor",
-      "premium",
-      "indoor",
       "Mexican",
       "quick-lunch",
+      "outdoor",
+      "indoor",
       "parking",
+      "loud",
+      "casual",
+      "premium",
       "lively"
     ],
     "avg_outcome_score": 0.35,
@@ -4974,11 +4974,11 @@
     "trust_citations": 16,
     "verified": false,
     "active": true,
-    "created_at": "2025-06-04T23:06:17.352211",
-    "updated_at": "2026-03-08T23:06:17.352212"
+    "created_at": "2025-07-02T23:46:12.083844",
+    "updated_at": "2026-04-05T23:46:12.083845"
   },
   {
-    "id": "8becd789-ffa9-4c35-ba30-1ce146b6b47a",
+    "id": "40551474-3d67-4224-b331-284b5497bed9",
     "name": "Little Forge",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -4999,24 +4999,24 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "date-night",
-      "premium",
-      "indoor",
       "Mexican",
+      "indoor",
+      "parking",
+      "casual",
       "quiet",
-      "parking"
+      "date-night",
+      "premium"
     ],
     "avg_outcome_score": 0.57,
     "total_visits": 23,
     "trust_citations": 7,
     "verified": false,
     "active": true,
-    "created_at": "2025-12-03T23:06:17.352219",
-    "updated_at": "2026-02-18T23:06:17.352220"
+    "created_at": "2025-12-31T23:46:12.083851",
+    "updated_at": "2026-03-18T23:46:12.083852"
   },
   {
-    "id": "693fce4e-4fdf-4453-aeec-73dcd30658c1",
+    "id": "7ded8376-c3b6-424f-ad73-3cf09d4cb6d9",
     "name": "The Old Thyme",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5037,25 +5037,25 @@
     ],
     "parking": true,
     "tags": [
-      "loud",
-      "outdoor",
-      "premium",
-      "Italian",
-      "cozy",
       "rooftop",
+      "celebration",
+      "outdoor",
+      "cozy",
       "parking",
-      "celebration"
+      "loud",
+      "Italian",
+      "premium"
     ],
     "avg_outcome_score": 0.52,
     "total_visits": 48,
     "trust_citations": 15,
     "verified": true,
     "active": true,
-    "created_at": "2026-01-11T23:06:17.352228",
-    "updated_at": "2026-01-15T23:06:17.352229"
+    "created_at": "2026-02-08T23:46:12.083860",
+    "updated_at": "2026-02-12T23:46:12.083862"
   },
   {
-    "id": "7aa80f1e-0b0e-4eae-a603-29e166240d77",
+    "id": "f0a79506-7299-4169-b1b2-9bc0b7d5c583",
     "name": "Cafe Chettinad",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5076,24 +5076,24 @@
     ],
     "parking": false,
     "tags": [
-      "indoor",
+      "rooftop",
       "quick-lunch",
       "budget",
-      "quiet",
-      "South Indian",
       "cozy",
-      "rooftop"
+      "indoor",
+      "quiet",
+      "South Indian"
     ],
     "avg_outcome_score": 0.64,
     "total_visits": 15,
     "trust_citations": 9,
     "verified": false,
     "active": true,
-    "created_at": "2025-09-13T23:06:17.352237",
-    "updated_at": "2026-02-15T23:06:17.352238"
+    "created_at": "2025-10-11T23:46:12.083868",
+    "updated_at": "2026-03-15T23:46:12.083870"
   },
   {
-    "id": "504d4b63-b0cf-4495-9ec9-b23c372b7fe2",
+    "id": "2b408ec3-31d0-4333-8ea4-4d5d1d981451",
     "name": "Spice Bistro",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5118,26 +5118,26 @@
     "parking": false,
     "tags": [
       "mid",
+      "rooftop",
+      "celebration",
+      "cozy",
       "family-friendly",
       "Continental",
+      "quiet",
       "indoor",
       "Italian",
-      "quiet",
-      "cozy",
-      "rooftop",
-      "family",
-      "celebration"
+      "family"
     ],
     "avg_outcome_score": 0.65,
     "total_visits": 36,
     "trust_citations": 7,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-17T23:06:17.352245",
-    "updated_at": "2026-02-14T23:06:17.352246"
+    "created_at": "2025-09-14T23:46:12.083877",
+    "updated_at": "2026-03-14T23:46:12.083878"
   },
   {
-    "id": "6578db86-1887-49ce-8ee2-e1224a56384a",
+    "id": "a72b7cc3-5695-494f-bc73-c24739c66b59",
     "name": "Cafe Tandoor",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5159,24 +5159,24 @@
     ],
     "parking": false,
     "tags": [
-      "outdoor",
-      "budget",
-      "quiet",
-      "cozy",
       "rooftop",
       "North Indian",
-      "celebration"
+      "budget",
+      "celebration",
+      "outdoor",
+      "cozy",
+      "quiet"
     ],
     "avg_outcome_score": 0.73,
     "total_visits": 34,
     "trust_citations": 16,
     "verified": true,
     "active": true,
-    "created_at": "2025-04-29T23:06:17.352254",
-    "updated_at": "2026-02-06T23:06:17.352255"
+    "created_at": "2025-05-27T23:46:12.083885",
+    "updated_at": "2026-03-06T23:46:12.083886"
   },
   {
-    "id": "5dcebb01-adac-4961-8713-b7b3743457d9",
+    "id": "836b1999-8386-44e9-ae1c-caa13a8d5e8e",
     "name": "New Imperial",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5198,26 +5198,26 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "moderate",
-      "date-night",
-      "outdoor",
-      "budget",
       "rooftop",
-      "parking",
       "North Indian",
-      "trendy"
+      "moderate",
+      "budget",
+      "outdoor",
+      "parking",
+      "casual",
+      "trendy",
+      "date-night"
     ],
     "avg_outcome_score": 0.31,
     "total_visits": 22,
     "trust_citations": 7,
     "verified": true,
     "active": true,
-    "created_at": "2025-11-21T23:06:17.352263",
-    "updated_at": "2026-01-23T23:06:17.352264"
+    "created_at": "2025-12-19T23:46:12.083893",
+    "updated_at": "2026-02-20T23:46:12.083894"
   },
   {
-    "id": "0dbd6b72-1bcc-4172-a6bb-b41afd7ca403",
+    "id": "ee039d11-1640-418e-b218-7d9e8150c571",
     "name": "Restaurant Tamarind",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5240,27 +5240,27 @@
     ],
     "parking": true,
     "tags": [
-      "outdoor",
-      "romantic",
-      "indoor",
-      "budget",
-      "quiet",
-      "South Indian",
       "rooftop",
-      "parking",
       "North Indian",
-      "celebration"
+      "budget",
+      "celebration",
+      "outdoor",
+      "quiet",
+      "indoor",
+      "parking",
+      "romantic",
+      "South Indian"
     ],
     "avg_outcome_score": 0.83,
     "total_visits": 44,
     "trust_citations": 15,
     "verified": true,
     "active": true,
-    "created_at": "2025-11-05T23:06:17.352271",
-    "updated_at": "2026-03-09T23:06:17.352273"
+    "created_at": "2025-12-03T23:46:12.083901",
+    "updated_at": "2026-04-06T23:46:12.083902"
   },
   {
-    "id": "a3cb7bf8-604b-40ab-a81b-5f53240a1098",
+    "id": "797020ab-0475-4c56-b83a-e58c38651b25",
     "name": "Kitchen Spoon",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5283,26 +5283,26 @@
     ],
     "parking": false,
     "tags": [
-      "casual",
-      "family-friendly",
-      "date-night",
-      "indoor",
-      "Cafe",
       "budget",
-      "quiet",
       "cozy",
-      "Desserts"
+      "family-friendly",
+      "quiet",
+      "Cafe",
+      "indoor",
+      "casual",
+      "Desserts",
+      "date-night"
     ],
     "avg_outcome_score": 0.51,
     "total_visits": 25,
     "trust_citations": 17,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-26T23:06:17.352280",
-    "updated_at": "2026-01-24T23:06:17.352281"
+    "created_at": "2026-01-23T23:46:12.083909",
+    "updated_at": "2026-02-21T23:46:12.083910"
   },
   {
-    "id": "f012a04f-147b-4845-ae21-023776bf6ed0",
+    "id": "982d1b3f-3cbd-45a3-b804-152fabdc6405",
     "name": "Little Fork",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5325,23 +5325,23 @@
     "parking": false,
     "tags": [
       "mid",
+      "rooftop",
+      "quick-lunch",
       "outdoor",
       "Continental",
-      "quick-lunch",
-      "Italian",
       "quiet",
-      "rooftop"
+      "Italian"
     ],
     "avg_outcome_score": 0.52,
     "total_visits": 47,
     "trust_citations": 14,
     "verified": true,
     "active": true,
-    "created_at": "2025-06-30T23:06:17.352289",
-    "updated_at": "2026-02-20T23:06:17.352290"
+    "created_at": "2025-07-28T23:46:12.083917",
+    "updated_at": "2026-03-20T23:46:12.083918"
   },
   {
-    "id": "d534d4b6-5d08-4bf9-aece-d8d9476f03ba",
+    "id": "983502c3-d0d3-4405-b683-96b4c2a2b818",
     "name": "Urban Dragon",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5362,24 +5362,24 @@
     ],
     "parking": false,
     "tags": [
-      "Chinese",
       "mid",
-      "casual",
-      "loud",
-      "indoor",
+      "rustic",
       "quick-lunch",
-      "rustic"
+      "Chinese",
+      "indoor",
+      "loud",
+      "casual"
     ],
     "avg_outcome_score": 0.77,
     "total_visits": 34,
     "trust_citations": 9,
     "verified": false,
     "active": true,
-    "created_at": "2025-12-04T23:06:17.352298",
-    "updated_at": "2026-02-21T23:06:17.352299"
+    "created_at": "2026-01-01T23:46:12.083925",
+    "updated_at": "2026-03-21T23:46:12.083926"
   },
   {
-    "id": "714a16f0-15eb-43e7-9780-dfa617eb436e",
+    "id": "9ebc0fc6-10fd-416a-883b-3c70cdc9a656",
     "name": "House of Table",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5401,23 +5401,23 @@
     "parking": false,
     "tags": [
       "mid",
-      "outdoor",
-      "romantic",
-      "Continental",
       "quick-lunch",
+      "outdoor",
+      "quiet",
+      "romantic",
       "Italian",
-      "quiet"
+      "Continental"
     ],
     "avg_outcome_score": 0.75,
     "total_visits": 2,
     "trust_citations": 11,
     "verified": true,
     "active": true,
-    "created_at": "2025-06-05T23:06:17.352306",
-    "updated_at": "2026-02-24T23:06:17.352307"
+    "created_at": "2025-07-03T23:46:12.083933",
+    "updated_at": "2026-03-24T23:46:12.083934"
   },
   {
-    "id": "c1dbc109-5af4-431c-b377-df8466920e92",
+    "id": "face2bb8-fa6f-4b5e-9c07-7ef75697156f",
     "name": "The Thyme",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5440,27 +5440,27 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "family-friendly",
-      "moderate",
-      "Continental",
-      "outdoor",
-      "Italian",
-      "budget",
-      "cozy",
       "rooftop",
-      "parking"
+      "moderate",
+      "budget",
+      "outdoor",
+      "cozy",
+      "family-friendly",
+      "parking",
+      "casual",
+      "Italian",
+      "Continental"
     ],
     "avg_outcome_score": 0.74,
     "total_visits": 38,
     "trust_citations": 14,
     "verified": false,
     "active": true,
-    "created_at": "2025-12-10T23:06:17.352314",
-    "updated_at": "2026-02-26T23:06:17.352315"
+    "created_at": "2026-01-07T23:46:12.083941",
+    "updated_at": "2026-03-26T23:46:12.083942"
   },
   {
-    "id": "ae4e86b6-1c6f-4132-8efb-f2f3b51cf7c2",
+    "id": "4a15f5ee-3970-41bd-a818-fb4e2089bd8d",
     "name": "House of Wok",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5482,24 +5482,24 @@
     "parking": true,
     "tags": [
       "mid",
-      "loud",
+      "celebration",
       "outdoor",
       "Pan Asian",
-      "trendy",
       "parking",
-      "lively",
-      "celebration"
+      "loud",
+      "trendy",
+      "lively"
     ],
     "avg_outcome_score": 0.74,
     "total_visits": 28,
     "trust_citations": 2,
     "verified": true,
     "active": true,
-    "created_at": "2025-04-17T23:06:17.352323",
-    "updated_at": "2026-02-18T23:06:17.352324"
+    "created_at": "2025-05-15T23:46:12.083949",
+    "updated_at": "2026-03-18T23:46:12.083951"
   },
   {
-    "id": "3995e3fe-54ae-4df8-8735-b91bd7a89325",
+    "id": "42ba9d4b-d315-49c6-851f-7b59879813d8",
     "name": "Little Pepper",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5520,25 +5520,25 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "loud",
-      "family-friendly",
       "friends-hangout",
-      "outdoor",
       "Biryani",
       "budget",
-      "parking"
+      "outdoor",
+      "family-friendly",
+      "parking",
+      "loud",
+      "casual"
     ],
     "avg_outcome_score": 0.62,
     "total_visits": 7,
     "trust_citations": 8,
     "verified": true,
     "active": true,
-    "created_at": "2025-05-30T23:06:17.352331",
-    "updated_at": "2026-02-28T23:06:17.352332"
+    "created_at": "2025-06-27T23:46:12.083957",
+    "updated_at": "2026-03-28T23:46:12.083958"
   },
   {
-    "id": "e61e4369-5e92-4967-a793-60a2902c44a6",
+    "id": "b381454c-2e79-427a-9c93-dccece3d41d4",
     "name": "Garden Tamarind",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5560,26 +5560,26 @@
     ],
     "parking": true,
     "tags": [
+      "rooftop",
+      "North Indian",
+      "quick-lunch",
+      "quiet",
+      "parking",
       "casual",
       "romantic",
       "premium",
-      "quick-lunch",
-      "quiet",
-      "South Indian",
-      "rooftop",
-      "parking",
-      "North Indian"
+      "South Indian"
     ],
     "avg_outcome_score": 0.43,
     "total_visits": 5,
     "trust_citations": 10,
     "verified": true,
     "active": true,
-    "created_at": "2025-12-11T23:06:17.352340",
-    "updated_at": "2026-02-06T23:06:17.352341"
+    "created_at": "2026-01-08T23:46:12.083965",
+    "updated_at": "2026-03-06T23:46:12.083967"
   },
   {
-    "id": "48d90977-63ca-4568-b821-56c73f9b8385",
+    "id": "d10c4e97-299d-4660-8824-d438a1f156f4",
     "name": "The Old Heritage",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5601,26 +5601,26 @@
     ],
     "parking": true,
     "tags": [
-      "Chinese",
-      "outdoor",
-      "romantic",
-      "premium",
-      "quick-lunch",
-      "quiet",
       "rooftop",
+      "North Indian",
+      "quick-lunch",
+      "outdoor",
+      "Chinese",
+      "quiet",
       "parking",
-      "North Indian"
+      "romantic",
+      "premium"
     ],
     "avg_outcome_score": 0.76,
     "total_visits": 50,
     "trust_citations": 11,
     "verified": true,
     "active": true,
-    "created_at": "2025-11-12T23:06:17.352349",
-    "updated_at": "2026-03-01T23:06:17.352350"
+    "created_at": "2025-12-10T23:46:12.083972",
+    "updated_at": "2026-03-29T23:46:12.083974"
   },
   {
-    "id": "bbfcfb9a-90c1-4786-b5a9-3aa7bf201ce9",
+    "id": "6d554d3d-c80a-4683-8fec-b7b6f3ae702b",
     "name": "Green Dragon",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5641,12 +5641,12 @@
     ],
     "parking": false,
     "tags": [
+      "rooftop",
       "mid",
       "outdoor",
-      "indoor",
       "Pan Asian",
+      "indoor",
       "quiet",
-      "rooftop",
       "family"
     ],
     "avg_outcome_score": 0.6,
@@ -5654,11 +5654,11 @@
     "trust_citations": 2,
     "verified": false,
     "active": true,
-    "created_at": "2025-06-24T23:06:17.352358",
-    "updated_at": "2026-01-27T23:06:17.352359"
+    "created_at": "2025-07-22T23:46:12.083981",
+    "updated_at": "2026-02-24T23:46:12.083982"
   },
   {
-    "id": "0aab1f16-db8a-453b-bed4-c9f34a54bfe5",
+    "id": "bc64ea83-0575-4d43-b2ad-5c7986df4b41",
     "name": "Spice Brew",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5681,12 +5681,12 @@
     "parking": false,
     "tags": [
       "mid",
-      "casual",
       "moderate",
-      "business",
+      "rustic",
       "outdoor",
       "Cafe",
-      "rustic",
+      "business",
+      "casual",
       "Desserts"
     ],
     "avg_outcome_score": 0.93,
@@ -5694,11 +5694,11 @@
     "trust_citations": 14,
     "verified": true,
     "active": true,
-    "created_at": "2025-07-21T23:06:17.352366",
-    "updated_at": "2026-03-05T23:06:17.352367"
+    "created_at": "2025-08-18T23:46:12.083989",
+    "updated_at": "2026-04-02T23:46:12.083990"
   },
   {
-    "id": "445b48fd-8ad1-44ad-a017-cf8801592bee",
+    "id": "921a5299-66df-4dd2-ad2e-cb65bf1d7e73",
     "name": "Garden Garden",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5721,24 +5721,24 @@
     "parking": true,
     "tags": [
       "mid",
-      "casual",
+      "Mexican",
+      "minimalist",
       "outdoor",
       "business",
-      "Mexican",
-      "quiet",
-      "minimalist",
-      "parking"
+      "parking",
+      "casual",
+      "quiet"
     ],
     "avg_outcome_score": 0.58,
     "total_visits": 3,
     "trust_citations": 3,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-11T23:06:17.352374",
-    "updated_at": "2026-03-03T23:06:17.352375"
+    "created_at": "2025-09-08T23:46:12.083997",
+    "updated_at": "2026-03-31T23:46:12.083998"
   },
   {
-    "id": "25aed1ce-e4f4-40ad-9a85-86d24423a762",
+    "id": "4b4646b9-429f-4486-a6fa-6f43d61bfaa2",
     "name": "Kitchen Jade",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5760,25 +5760,25 @@
     ],
     "parking": false,
     "tags": [
-      "Chinese",
-      "casual",
-      "loud",
-      "family-friendly",
-      "outdoor",
-      "indoor",
       "quick-lunch",
-      "budget"
+      "budget",
+      "outdoor",
+      "Chinese",
+      "family-friendly",
+      "indoor",
+      "loud",
+      "casual"
     ],
     "avg_outcome_score": 0.85,
     "total_visits": 40,
     "trust_citations": 17,
     "verified": false,
     "active": true,
-    "created_at": "2025-08-11T23:06:17.352383",
-    "updated_at": "2026-02-02T23:06:17.352384"
+    "created_at": "2025-09-08T23:46:12.084005",
+    "updated_at": "2026-03-02T23:46:12.084006"
   },
   {
-    "id": "cea22a21-d01a-45ef-a33a-f5aed2c2d146",
+    "id": "9ff30c5e-9064-4389-ba53-9fff898090fd",
     "name": "The Old Dhaba",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5800,25 +5800,25 @@
     ],
     "parking": false,
     "tags": [
-      "Chinese",
       "mid",
-      "casual",
+      "North Indian",
       "moderate",
-      "business",
       "outdoor",
-      "lively",
-      "North Indian"
+      "Chinese",
+      "business",
+      "casual",
+      "lively"
     ],
     "avg_outcome_score": 0.73,
     "total_visits": 21,
     "trust_citations": 18,
     "verified": false,
     "active": true,
-    "created_at": "2025-12-30T23:06:17.352391",
-    "updated_at": "2026-03-08T23:06:17.352392"
+    "created_at": "2026-01-27T23:46:12.084013",
+    "updated_at": "2026-04-05T23:46:12.084014"
   },
   {
-    "id": "66425fdd-efe3-40c6-80be-0e00f9a8b8b9",
+    "id": "4cb6f509-dac0-4df4-ab6c-318ead67e76e",
     "name": "Royal Tandoor",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5841,26 +5841,26 @@
     ],
     "parking": false,
     "tags": [
-      "moderate",
-      "indoor",
-      "budget",
       "rooftop",
-      "trendy",
       "North Indian",
-      "lively",
+      "moderate",
+      "budget",
+      "celebration",
+      "indoor",
+      "trendy",
       "family",
-      "celebration"
+      "lively"
     ],
     "avg_outcome_score": 0.72,
     "total_visits": 18,
     "trust_citations": 20,
     "verified": true,
     "active": true,
-    "created_at": "2025-05-11T23:06:17.352400",
-    "updated_at": "2026-02-26T23:06:17.352401"
+    "created_at": "2025-06-08T23:46:12.084021",
+    "updated_at": "2026-03-26T23:46:12.084022"
   },
   {
-    "id": "eb943b99-f1e2-4427-8a11-cec924a33baa",
+    "id": "833ea979-0c5f-41d0-8ba9-fefa0a7fa61c",
     "name": "Royal Panda",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5883,24 +5883,24 @@
     "parking": false,
     "tags": [
       "mid",
-      "casual",
-      "family-friendly",
-      "friends-hangout",
       "moderate",
+      "friends-hangout",
       "outdoor",
+      "cozy",
+      "family-friendly",
       "Pan Asian",
-      "cozy"
+      "casual"
     ],
     "avg_outcome_score": 0.59,
     "total_visits": 13,
     "trust_citations": 10,
     "verified": true,
     "active": true,
-    "created_at": "2025-08-06T23:06:17.352408",
-    "updated_at": "2026-01-17T23:06:17.352410"
+    "created_at": "2025-09-03T23:46:12.084029",
+    "updated_at": "2026-02-14T23:46:12.084030"
   },
   {
-    "id": "690117bc-ca89-4984-968f-d42958925f9c",
+    "id": "9c294477-9877-40df-861a-51e658f4c72a",
     "name": "House of Spoon",
     "area": "Jayanagar",
     "city": "Bangalore",
@@ -5922,22 +5922,22 @@
     ],
     "parking": true,
     "tags": [
-      "casual",
-      "family-friendly",
-      "moderate",
-      "premium",
-      "Cafe",
-      "quick-lunch",
       "rooftop",
+      "moderate",
+      "quick-lunch",
+      "family-friendly",
+      "Cafe",
       "parking",
-      "Desserts"
+      "casual",
+      "Desserts",
+      "premium"
     ],
     "avg_outcome_score": 0.38,
     "total_visits": 35,
     "trust_citations": 3,
     "verified": false,
     "active": true,
-    "created_at": "2025-05-20T23:06:17.352416",
-    "updated_at": "2026-03-06T23:06:17.352418"
+    "created_at": "2025-06-17T23:46:12.084037",
+    "updated_at": "2026-04-03T23:46:12.084038"
   }
 ]
