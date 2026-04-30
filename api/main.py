@@ -100,8 +100,8 @@ class SourceResult(BaseModel):
     displacement_score: float
     intent_score:       float
     trust_score:        float
-    is_cold_result:     bool
-    trust_path:         Optional[TrustPathResponse]
+    signal_layer:       str     # direct_trust|network_trust|domain_expert|crowd_wisdom|intent_only
+    trust_signal:       Optional[TrustPathResponse]
     explanation:        ExplanationResponse
 
 class SearchResponse(BaseModel):
@@ -132,14 +132,15 @@ class OutcomeResponse(BaseModel):
 # ── HELPER ────────────────────────────────────────────────────────────────────
 
 def _format_result(r) -> SourceResult:
-    tp = None
-    if r.trust_path:
-        tp = TrustPathResponse(
-            trusted_person=r.trust_path.trusted_user_name,
-            edge_weight=r.trust_path.edge_weight,
-            hops=r.trust_path.hops,
-            their_outcome=r.trust_path.outcome,
-            visited_at=r.trust_path.visited_at,
+    sig = r.signal
+    ts  = None
+    if sig.trusted_user_id:
+        ts = TrustPathResponse(
+            trusted_person=sig.trusted_user_name,
+            edge_weight=sig.edge_weight,
+            hops=sig.hops,
+            their_outcome=sig.outcome,
+            visited_at=sig.visited_at,
         )
 
     exp          = r.explanation
@@ -152,7 +153,7 @@ def _format_result(r) -> SourceResult:
         intent_score=intent_layer.get("score", 0),
         trust_summary=trust_layer.get("summary", ""),
         trust_score=trust_layer.get("score", 0),
-        is_cold_result=exp.get("cold_result", True),
+        is_cold_result=(r.signal_layer == 'intent_only'),
         breakdown=intent_layer.get("breakdown", {}),
     )
 
@@ -164,9 +165,9 @@ def _format_result(r) -> SourceResult:
         avg_outcome_score=r.avg_outcome_score,
         displacement_score=r.displacement_score,
         intent_score=r.intent_score,
-        trust_score=r.trust_path_score,
-        is_cold_result=r.is_cold_result,
-        trust_path=tp,
+        trust_score=r.trust_score,
+        signal_layer=r.signal_layer,
+        trust_signal=ts,
         explanation=explanation,
     )
 
@@ -251,22 +252,30 @@ def search(req: SearchRequest, conn=Depends(get_db)):
             len(results),
             top.source_id if top else None,
             top.displacement_score if top else None,
-            any(r.trust_path for r in results),
+            any(r.signal_layer == 'direct_trust' for r in results),
         ))
 
         now = datetime.now().isoformat()
         fk  = domain_config.source_fk_column
         for r in results:
-            recommended_by = r.trust_path.trusted_user_id if r.trust_path else None
-            trust_weight   = r.trust_path.edge_weight     if r.trust_path else None
-            trust_hops     = r.trust_path.hops            if r.trust_path else 0
+            has_personal   = r.signal.trusted_user_id is not None
+            recommended_by = r.signal.trusted_user_id if has_personal else None
+            trust_weight   = r.signal.edge_weight      if has_personal else None
+            trust_hops     = r.signal.hops             if has_personal else 0
             cur.execute(f"""
                 INSERT INTO interactions
                   (user_id, {fk}, recommended_by, trust_path_weight,
                    trust_hops, intent_query, intent_parsed,
                    outcome, outcome_score, visited_at, created_at)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, NULL, NULL, NULL, %s)
-                ON CONFLICT DO NOTHING
+                ON CONFLICT (user_id, {fk}) WHERE outcome IS NULL AND {fk} IS NOT NULL
+                DO UPDATE SET
+                    recommended_by    = EXCLUDED.recommended_by,
+                    trust_path_weight = EXCLUDED.trust_path_weight,
+                    trust_hops        = EXCLUDED.trust_hops,
+                    intent_query      = EXCLUDED.intent_query,
+                    intent_parsed     = EXCLUDED.intent_parsed,
+                    created_at        = EXCLUDED.created_at
             """, (
                 req.user_id, r.source_id,
                 recommended_by, trust_weight, trust_hops,

@@ -1,0 +1,48 @@
+Mental Model — What the System Does End to End                                                                    
+                                                                                                                    
+  User query (natural language)                                                                                     
+          │                                                                                                         
+          ▼                                                 
+    intent_parser.py
+    parse_intent(query, domain_config)
+          │  Groq/Llama extracts structured fields                                                                  
+          │  Each field tagged hard | soft | none
+          ▼                                                                                                         
+    IntentObject {cuisine: hard, area: hard, vibe: soft, ...}
+          │                                                                                                         
+          ▼                                                 
+    matcher.py — match(intent, user_id, conn, domain_config)                                                        
+          │                                                                                                         
+          ├─ 1. load_user_taste_profile()
+          │      Learns per-user field weights from past positive outcomes                                          
+          │      Falls back to domain defaults if sparse history                                                    
+          │                                                                                                         
+          ├─ 2. filter_candidates()                                                                                 
+          │      SQL: eliminate sources violating hard constraints                                                  
+          │      Relaxes constraints if zero results                                                                
+          │
+          └─ For each candidate source:                                                                             
+                 │                                                                                                  
+                 ├─ score_intent(source, intent, taste_profile)
+                 │    Weighted field matching with personalized weights                                             
+                 │    Returns intent_score [0, 1]                                                                   
+                 │                                                                                                  
+                 ├─ find_best_trust_signal()                                                                        
+                 │    Tries 5 layers in order:                                                                      
+                 │    direct_trust → network_trust (recursive CTE, N hops)                                          
+                 │    → domain_expert → crowd_wisdom → intent_only                                                  
+                 │    Returns TrustSignal with interaction_intent                                                   
+                 │                                                                                                  
+                 ├─ compute_intent_similarity()             
+                 │    Compares current intent vs past interaction context                                           
+                 │    Returns multiplier [0.2, 1.0]                                                                 
+                 │
+                 ├─ score_trust_signal(signal, intent_similarity)                                                   
+                 │    Additive formula + hop decay + convergence bonus                                              
+                 │    Discounted by intent_similarity                                                               
+                 │    Hard-capped by layer (0.95 / 0.75 / 0.55 / 0.35 / 0.0)                                        
+                 │                                                                                                  
+                 └─ displacement = intent_score × α + trust_score × β
+                      α > β always, α/β adjusts dynamically by graph density                                        
+                      Sparse user: α=0.85  Dense user: α=0.55                                                       
+                      Sort by displacement_score ↓

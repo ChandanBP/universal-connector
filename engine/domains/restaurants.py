@@ -12,6 +12,7 @@ RESTAURANTS_CONFIG = DomainConfig(
     source_table='restaurants',
     source_fk_column='restaurant_id',
     trust_received_column='trust_received_restaurants',
+    max_trust_hops=3,
     select_columns=[
         'id', 'name', 'area', 'cuisine', 'vibe', 'occasion',
         'price_range', 'noise_level', 'seating_type', 'parking',

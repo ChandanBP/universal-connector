@@ -1,0 +1,1055 @@
+[
+  {
+    "id": "ae0f63d2-f4bc-4aae-abb9-b70c58f360c1",
+    "name": "Apple iPhone 15 Pro",
+    "brand": [
+      "Apple"
+    ],
+    "category": "phone",
+    "use_case": [
+      "professional",
+      "content-creation",
+      "casual-use"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "5G",
+      "USB-C"
+    ],
+    "battery_life": "good",
+    "portability": "highly-portable",
+    "tags": [
+      "apple",
+      "premium",
+      "5g",
+      "camera",
+      "flagship"
+    ],
+    "avg_outcome_score": 0.59,
+    "total_visits": 20,
+    "trust_citations": 20,
+    "active": true,
+    "created_at": "2025-05-07T23:48:06.183635",
+    "updated_at": "2026-04-22T23:48:06.183635"
+  },
+  {
+    "id": "44ec41e5-8de1-4ba4-a558-8accc188ba80",
+    "name": "Samsung Galaxy S24",
+    "brand": [
+      "Samsung"
+    ],
+    "category": "phone",
+    "use_case": [
+      "professional",
+      "gaming",
+      "casual-use"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "5G",
+      "USB-C"
+    ],
+    "battery_life": "good",
+    "portability": "highly-portable",
+    "tags": [
+      "samsung",
+      "android",
+      "5g",
+      "amoled",
+      "flagship"
+    ],
+    "avg_outcome_score": 0.81,
+    "total_visits": 37,
+    "trust_citations": 10,
+    "active": true,
+    "created_at": "2026-01-18T23:48:06.183635",
+    "updated_at": "2026-04-11T23:48:06.183635"
+  },
+  {
+    "id": "280350c5-8186-4e13-a703-1f87b2ed1d98",
+    "name": "OnePlus 12R",
+    "brand": [
+      "OnePlus"
+    ],
+    "category": "phone",
+    "use_case": [
+      "gaming",
+      "casual-use",
+      "student"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "5G"
+    ],
+    "battery_life": "excellent",
+    "portability": "highly-portable",
+    "tags": [
+      "oneplus",
+      "gaming",
+      "fast-charging",
+      "5g",
+      "mid-range"
+    ],
+    "avg_outcome_score": 0.56,
+    "total_visits": 8,
+    "trust_citations": 18,
+    "active": true,
+    "created_at": "2025-08-26T23:48:06.183635",
+    "updated_at": "2026-04-22T23:48:06.183635"
+  },
+  {
+    "id": "6f20c948-f144-41cf-a512-3e2c8aaf525a",
+    "name": "Google Pixel 8a",
+    "brand": [
+      "Google"
+    ],
+    "category": "phone",
+    "use_case": [
+      "casual-use",
+      "professional",
+      "travel"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "5G"
+    ],
+    "battery_life": "good",
+    "portability": "highly-portable",
+    "tags": [
+      "google",
+      "pure-android",
+      "camera",
+      "ai",
+      "mid-range"
+    ],
+    "avg_outcome_score": 0.76,
+    "total_visits": 38,
+    "trust_citations": 17,
+    "active": true,
+    "created_at": "2025-07-15T23:48:06.183635",
+    "updated_at": "2026-04-07T23:48:06.183635"
+  },
+  {
+    "id": "c2e18a1d-465b-40ba-b2f0-399895dbac45",
+    "name": "Apple MacBook Air M3",
+    "brand": [
+      "Apple"
+    ],
+    "category": "laptop",
+    "use_case": [
+      "work",
+      "content-creation",
+      "student",
+      "home-office"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "Thunderbolt",
+      "USB-C"
+    ],
+    "battery_life": "excellent",
+    "portability": "highly-portable",
+    "tags": [
+      "apple",
+      "m3",
+      "lightweight",
+      "battery",
+      "silent"
+    ],
+    "avg_outcome_score": 0.8,
+    "total_visits": 29,
+    "trust_citations": 19,
+    "active": true,
+    "created_at": "2025-05-02T23:48:06.183635",
+    "updated_at": "2026-04-15T23:48:06.183635"
+  },
+  {
+    "id": "57e2aa11-a468-4151-b85b-682e8e477946",
+    "name": "Dell XPS 15",
+    "brand": [
+      "Dell"
+    ],
+    "category": "laptop",
+    "use_case": [
+      "work",
+      "content-creation",
+      "professional"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "Thunderbolt",
+      "USB-A"
+    ],
+    "battery_life": "good",
+    "portability": "portable",
+    "tags": [
+      "dell",
+      "oled",
+      "professional",
+      "video-editing",
+      "4k"
+    ],
+    "avg_outcome_score": 0.65,
+    "total_visits": 3,
+    "trust_citations": 53,
+    "active": true,
+    "created_at": "2025-06-02T23:48:06.183635",
+    "updated_at": "2026-04-04T23:48:06.183635"
+  },
+  {
+    "id": "f6342599-38ba-4b61-a489-62466afce879",
+    "name": "Lenovo ThinkPad E14",
+    "brand": [
+      "Lenovo"
+    ],
+    "category": "laptop",
+    "use_case": [
+      "work",
+      "home-office",
+      "student"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "USB-C",
+      "USB-A",
+      "HDMI"
+    ],
+    "battery_life": "good",
+    "portability": "portable",
+    "tags": [
+      "lenovo",
+      "thinkpad",
+      "business",
+      "keyboard",
+      "durable"
+    ],
+    "avg_outcome_score": 0.79,
+    "total_visits": 24,
+    "trust_citations": 22,
+    "active": true,
+    "created_at": "2026-01-08T23:48:06.183635",
+    "updated_at": "2026-04-25T23:48:06.183635"
+  },
+  {
+    "id": "92eff641-6bfd-476d-8241-fcc17a1c7a60",
+    "name": "Asus ROG Zephyrus G14",
+    "brand": [
+      "Asus"
+    ],
+    "category": "laptop",
+    "use_case": [
+      "gaming",
+      "content-creation"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "USB-C",
+      "USB-A",
+      "HDMI"
+    ],
+    "battery_life": "good",
+    "portability": "portable",
+    "tags": [
+      "asus",
+      "rog",
+      "gaming",
+      "ryzen",
+      "amd",
+      "144hz"
+    ],
+    "avg_outcome_score": 0.89,
+    "total_visits": 24,
+    "trust_citations": 11,
+    "active": true,
+    "created_at": "2025-12-10T23:48:06.183635",
+    "updated_at": "2026-04-27T23:48:06.183635"
+  },
+  {
+    "id": "bcb425ea-c993-408e-899a-cf18ed15d96f",
+    "name": "HP Pavilion 15",
+    "brand": [
+      "HP"
+    ],
+    "category": "laptop",
+    "use_case": [
+      "student",
+      "casual-use",
+      "home-office"
+    ],
+    "price_range": "budget",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "USB-C",
+      "USB-A",
+      "HDMI"
+    ],
+    "battery_life": "average",
+    "portability": "portable",
+    "tags": [
+      "hp",
+      "budget",
+      "student",
+      "everyday",
+      "affordable"
+    ],
+    "avg_outcome_score": 0.58,
+    "total_visits": 25,
+    "trust_citations": 43,
+    "active": true,
+    "created_at": "2025-09-17T23:48:06.183635",
+    "updated_at": "2026-04-21T23:48:06.183635"
+  },
+  {
+    "id": "8952c5cc-e8a5-4233-9874-5b34c595ed9b",
+    "name": "Sony WH-1000XM5",
+    "brand": [
+      "Sony"
+    ],
+    "category": "headphones",
+    "use_case": [
+      "travel",
+      "work",
+      "casual-use"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "USB-C",
+      "3.5mm"
+    ],
+    "battery_life": "excellent",
+    "portability": "highly-portable",
+    "tags": [
+      "sony",
+      "anc",
+      "noise-cancelling",
+      "wireless",
+      "premium"
+    ],
+    "avg_outcome_score": 0.81,
+    "total_visits": 37,
+    "trust_citations": 12,
+    "active": true,
+    "created_at": "2026-03-08T23:48:06.183635",
+    "updated_at": "2026-03-31T23:48:06.183635"
+  },
+  {
+    "id": "16c7fdda-5e4b-41ee-8783-c94ef2b12f27",
+    "name": "Bose QuietComfort 45",
+    "brand": [
+      "Bose"
+    ],
+    "category": "headphones",
+    "use_case": [
+      "travel",
+      "work",
+      "casual-use"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "USB-C",
+      "3.5mm"
+    ],
+    "battery_life": "excellent",
+    "portability": "highly-portable",
+    "tags": [
+      "bose",
+      "anc",
+      "comfortable",
+      "premium",
+      "wireless"
+    ],
+    "avg_outcome_score": 0.58,
+    "total_visits": 21,
+    "trust_citations": 58,
+    "active": true,
+    "created_at": "2025-09-18T23:48:06.183635",
+    "updated_at": "2026-04-09T23:48:06.183635"
+  },
+  {
+    "id": "10f4eb2c-28c9-49ca-9bcd-181aeba68347",
+    "name": "Jabra Evolve2 65",
+    "brand": [
+      "Jabra"
+    ],
+    "category": "headphones",
+    "use_case": [
+      "work",
+      "home-office",
+      "professional"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "USB-A"
+    ],
+    "battery_life": "excellent",
+    "portability": "portable",
+    "tags": [
+      "jabra",
+      "work",
+      "calls",
+      "professional",
+      "wireless"
+    ],
+    "avg_outcome_score": 0.86,
+    "total_visits": 26,
+    "trust_citations": 41,
+    "active": true,
+    "created_at": "2025-05-18T23:48:06.183635",
+    "updated_at": "2026-04-23T23:48:06.183635"
+  },
+  {
+    "id": "c814b685-af5c-4dc4-a120-65bc71980dbe",
+    "name": "Sennheiser HD 560S",
+    "brand": [
+      "Sennheiser"
+    ],
+    "category": "headphones",
+    "use_case": [
+      "content-creation",
+      "casual-use",
+      "professional"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "3.5mm",
+      "6.35mm"
+    ],
+    "battery_life": "na",
+    "portability": "portable",
+    "tags": [
+      "sennheiser",
+      "audiophile",
+      "open-back",
+      "studio",
+      "wired"
+    ],
+    "avg_outcome_score": 0.57,
+    "total_visits": 17,
+    "trust_citations": 54,
+    "active": true,
+    "created_at": "2025-04-04T23:48:06.183635",
+    "updated_at": "2026-04-20T23:48:06.183635"
+  },
+  {
+    "id": "f55b46e4-c7f4-46ab-a742-79ab7e24e075",
+    "name": "JBL Tune 770NC",
+    "brand": [
+      "JBL"
+    ],
+    "category": "headphones",
+    "use_case": [
+      "casual-use",
+      "fitness",
+      "travel"
+    ],
+    "price_range": "budget",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "USB-C"
+    ],
+    "battery_life": "excellent",
+    "portability": "highly-portable",
+    "tags": [
+      "jbl",
+      "budget",
+      "anc",
+      "wireless",
+      "affordable"
+    ],
+    "avg_outcome_score": 0.85,
+    "total_visits": 9,
+    "trust_citations": 29,
+    "active": true,
+    "created_at": "2026-02-18T23:48:06.183635",
+    "updated_at": "2026-04-21T23:48:06.183635"
+  },
+  {
+    "id": "24fbc53c-5648-4de3-9390-12cfa827f4bb",
+    "name": "Apple iPad Air M2",
+    "brand": [
+      "Apple"
+    ],
+    "category": "tablet",
+    "use_case": [
+      "casual-use",
+      "content-creation",
+      "student"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "USB-C"
+    ],
+    "battery_life": "excellent",
+    "portability": "highly-portable",
+    "tags": [
+      "apple",
+      "ipad",
+      "creative",
+      "display",
+      "apple-pencil"
+    ],
+    "avg_outcome_score": 0.77,
+    "total_visits": 26,
+    "trust_citations": 15,
+    "active": true,
+    "created_at": "2025-08-10T23:48:06.183635",
+    "updated_at": "2026-04-18T23:48:06.183635"
+  },
+  {
+    "id": "ccbd8581-ef7d-4950-b7eb-53eb5b864ffc",
+    "name": "Samsung Galaxy Tab S9",
+    "brand": [
+      "Samsung"
+    ],
+    "category": "tablet",
+    "use_case": [
+      "casual-use",
+      "content-creation",
+      "student"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "WiFi",
+      "Bluetooth",
+      "USB-C"
+    ],
+    "battery_life": "excellent",
+    "portability": "highly-portable",
+    "tags": [
+      "samsung",
+      "amoled",
+      "android",
+      "s-pen",
+      "tablet"
+    ],
+    "avg_outcome_score": 0.62,
+    "total_visits": 20,
+    "trust_citations": 49,
+    "active": true,
+    "created_at": "2025-09-30T23:48:06.183635",
+    "updated_at": "2026-03-31T23:48:06.183635"
+  },
+  {
+    "id": "42f7db18-9e0c-4c10-aa0a-e14982fb78ac",
+    "name": "Apple Watch Series 9",
+    "brand": [
+      "Apple"
+    ],
+    "category": "smartwatch",
+    "use_case": [
+      "fitness",
+      "casual-use",
+      "professional"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "WiFi",
+      "GPS"
+    ],
+    "battery_life": "good",
+    "portability": "highly-portable",
+    "tags": [
+      "apple",
+      "health",
+      "fitness",
+      "ios",
+      "waterproof"
+    ],
+    "avg_outcome_score": 0.78,
+    "total_visits": 13,
+    "trust_citations": 39,
+    "active": true,
+    "created_at": "2025-04-15T23:48:06.183635",
+    "updated_at": "2026-04-06T23:48:06.183635"
+  },
+  {
+    "id": "447761cf-48ec-451f-bca4-75c65fa11c84",
+    "name": "Samsung Galaxy Watch 6",
+    "brand": [
+      "Samsung"
+    ],
+    "category": "smartwatch",
+    "use_case": [
+      "fitness",
+      "casual-use"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "WiFi",
+      "GPS"
+    ],
+    "battery_life": "good",
+    "portability": "highly-portable",
+    "tags": [
+      "samsung",
+      "android",
+      "health",
+      "fitness",
+      "wear-os"
+    ],
+    "avg_outcome_score": 0.61,
+    "total_visits": 27,
+    "trust_citations": 22,
+    "active": true,
+    "created_at": "2025-11-25T23:48:06.183635",
+    "updated_at": "2026-03-31T23:48:06.183635"
+  },
+  {
+    "id": "bdf0895f-b7d9-42a5-95de-6002864dd960",
+    "name": "Bose SoundLink Flex",
+    "brand": [
+      "Bose"
+    ],
+    "category": "speaker",
+    "use_case": [
+      "travel",
+      "casual-use",
+      "fitness"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "USB-C"
+    ],
+    "battery_life": "excellent",
+    "portability": "highly-portable",
+    "tags": [
+      "bose",
+      "waterproof",
+      "portable",
+      "outdoor",
+      "rugged"
+    ],
+    "avg_outcome_score": 0.79,
+    "total_visits": 17,
+    "trust_citations": 48,
+    "active": true,
+    "created_at": "2025-05-07T23:48:06.183635",
+    "updated_at": "2026-04-19T23:48:06.183635"
+  },
+  {
+    "id": "a3da6e5a-dabb-4aa5-95b1-e6f74722cd16",
+    "name": "Sony SRS-XB33",
+    "brand": [
+      "Sony"
+    ],
+    "category": "speaker",
+    "use_case": [
+      "casual-use",
+      "fitness",
+      "travel"
+    ],
+    "price_range": "budget",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "USB-C",
+      "3.5mm"
+    ],
+    "battery_life": "excellent",
+    "portability": "highly-portable",
+    "tags": [
+      "sony",
+      "bass",
+      "waterproof",
+      "portable",
+      "party"
+    ],
+    "avg_outcome_score": 0.63,
+    "total_visits": 5,
+    "trust_citations": 56,
+    "active": true,
+    "created_at": "2026-03-02T23:48:06.183635",
+    "updated_at": "2026-04-19T23:48:06.183635"
+  },
+  {
+    "id": "6c2f7fbc-de88-4160-9500-282b28a1dea8",
+    "name": "JBL Charge 5",
+    "brand": [
+      "JBL"
+    ],
+    "category": "speaker",
+    "use_case": [
+      "casual-use",
+      "travel",
+      "fitness"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "USB-C"
+    ],
+    "battery_life": "excellent",
+    "portability": "highly-portable",
+    "tags": [
+      "jbl",
+      "charge",
+      "powerbank",
+      "waterproof",
+      "portable"
+    ],
+    "avg_outcome_score": 0.64,
+    "total_visits": 16,
+    "trust_citations": 41,
+    "active": true,
+    "created_at": "2025-09-06T23:48:06.183635",
+    "updated_at": "2026-04-01T23:48:06.183635"
+  },
+  {
+    "id": "e7f0cbc8-6ef0-4454-ae31-ee94f281fb23",
+    "name": "LG UltraFine 27UK850",
+    "brand": [
+      "LG"
+    ],
+    "category": "monitor",
+    "use_case": [
+      "work",
+      "content-creation",
+      "home-office"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "USB-C",
+      "HDMI",
+      "DisplayPort"
+    ],
+    "battery_life": "na",
+    "portability": "desktop",
+    "tags": [
+      "lg",
+      "4k",
+      "usb-c",
+      "color-accurate",
+      "ips"
+    ],
+    "avg_outcome_score": 0.66,
+    "total_visits": 34,
+    "trust_citations": 30,
+    "active": true,
+    "created_at": "2025-03-28T23:48:06.183635",
+    "updated_at": "2026-04-01T23:48:06.183635"
+  },
+  {
+    "id": "cd73f1e1-b93c-4fa3-902a-7cdf77a43f7b",
+    "name": "Dell UltraSharp 27",
+    "brand": [
+      "Dell"
+    ],
+    "category": "monitor",
+    "use_case": [
+      "work",
+      "professional",
+      "home-office"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "USB-C",
+      "HDMI",
+      "DisplayPort",
+      "USB-A"
+    ],
+    "battery_life": "na",
+    "portability": "desktop",
+    "tags": [
+      "dell",
+      "ips",
+      "4k",
+      "professional",
+      "color-accurate"
+    ],
+    "avg_outcome_score": 0.71,
+    "total_visits": 19,
+    "trust_citations": 13,
+    "active": true,
+    "created_at": "2025-05-05T23:48:06.183635",
+    "updated_at": "2026-04-22T23:48:06.183635"
+  },
+  {
+    "id": "a0be9109-9d2f-4150-ba3a-28fb50e91b58",
+    "name": "Asus TUF Gaming VG279QM",
+    "brand": [
+      "Asus"
+    ],
+    "category": "monitor",
+    "use_case": [
+      "gaming"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "HDMI",
+      "DisplayPort"
+    ],
+    "battery_life": "na",
+    "portability": "desktop",
+    "tags": [
+      "asus",
+      "280hz",
+      "gaming",
+      "fast",
+      "ips"
+    ],
+    "avg_outcome_score": 0.74,
+    "total_visits": 40,
+    "trust_citations": 32,
+    "active": true,
+    "created_at": "2025-06-16T23:48:06.183635",
+    "updated_at": "2026-04-01T23:48:06.183635"
+  },
+  {
+    "id": "9a7430a9-2114-498d-91da-5099e33df940",
+    "name": "Logitech MX Keys",
+    "brand": [
+      "Logitech"
+    ],
+    "category": "keyboard",
+    "use_case": [
+      "work",
+      "home-office",
+      "professional"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "USB-A"
+    ],
+    "battery_life": "excellent",
+    "portability": "portable",
+    "tags": [
+      "logitech",
+      "wireless",
+      "backlit",
+      "typing",
+      "multi-device"
+    ],
+    "avg_outcome_score": 0.69,
+    "total_visits": 17,
+    "trust_citations": 13,
+    "active": true,
+    "created_at": "2025-06-05T23:48:06.183635",
+    "updated_at": "2026-04-13T23:48:06.183635"
+  },
+  {
+    "id": "7e6b4b92-ba1b-407e-a57f-3bd73d62b907",
+    "name": "Apple Magic Keyboard",
+    "brand": [
+      "Apple"
+    ],
+    "category": "keyboard",
+    "use_case": [
+      "work",
+      "home-office",
+      "casual-use"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "Bluetooth",
+      "USB-C"
+    ],
+    "battery_life": "excellent",
+    "portability": "portable",
+    "tags": [
+      "apple",
+      "wireless",
+      "slim",
+      "mac",
+      "minimalist"
+    ],
+    "avg_outcome_score": 0.58,
+    "total_visits": 6,
+    "trust_citations": 60,
+    "active": true,
+    "created_at": "2025-07-21T23:48:06.183635",
+    "updated_at": "2026-04-26T23:48:06.183635"
+  },
+  {
+    "id": "d6b034b7-730d-4ca4-8f41-9ce52d6699d3",
+    "name": "LG C3 OLED 65\"",
+    "brand": [
+      "LG"
+    ],
+    "category": "tv",
+    "use_case": [
+      "casual-use",
+      "gaming",
+      "home-office"
+    ],
+    "price_range": "premium",
+    "condition": "new",
+    "connectivity": [
+      "HDMI",
+      "WiFi",
+      "Bluetooth",
+      "USB"
+    ],
+    "battery_life": "na",
+    "portability": "desktop",
+    "tags": [
+      "lg",
+      "oled",
+      "4k",
+      "dolby",
+      "gaming",
+      "premium"
+    ],
+    "avg_outcome_score": 0.77,
+    "total_visits": 30,
+    "trust_citations": 43,
+    "active": true,
+    "created_at": "2026-01-11T23:48:06.183635",
+    "updated_at": "2026-04-27T23:48:06.183635"
+  },
+  {
+    "id": "8b77a523-a320-449c-a002-0ecad64830c9",
+    "name": "Samsung Neo QLED 55\"",
+    "brand": [
+      "Samsung"
+    ],
+    "category": "tv",
+    "use_case": [
+      "casual-use",
+      "gaming"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "HDMI",
+      "WiFi",
+      "Bluetooth",
+      "USB"
+    ],
+    "battery_life": "na",
+    "portability": "desktop",
+    "tags": [
+      "samsung",
+      "qled",
+      "4k",
+      "hdr",
+      "smart-tv"
+    ],
+    "avg_outcome_score": 0.68,
+    "total_visits": 32,
+    "trust_citations": 38,
+    "active": true,
+    "created_at": "2025-09-14T23:48:06.183635",
+    "updated_at": "2026-04-21T23:48:06.183635"
+  },
+  {
+    "id": "28afbb9a-96df-4a22-a550-9fe5f0bdd4ee",
+    "name": "Sony Alpha ZV-E10",
+    "brand": [
+      "Sony"
+    ],
+    "category": "camera",
+    "use_case": [
+      "content-creation",
+      "casual-use",
+      "professional"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "USB-C",
+      "WiFi",
+      "Bluetooth"
+    ],
+    "battery_life": "average",
+    "portability": "portable",
+    "tags": [
+      "sony",
+      "mirrorless",
+      "vlog",
+      "content-creator",
+      "aps-c"
+    ],
+    "avg_outcome_score": 0.85,
+    "total_visits": 3,
+    "trust_citations": 48,
+    "active": true,
+    "created_at": "2025-06-20T23:48:06.183635",
+    "updated_at": "2026-04-06T23:48:06.183635"
+  },
+  {
+    "id": "619cffc0-b62e-44c0-a49d-b69ca523ed9c",
+    "name": "Canon EOS R50",
+    "brand": [
+      "Canon"
+    ],
+    "category": "camera",
+    "use_case": [
+      "casual-use",
+      "content-creation",
+      "travel"
+    ],
+    "price_range": "mid",
+    "condition": "new",
+    "connectivity": [
+      "USB-C",
+      "WiFi",
+      "Bluetooth"
+    ],
+    "battery_life": "good",
+    "portability": "portable",
+    "tags": [
+      "canon",
+      "mirrorless",
+      "beginner",
+      "video",
+      "aps-c"
+    ],
+    "avg_outcome_score": 0.79,
+    "total_visits": 37,
+    "trust_citations": 53,
+    "active": true,
+    "created_at": "2026-01-31T23:48:06.183635",
+    "updated_at": "2026-04-21T23:48:06.183635"
+  }
+]

@@ -85,6 +85,7 @@ class DomainConfig:
     trust_received_column: str        # column in users table, e.g. 'trust_received_restaurants'
     select_columns:        list[str]  # columns to SELECT from source_table
     fields:                list[FieldDefinition]
+    max_trust_hops:        int = 3    # per-domain trust traversal depth cap
 
     # ── field accessors ───────────────────────────────────────────────────────
 
