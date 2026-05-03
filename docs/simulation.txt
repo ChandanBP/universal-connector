@@ -1,0 +1,301 @@
+Step 0 — Intent parsing (before match() is called)        
+                                                                                               
+  LLM parses the query into:
+                                                                                               
+  IntentObject(                                             
+      raw_query = "I want a quiet place for a business dinner...",                             
+      domain    = "restaurants",                                                               
+      ambiguity_score = 0.1,   # specific query → low ambiguity
+      fields = {                                                                               
+          "cuisine":     IntentField(value=["North Indian"], constraint="hard"),               
+          "area":        IntentField(value="Indiranagar",    constraint="hard"),               
+          "occasion":    IntentField(value=["business"],     constraint="soft"),               
+          "noise_level": IntentField(value="quiet",          constraint="soft"),
+          "parking":     IntentField(value=True,             constraint="hard"),               
+          "vibe":        IntentField(value=[],               constraint="none"),
+          "price_range": IntentField(value=None,             constraint="none"),               
+      }                                                                                        
+  )                                                                                            
+                                                                                               
+  ---                                                       
+  Step 1 — match() enters: Trust graph density → α/β
+                                                                                               
+  # matcher.py:694
+  density = get_trust_graph_density(cur, arjun_id, 'restaurants')                              
+  # Arjun has 6 active restaurant trust edges                                                  
+  # → density = min(1.0, 6/10.0) = 0.60                                                        
+                                                                                               
+  alpha, beta = compute_alpha_beta(0.60)                                                       
+  # 0.3 ≤ 0.60 < 0.7  → alpha = 0.70, beta = 0.30                                              
+                                                                                               
+  Why this matters: Arjun has a moderately dense trust graph — the engine trusts intent        
+  slightly less and trusts the graph slightly more than cold start (α=0.85). The richer your   
+  network, the more weight shifts to trust.                                                    
+                                                            
+  ---
+  Step 2 — load_user_taste_profile() (matcher.py:186)
+                                                                                               
+  Arjun has 8 past positive interactions. Scanning their intent_parsed:
+                                                                                               
+  Interaction 1: cuisine=["North Indian"]/hard, area="Indiranagar"/hard,                       
+  occasion=["business"]/soft                                                                   
+  Interaction 2: cuisine=["South Indian"]/hard, area="Koramangala"/hard                        
+  Interaction 3: cuisine=["North Indian"]/hard, area="Indiranagar"/hard,                       
+  occasion=["casual"]/soft                                                                     
+  ... (8 total)
+                                                                                               
+  Field count accumulation (hard=2.0, soft=1.0):                                               
+  
+  cuisine:     appeared 6×hard → 6×2.0 = 12.0                                                  
+  area:        appeared 8×hard → 8×2.0 = 16.0                                                  
+  occasion:    appeared 4×soft → 4×1.0 =  4.0                                                  
+  vibe:        appeared 2×soft → 2×1.0 =  2.0                                                  
+  price_range: appeared 0×     →          0.0                                                  
+  noise_level: appeared 0×     →          0.0                                                  
+  total = 34.0                                                                                 
+                                                                                               
+  50/50 blend with domain defaults, then normalize:                                            
+  
+                  freq    default   blend    normalized                                        
+  cuisine:        0.353   0.20     0.277     0.270                                             
+  area:           0.471   0.10     0.285     0.278                                             
+  occasion:       0.118   0.35     0.234     0.228                                             
+  vibe:           0.059   0.30     0.179     0.175                                             
+  price_range:    0.000   0.05     0.025     0.024                                             
+  noise_level:    0.000   0.05     0.025     0.024                                             
+                                   ─────     ─────                                             
+                                   1.025     1.000                                             
+                                                            
+  Arjun is cuisine-first and location-fixed. His profile pushes cuisine and area weights up,   
+  pulls vibe down. This is his personal scoring lens.       
+                                                                                               
+  ---                                                       
+  Step 3 — filter_candidates() (matcher.py:107)
+                                               
+  Hard constraints → SQL WHERE clauses:
+                                                                                               
+  SELECT id, name, area, cuisine, ...
+  FROM restaurants                                                                             
+  WHERE active = true                                       
+  AND cuisine && ARRAY['North Indian']::text[]   -- array_overlap                              
+  AND area = 'Indiranagar'                       -- exact                                      
+  AND parking = true                             -- boolean
+  LIMIT 100                                                                                    
+                                                            
+  Returns 8 restaurants. We'll trace two:                                                      
+                                                            
+  ┌──────────────┬─────────────────────┬─────────────────────────┬─────────────┬───────────┐   
+  │  Restaurant  │       cuisine       │        occasion         │ noise_level │ avg_score │
+  ├──────────────┼─────────────────────┼─────────────────────────┼─────────────┼───────────┤   
+  │ Spice Garden │ [North Indian,      │ [business, date-night]  │ quiet       │ 0.74      │
+  │              │ Mughlai]            │                         │             │           │
+  ├──────────────┼─────────────────────┼─────────────────────────┼─────────────┼───────────┤   
+  │ Punjabi      │ [North Indian]      │ [casual,                │ loud        │ 0.65      │
+  │ Tadka        │                     │ friends-hangout]        │             │           │   
+  └──────────────┴─────────────────────┴─────────────────────────┴─────────────┴───────────┘
+                                                                                               
+  ---                                                       
+  Step 4 — score_intent() for each candidate (matcher.py:252)
+                                                                                               
+  Only scored fields with non-empty intent values are evaluated: cuisine, area, occasion, 
+  noise_level                                                                                  
+                                                            
+  Spice Garden:                                                                                
+                                                            
+  cuisine:     intent=["North Indian"] ∩ source=["North Indian","Mughlai"]
+               overlap=1/1 → score=1.0   weight=0.270  →  0.270                                
+                                                                                               
+  area:        "Indiranagar" == "Indiranagar"                                                  
+               score=1.0   weight=0.278  →  0.278                                              
+                                                                                               
+  occasion:    intent=["business"]  source=["business","date-night"]                           
+               similarity_map["business"]["business"] = 1.0
+               score=1.0   weight=0.228  →  0.228                                              
+                                                            
+  noise_level: "quiet" == "quiet"                                                              
+               score=1.0   weight=0.024  →  0.024           
+                                                                                               
+  total_score=0.800  total_weight=0.800                                                        
+  intent_score = 0.800/0.800 = 1.000                                                           
+                                                                                               
+  Punjabi Tadka:                                            
+                                                                                               
+  cuisine:     overlap=1/1 → score=1.0   weight=0.270  →  0.270
+                                                                                               
+  area:        score=1.0   weight=0.278  →  0.278
+                                                                                               
+  occasion:    intent=["business"]  source=["casual","friends-hangout"]
+               similarity_map["business"]["casual"] = 0.4, ["friends-hangout"] = 0.0
+               score=0.4   weight=0.228  →  0.091                                              
+  
+  noise_level: "quiet" vs "loud"                                                               
+               mismatch, constraint="soft" → score=0.3      
+               weight=0.024  →  0.007                                                          
+                                                                                               
+  total_score=0.646  total_weight=0.800
+  intent_score = 0.646/0.800 = 0.808                                                           
+                                                            
+  ---
+  Step 5 — find_best_trust_signal() (matcher.py:381)
+                                                                                               
+  For Spice Garden — Layer 1 direct_trust hit:
+                                                                                               
+  -- _DIRECT_TRUST_SQL                                      
+  SELECT te.to_user_id, u.name, te.weight, i.outcome, i.visited_at, i.intent_parsed            
+  FROM trust_edges te                                                                          
+  JOIN users u ON u.id = te.to_user_id
+  JOIN interactions i ON i.user_id = te.to_user_id AND i.restaurant_id = 'spice-garden-id'     
+  WHERE te.from_user_id = 'arjun-id'                                                           
+    AND te.status = 'active' AND te.domain = 'restaurants'
+    AND i.outcome IN ('positive', 'neutral')                                                   
+  ORDER BY te.weight DESC LIMIT 1                           
+                                                                                               
+  Result: Priya visited Spice Garden for a business dinner, outcome=positive                   
+                                                                                               
+  TrustSignal(                                                                                 
+      signal_layer      = 'direct_trust',                   
+      trusted_user_name = 'Priya',                                                             
+      edge_weight       = 0.82,          # Arjun→Priya trust edge weight
+      hops              = 1,                                                                   
+      outcome           = 'positive',                       
+      visited_at        = '2026-03-15',                                                        
+      interaction_intent = {             # what Priya searched for when she went
+          "fields": {                                                                          
+              "cuisine":     {"value": ["North Indian"], "constraint": "hard"},
+              "occasion":    {"value": ["business"],     "constraint": "soft"},                
+              "noise_level": {"value": "quiet",          "constraint": "soft"},                
+          }                                                                                    
+      }                                                                                        
+  )                                                         
+
+  Layer 1 hit → skip Layers 2-5 entirely.                                                      
+  
+  For Punjabi Tadka — Layer 1 miss, Layer 2 network_trust hit:                                 
+                                                            
+  No one in Arjun's direct trust network visited Punjabi Tadka. Recursive CTE fires:           
+                                                            
+  trust_paths traversal:                                                                       
+    Arjun → Priya  (weight=0.82, hops=1)                    
+    Arjun → Kiran  (weight=0.79, hops=1)                                                       
+    Priya → Rahul  (weight=0.75, hops=2)  ← Rahul visited Punjabi Tadka!                       
+                                                                                               
+  path_score = avg_weight × 0.85^(hops-1)                                                      
+             = ((0.82+0.75)/2) × 0.85^1                                                        
+             = 0.785 × 0.85 = 0.667                                                            
+                                                            
+  TrustSignal(                                                                                 
+      signal_layer      = 'network_trust',                  
+      trusted_user_name = 'Rahul',                                                             
+      edge_weight       = 0.667,         # path_score
+      hops              = 2,                                                                   
+      outcome           = 'positive',                       
+      visited_at        = '2026-02-20',                                                        
+      path_count        = 1,
+      interaction_intent = {                                                                   
+          "fields": {                                       
+              "cuisine":  {"value": ["North Indian"], "constraint": "hard"},
+              "occasion": {"value": ["casual"],       "constraint": "soft"},                   
+          }
+      }                                                                                        
+  )                                                         
+                                                                                               
+  ---
+  Step 6 — compute_intent_similarity() (matcher.py:475)                                        
+                                                            
+  Compares Arjun's current intent vs what the trusted person searched for.
+                                                                                               
+  Spice Garden (Priya's past intent vs Arjun's current intent):                                
+                                                                                               
+  Priya searched: occasion=business, noise_level=quiet, cuisine=North Indian                   
+  Arjun wants:    occasion=business, noise_level=quiet, cuisine=North Indian                   
+  
+  cuisine:     1.0 × 0.20 = 0.20                                                               
+  area:        1.0 × 0.10 = 0.10                            
+  occasion:    business vs business → sim=1.0 × 0.35 = 0.35                                    
+  noise_level: quiet vs quiet → 1.0 × 0.05 = 0.05                                              
+                                                                                               
+  similarity = 0.70/0.70 = 1.00   ← perfect context match                                      
+                                                                                               
+  Punjabi Tadka (Rahul's past intent vs Arjun's current intent):                               
+                                                            
+  Rahul searched: occasion=casual, cuisine=North Indian                                        
+  Arjun wants:    occasion=business, noise_level=quiet      
+
+  cuisine:     1.0 × 0.20 = 0.20                                                               
+  area:        1.0 × 0.10 = 0.10
+  occasion:    business vs casual → sim_map=0.4 × 0.35 = 0.14                                  
+  noise_level: Rahul didn't specify → neutral score 0.5 × 0.05 = 0.025                         
+                                                                                               
+  similarity = 0.465/0.70 = 0.664   ← Rahul went casually, Arjun wants business                
+                                                                                               
+  This is the key insight of intent-contextualized trust. Rahul's recommendation is discounted 
+  because the context of his visit doesn't match Arjun's need.
+                                                                                               
+  ---                                                       
+  Step 7 — score_trust_signal() (matcher.py:532)
+                                                
+  Spice Garden (direct_trust, cap=0.95, similarity=1.00):
+                                                                                               
+  edge_component    = 0.82 × 0.50  = 0.410
+  outcome_component = 0.80 × 0.30  = 0.240   (positive outcome)                                
+  recency_days      = 47 days ago                                                              
+  recency_component = (1 - 47/180) × 0.20 = 0.739 × 0.20 = 0.148                               
+                                                                                               
+  raw = 0.410 + 0.240 + 0.148 = 0.798                                                          
+  raw × similarity = 0.798 × 1.00 = 0.798                                                      
+  trust_score = min(0.95, 0.798) = 0.798                                                       
+                                                            
+  Punjabi Tadka (network_trust, cap=0.75, similarity=0.664):                                   
+  
+  edge_component    = 0.667 × 0.50 = 0.334                                                     
+  outcome_component = 0.80  × 0.30 = 0.240                  
+  recency_days      = 70 days ago                                                              
+  recency_component = (1 - 70/180) × 0.20 = 0.611 × 0.20 = 0.122
+                                                                                               
+  raw = 0.334 + 0.240 + 0.122 = 0.696                       
+  raw × similarity = 0.696 × 0.664 = 0.462   ← discounted for context mismatch                 
+  trust_score = min(0.75, 0.462) = 0.462                                                       
+                                                                                               
+  ---                                                                                          
+  Step 8 — compute_displacement_score() (matcher.py:603)                                       
+                                                            
+  α=0.70, β=0.30
+                                                                                               
+  Spice Garden:   (1.000 × 0.70) + (0.798 × 0.30) = 0.700 + 0.239 = 0.939                      
+  Punjabi Tadka:  (0.808 × 0.70) + (0.462 × 0.30) = 0.566 + 0.139 = 0.705                      
+                                                                                               
+  ---                                                       
+  Final ranking                                                                                
+                                                                                               
+  Rank  Restaurant       Disp   Intent  Trust   Layer           Why
+  ────  ─────────────    ─────  ──────  ─────   ─────────────   ───────────────────────────────
+   #1   Spice Garden     0.939  1.000   0.798   direct_trust    Priya (trust=0.82) went for    
+                                                                 a business dinner, same       
+  context                                                                                      
+   #2   Punjabi Tadka    0.705  0.808   0.462   network_trust   Rahul (2 hops) went casually — 
+                                                                 context mismatch discounts    
+  trust                                                                                        
+                                                                                               
+  ---                                                                                          
+  What this example demonstrates                            
+                                
+  ┌─────────────────────────────────┬──────────────────────────────────────────────────────┐
+  │             Concept             │                  Where it shows up                   │   
+  ├─────────────────────────────────┼──────────────────────────────────────────────────────┤
+  │ Hard constraints filter, soft   │ Cuisine/area/parking eliminate; occasion/noise_level │   
+  │ constraints rank                │  score                                               │
+  ├─────────────────────────────────┼──────────────────────────────────────────────────────┤   
+  │ Personalized weights change     │ Arjun's cuisine-obsessed history pushes cuisine      │
+  │ ranking                         │ weight from 0.20 → 0.27                              │   
+  ├─────────────────────────────────┼──────────────────────────────────────────────────────┤
+  │ α/β shift with graph density    │ 6 edges → medium density → α=0.70 not 0.85           │   
+  ├─────────────────────────────────┼──────────────────────────────────────────────────────┤   
+  │ Intent similarity discounts     │ Punjabi Tadka trust 0.696 → 0.462 because Rahul went │
+  │ mismatched context              │  casually                                            │   
+  ├─────────────────────────────────┼──────────────────────────────────────────────────────┤
+  │ Layer caps enforce trust        │ direct_trust can reach 0.95, network_trust capped at │   
+  │ hierarchy                       │  0.75                                                │   
+  ├─────────────────────────────────┼──────────────────────────────────────────────────────┤
+  │ 5-layer fallback never fails    │ If Arjun had zero trust edges, crowd_wisdom or       │   
+  │                                 │ intent_only would have fired                         │   
+  └─────────────────────────────────┴──────────────────────────────────────────────────────┘

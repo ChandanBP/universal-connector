@@ -292,24 +292,29 @@ def score_intent(
 # ── STEP 3: LAYERED TRUST SIGNAL ─────────────────────────────────────────────
 # Tried in order. Always returns a TrustSignal — never None.
 
+# ── HOT PATH: trust_edges + source_trust only ────────────────────────────────
+# interactions is NOT queried in any of these — it is bookkeeping only.
+# source_trust.last_intent_parsed carries the visit context for intent similarity.
+# source_trust.last_outcome carries the outcome signal.
+
 _DIRECT_TRUST_SQL = """
     SELECT
         te.to_user_id,
-        u.name          AS trusted_user_name,
-        te.weight       AS edge_weight,
-        i.outcome,
-        i.visited_at,
-        i.intent_parsed
+        u.name                  AS trusted_user_name,
+        te.weight               AS edge_weight,
+        st.last_outcome,
+        st.last_visited_at,
+        st.last_intent_parsed
     FROM trust_edges te
-    JOIN users u ON u.id = te.to_user_id
-    JOIN interactions i
-        ON  i.user_id = te.to_user_id
-        AND i.{source_fk} = %s
+    JOIN users u         ON u.id = te.to_user_id
+    JOIN source_trust st ON st.user_id   = te.to_user_id
+                        AND st.{source_fk} = %s
+                        AND st.domain    = %s
     WHERE te.from_user_id = %s
       AND te.status       = 'active'
       AND te.domain       = %s
-      AND i.outcome IN ('positive', 'neutral')
-    ORDER BY te.weight DESC, i.visited_at DESC
+      AND st.positive_outcome_count > 0
+    ORDER BY te.weight DESC, st.last_visited_at DESC
     LIMIT 1
 """
 
@@ -344,17 +349,17 @@ _NETWORK_TRUST_SQL = """
         u.name,
         ROUND(
             (tp.avg_weight * POWER(0.85::float, tp.hops - 1))::numeric, 3
-        )                   AS path_score,
+        )                       AS path_score,
         tp.hops,
-        i.outcome,
-        i.visited_at,
-        i.intent_parsed
+        st.last_outcome,
+        st.last_visited_at,
+        st.last_intent_parsed
     FROM trust_paths tp
-    JOIN users u ON u.id = tp.reached_user
-    JOIN interactions i
-        ON  i.user_id = tp.reached_user
-        AND i.{source_fk} = %s
-    WHERE i.outcome IN ('positive', 'neutral')
+    JOIN users u         ON u.id = tp.reached_user
+    JOIN source_trust st ON st.user_id   = tp.reached_user
+                        AND st.{source_fk} = %s
+                        AND st.domain    = %s
+    WHERE st.positive_outcome_count > 0
       AND tp.hops >= 2
     ORDER BY path_score DESC
     LIMIT 3
@@ -364,16 +369,16 @@ _DOMAIN_EXPERT_SQL = """
     SELECT
         u.id,
         u.name,
-        i.outcome,
-        i.visited_at
+        st.last_outcome,
+        st.last_visited_at
     FROM users u
-    JOIN interactions i
-        ON  i.user_id = u.id
-        AND i.{source_fk} = %s
+    JOIN source_trust st ON st.user_id   = u.id
+                        AND st.{source_fk} = %s
+                        AND st.domain    = %s
     WHERE u.id != %s
       AND u.{trust_col} >= 0.6
-      AND i.outcome IN ('positive', 'neutral')
-    ORDER BY u.{trust_col} DESC, i.visited_at DESC
+      AND st.positive_outcome_count > 0
+    ORDER BY u.{trust_col} DESC, st.last_visited_at DESC
     LIMIT 1
 """
 
@@ -394,8 +399,11 @@ def find_best_trust_signal(
     col = domain_config.trust_received_column
 
     # ── Layer 1: Direct trust (1 hop) ────────────────────────────────────────
-    cur.execute(_DIRECT_TRUST_SQL.format(source_fk=fk),
-                (source_id, user_id, domain_config.domain))
+    # Joins trust_edges + source_trust only — interactions not touched.
+    cur.execute(
+        _DIRECT_TRUST_SQL.format(source_fk=fk),
+        (source_id, domain_config.domain, user_id, domain_config.domain),
+    )
     row = cur.fetchone()
     if row:
         return TrustSignal(
@@ -406,15 +414,16 @@ def find_best_trust_signal(
             hops=1,
             outcome=row[3],
             visited_at=str(row[4]) if row[4] else None,
-            interaction_intent=row[5],  # dict or None
+            interaction_intent=row[5],  # source_trust.last_intent_parsed
         )
 
     # ── Layer 2: Multi-hop network traversal ─────────────────────────────────
+    # Recursive CTE traverses trust_edges; joins source_trust at leaf nodes.
     cur.execute(
         _NETWORK_TRUST_SQL.format(source_fk=fk),
         (user_id, domain_config.domain,
          domain_config.max_trust_hops, domain_config.domain,
-         source_id),
+         source_id, domain_config.domain),
     )
     rows = cur.fetchall()
     if rows:
@@ -428,12 +437,14 @@ def find_best_trust_signal(
             outcome=best[4],
             visited_at=str(best[5]) if best[5] else None,
             path_count=len(rows),
-            interaction_intent=best[6],
+            interaction_intent=best[6],  # source_trust.last_intent_parsed
         )
 
     # ── Layer 3: Domain expert (outside personal network) ────────────────────
-    cur.execute(_DOMAIN_EXPERT_SQL.format(source_fk=fk, trust_col=col),
-                (source_id, user_id))
+    cur.execute(
+        _DOMAIN_EXPERT_SQL.format(source_fk=fk, trust_col=col),
+        (source_id, domain_config.domain, user_id),
+    )
     row = cur.fetchone()
     if row:
         return TrustSignal(

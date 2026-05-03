@@ -331,17 +331,19 @@ def record_outcome(req: OutcomeRequest, conn=Depends(get_db)):
     cur = conn.cursor()
 
     cur.execute(f"""
-        SELECT id, recommended_by, trust_path_weight, trust_hops, intent_query
+        SELECT id, recommended_by, trust_path_weight, trust_hops, intent_query, intent_parsed
         FROM interactions
         WHERE user_id = %s AND {fk} = %s AND outcome IS NULL
         ORDER BY created_at DESC
         LIMIT 1
     """, (req.user_id, req.source_id))
     row = cur.fetchone()
-    pending_id, recommended_by, trust_path_weight, trust_hops, stored_query = (
-        (row[0], row[1], row[2], row[3], row[4]) if row
-        else (None, None, None, 0, req.intent_query)
-    )
+    if row:
+        pending_id, recommended_by, trust_path_weight, trust_hops, stored_query, intent_parsed_data = row
+    else:
+        pending_id, recommended_by, trust_path_weight, trust_hops, stored_query, intent_parsed_data = (
+            None, None, None, 0, req.intent_query, None
+        )
 
     outcome_score_map = {
         "positive":  0.8,
@@ -378,20 +380,73 @@ def record_outcome(req: OutcomeRequest, conn=Depends(get_db)):
             req.notes, now, now,
         ))
 
+    # ── source_trust — aggregated user→source visit history ──────────────────
+    # last_intent_parsed and last_outcome are written here so the matching
+    # engine can read them from source_trust without touching interactions.
+    is_positive = req.outcome == "positive"
+    is_negative = req.outcome in ("negative", "regret")
+    cur.execute(f"""
+        INSERT INTO source_trust
+          (user_id, {fk}, domain, weight,
+           visit_count, positive_outcome_count, negative_outcome_count,
+           last_visited_at, last_outcome, last_intent_parsed, status)
+        VALUES (%s, %s, %s, %s, 1, %s, %s, %s, %s, %s, 'active')
+        ON CONFLICT (user_id, {fk}) WHERE {fk} IS NOT NULL
+        DO UPDATE SET
+            visit_count            = source_trust.visit_count + 1,
+            positive_outcome_count = source_trust.positive_outcome_count + %s,
+            negative_outcome_count = source_trust.negative_outcome_count + %s,
+            last_visited_at        = %s,
+            last_outcome           = %s,
+            last_intent_parsed     = COALESCE(%s, source_trust.last_intent_parsed),
+            weight = CASE
+                WHEN %s THEN LEAST(1.0,   source_trust.weight + 0.05)
+                WHEN %s THEN GREATEST(0.0, source_trust.weight - 0.03)
+                ELSE source_trust.weight
+            END,
+            updated_at = %s
+    """, (
+        req.user_id, req.source_id, req.domain,
+        0.6 if is_positive else 0.2,
+        1 if is_positive else 0,
+        1 if is_negative else 0,
+        now, req.outcome,
+        Json(intent_parsed_data) if intent_parsed_data else None,
+        # DO UPDATE params:
+        1 if is_positive else 0,
+        1 if is_negative else 0,
+        now, req.outcome,
+        Json(intent_parsed_data) if intent_parsed_data else None,
+        is_positive, is_negative,
+        now,
+    ))
+
+    # ── trust_edges — user→user trust graph ──────────────────────────────────
+    # Create the edge if this is the first recommendation from this person.
+    # Then reinforce or weaken based on outcome.
     trust_updated = False
     if recommended_by:
-        if req.outcome == "positive":
+        # Ensure edge exists — creates it with a conservative initial weight
+        # if this is the first time this person's recommendation was followed.
+        cur.execute("""
+            INSERT INTO trust_edges
+              (from_user_id, to_user_id, domain, weight, basis,
+               implicit_count, last_reinforced_at, decay_rate, status)
+            VALUES (%s, %s, %s, 0.30, 'implicit', 0, %s, 0.01, 'active')
+            ON CONFLICT (from_user_id, to_user_id, domain) DO NOTHING
+        """, (req.user_id, recommended_by, req.domain, now))
+
+        if is_positive:
             cur.execute("""
                 UPDATE trust_edges
                 SET weight             = LEAST(1.0, weight + 0.03),
                     implicit_count     = implicit_count + 1,
                     last_reinforced_at = %s,
-                    status             = 'active',
                     updated_at         = %s
                 WHERE from_user_id = %s AND to_user_id = %s AND domain = %s
             """, (now, now, req.user_id, recommended_by, req.domain))
 
-        elif req.outcome in ("negative", "regret"):
+        elif is_negative:
             cur.execute("""
                 UPDATE trust_edges
                 SET weight         = GREATEST(0.0, weight - 0.02),
@@ -412,37 +467,6 @@ def record_outcome(req: OutcomeRequest, conn=Depends(get_db)):
         """, (now, req.user_id, recommended_by, req.domain))
 
         trust_updated = True
-
-    # Source trust
-    col = domain_config.trust_received_column
-    cur.execute(f"""
-        INSERT INTO source_trust
-          (user_id, {fk}, domain, weight,
-           visit_count, positive_outcome_count, negative_outcome_count,
-           last_visited_at, status)
-        VALUES (%s, %s, %s, %s, 1, %s, %s, %s, 'active')
-        ON CONFLICT (user_id, {fk})
-        DO UPDATE SET
-            visit_count            = source_trust.visit_count + 1,
-            positive_outcome_count = source_trust.positive_outcome_count + %s,
-            negative_outcome_count = source_trust.negative_outcome_count + %s,
-            last_visited_at        = %s,
-            weight = CASE
-                WHEN EXCLUDED.positive_outcome_count > 0
-                THEN LEAST(1.0, source_trust.weight + 0.05)
-                ELSE GREATEST(0.0, source_trust.weight - 0.03)
-            END,
-            updated_at = %s
-    """, (
-        req.user_id, req.source_id, req.domain,
-        0.6 if req.outcome == "positive" else 0.2,
-        1 if req.outcome == "positive" else 0,
-        1 if req.outcome in ("negative", "regret") else 0,
-        now,
-        1 if req.outcome == "positive" else 0,
-        1 if req.outcome in ("negative", "regret") else 0,
-        now, now,
-    ))
 
     conn.commit()
     cur.close()
