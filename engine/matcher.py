@@ -2,26 +2,31 @@
 UNIVERSAL CONNECTOR — Matching Engine
 Domain-agnostic: all domain knowledge comes from DomainConfig.
 
-Displacement score = (intent_score × α) + (trust_score × β)
+Displacement score = (intent_score × α) + (trust_score × β) + fit_bonus
   α > β always — intent is the primary signal.
   α/β adjusts dynamically based on trust graph density.
+  fit_bonus = small boost when source explicitly wants this type of user.
 
-Trust signal has five layers, tried in order:
-  1. direct_trust   — 1-hop: someone the user directly trusts has visited
-  2. network_trust  — 2-N hop recursive traversal through real trust edges
-  3. domain_expert  — high trust_received node, not in personal network
-  4. crowd_wisdom   — avg outcome across all users, no personal connection
-  5. intent_only    — no outcome data at all, pure intent match
+Trust signal has SIX layers, tried in order:
+  1. direct_trust    — 1-hop: someone the user directly trusts has visited
+  2. network_trust   — 2-N hop recursive traversal through real trust edges
+  3. community_trust — shared context (village/profession/family) someone visited
+  4. domain_expert   — high trust_received node, not in personal network
+  5. crowd_wisdom    — avg outcome across all users, no personal connection
+  6. intent_only     — no outcome data at all, pure intent match
 
 Granularity additions:
   A. Intent-contextualized trust — trust score is discounted when the
      trusted person's past visit context doesn't match the current intent.
-     (e.g. your friend went for a casual lunch; you need a business dinner)
 
   B. User taste profile — scoring weights are personalized per user from
-     their past positive outcome history. Users who consistently search
-     by vibe get higher vibe weight; cuisine-obsessed users get higher
-     cuisine weight. Falls back to domain defaults with sparse history.
+     their past positive outcome history.
+
+  C. Bidirectional fit — sources declare target_profile (who they're for).
+     A small bonus is applied when the source explicitly wants this type of user.
+
+  D. Ghost sources — offline sources entered by reference. Matched separately
+     and returned as a ghost tier in results.
 
 Usage:
   from engine.domains import get_domain
@@ -45,13 +50,16 @@ from engine.domains.base import DomainConfig, FieldDefinition, IntentObject
 
 # ── SIGNAL LAYERS ─────────────────────────────────────────────────────────────
 # Score caps enforce the trust hierarchy even when lower layers have strong data.
+# community_trust sits between network and domain_expert — it's personal (shared
+# context) but less curated than deliberate trust edges.
 
 SIGNAL_LAYERS = {
-    'direct_trust':   0.95,
-    'network_trust':  0.75,
-    'domain_expert':  0.55,
-    'crowd_wisdom':   0.35,
-    'intent_only':    0.00,
+    'direct_trust':    0.95,
+    'network_trust':   0.75,
+    'community_trust': 0.45,   # shared village/profession/family context
+    'domain_expert':   0.55,
+    'crowd_wisdom':    0.35,
+    'intent_only':     0.00,
 }
 
 # Minimum interaction history before personalized weights are applied.
@@ -71,6 +79,23 @@ class TrustSignal:
     visited_at:         Optional[str]
     path_count:         int  = 1        # convergence: paths found (network_trust)
     interaction_intent: Optional[dict] = None  # intent_parsed from the interaction
+    community_context:  Optional[str]  = None  # e.g. "village:Mandya" for community_trust
+
+
+@dataclass
+class GhostMatch:
+    """An offline source entered by reference — not yet on the platform."""
+    ghost_id:          str
+    name:              str
+    domain:            str
+    description:       Optional[str]
+    attributes:        dict
+    entered_by_id:     str
+    entered_by_name:   str
+    contact_hint:      Optional[str]
+    location_hint:     Optional[str]
+    community_tags:    list
+    trust_weight:      float   # edge weight to entered_by user (0.0 if not in network)
 
 
 @dataclass
@@ -83,6 +108,7 @@ class MatchResult:
 
     intent_score:       float
     trust_score:        float
+    fit_score:          float           # bidirectional: how well source wants this user
     displacement_score: float
 
     signal:             TrustSignal
@@ -382,6 +408,32 @@ _DOMAIN_EXPERT_SQL = """
     LIMIT 1
 """
 
+# Community trust: users who share a community context (village/profession/family)
+# with the searcher AND have visited this source with a positive outcome.
+# Self-join on user_community to find shared-context users.
+_COMMUNITY_TRUST_SQL = """
+    SELECT
+        uc_target.user_id,
+        u.name,
+        uc_me.context_type,
+        uc_me.context_value,
+        st.last_outcome,
+        st.last_visited_at
+    FROM user_community uc_me
+    JOIN user_community uc_target
+        ON  uc_target.context_type  = uc_me.context_type
+        AND uc_target.context_value = uc_me.context_value
+        AND uc_target.user_id      != %s
+    JOIN users u         ON u.id = uc_target.user_id
+    JOIN source_trust st ON st.user_id    = uc_target.user_id
+                        AND st.{source_fk} = %s
+                        AND st.domain     = %s
+    WHERE uc_me.user_id = %s
+      AND st.positive_outcome_count > 0
+    ORDER BY st.last_visited_at DESC
+    LIMIT 1
+"""
+
 
 def find_best_trust_signal(
     cur,
@@ -440,7 +492,31 @@ def find_best_trust_signal(
             interaction_intent=best[6],  # source_trust.last_intent_parsed
         )
 
-    # ── Layer 3: Domain expert (outside personal network) ────────────────────
+    # ── Layer 3: Community trust (shared village/profession/family context) ──────
+    # Someone in the user's community has visited this source. Tries the
+    # user_community self-join — only meaningful when migration 004 is applied.
+    try:
+        cur.execute(
+            _COMMUNITY_TRUST_SQL.format(source_fk=fk),
+            (user_id, source_id, domain_config.domain, user_id),
+        )
+        row = cur.fetchone()
+        if row:
+            context_label = f"{row[2]}:{row[3]}"  # e.g. "village:Mandya"
+            return TrustSignal(
+                signal_layer='community_trust',
+                trusted_user_id=str(row[0]),
+                trusted_user_name=row[1],
+                edge_weight=0.35,   # implicit community weight
+                hops=0,
+                outcome=row[4],
+                visited_at=str(row[5]) if row[5] else None,
+                community_context=context_label,
+            )
+    except Exception:
+        pass   # user_community table may not exist yet
+
+    # ── Layer 4: Domain expert (outside personal network) ─────────────────────
     cur.execute(
         _DOMAIN_EXPERT_SQL.format(source_fk=fk, trust_col=col),
         (source_id, domain_config.domain, user_id),
@@ -457,7 +533,7 @@ def find_best_trust_signal(
             visited_at=str(row[3]) if row[3] else None,
         )
 
-    # ── Layer 4: Crowd wisdom ─────────────────────────────────────────────────
+    # ── Layer 5: Crowd wisdom ─────────────────────────────────────────────────
     if avg_outcome_score > 0.0:
         return TrustSignal(
             signal_layer='crowd_wisdom',
@@ -469,7 +545,7 @@ def find_best_trust_signal(
             visited_at=None,
         )
 
-    # ── Layer 5: Intent only ──────────────────────────────────────────────────
+    # ── Layer 6: Intent only ──────────────────────────────────────────────────
     return TrustSignal(
         signal_layer='intent_only',
         trusted_user_id=None,
@@ -567,6 +643,12 @@ def score_trust_signal(
     if layer == 'crowd_wisdom':
         return round(min(cap, max(0.0, signal.edge_weight * 0.50)), 3)
 
+    # community_trust uses a softer formula — shared context, not deliberate edge
+    if layer == 'community_trust':
+        outcome_component = _OUTCOME_SCORES.get(signal.outcome, 0.0) * 0.40
+        raw = 0.30 + outcome_component   # base community bonus + outcome
+        return round(min(cap, max(0.0, raw)), 3)
+
     # direct_trust, network_trust, domain_expert
     edge_component    = signal.edge_weight * 0.50
     outcome_component = _OUTCOME_SCORES.get(signal.outcome, 0.0) * 0.30
@@ -629,6 +711,10 @@ def _layer_summary(signal: TrustSignal) -> str:
     if layer == 'network_trust':
         base = f"{signal.trusted_user_name} ({signal.hops} hops away) rated it {signal.outcome}"
         return base + (f" · {signal.path_count} in your network agree" if signal.path_count > 1 else "")
+    if layer == 'community_trust':
+        ctx = signal.community_context or "shared community"
+        ctx_label = ctx.split(":")[-1] if ":" in ctx else ctx
+        return f"{signal.trusted_user_name} (from {ctx_label}) visited and rated it {signal.outcome}"
     if layer == 'domain_expert':
         return f"{signal.trusted_user_name} is a trusted voice in this domain"
     if layer == 'crowd_wisdom':
@@ -674,7 +760,165 @@ def build_explanation(
     }
 
 
+# ── STEP 5B: BIDIRECTIONAL FIT SCORE ─────────────────────────────────────────
+
+def compute_fit_score(
+    source:        dict,
+    intent:        IntentObject,
+    domain_config: DomainConfig,
+) -> float:
+    """
+    Bidirectional: how well does the source's declared target_profile match
+    the user's current intent?
+
+    A restaurant can say "I'm for business dinners, formal occasions" via
+    target_profile JSONB. If the user is searching for that, the source
+    gets a small boost. If not, no penalty — just no boost.
+
+    Returns 0.5 when no target_profile is set (neutral).
+    Returns 0.0–1.0 otherwise.
+    """
+    target_profile = source.get('target_profile')
+    if not target_profile:
+        return 0.5
+
+    total_score  = 0.0
+    total_weight = 0.0
+
+    for fd in domain_config.scored_fields():
+        intent_field = intent.fields.get(fd.name)
+        if not intent_field or intent_field.value in [None, [], '']:
+            continue
+
+        target_value = target_profile.get(fd.name)
+        if not target_value:
+            continue
+
+        score = _score_field(intent_field.value, target_value, fd, 'soft')
+        total_score  += score * fd.score_weight
+        total_weight += fd.score_weight
+
+    if total_weight == 0:
+        return 0.5
+
+    return round(total_score / total_weight, 3)
+
+
+# ── GHOST SOURCE MATCHING ─────────────────────────────────────────────────────
+
+def get_ghost_matches(
+    cur,
+    user_id: str,
+    domain:  str,
+) -> list[GhostMatch]:
+    """
+    Return active ghost sources for this domain.
+    A ghost source is an offline source entered by someone who knows them.
+    The person who entered it IS the trust signal.
+
+    Ordered by: trust edge to entered_by user first, then recency.
+    """
+    try:
+        cur.execute("""
+            SELECT
+                gs.id, gs.name, gs.description, gs.attributes,
+                gs.entered_by, u.name  AS entered_by_name,
+                gs.contact_hint, gs.location_hint, gs.community_tags,
+                te.weight              AS trust_weight
+            FROM ghost_sources gs
+            JOIN users u ON u.id = gs.entered_by
+            LEFT JOIN trust_edges te
+                ON  te.from_user_id = %s
+                AND te.to_user_id   = gs.entered_by
+                AND te.domain       = %s
+                AND te.status       = 'active'
+            WHERE gs.domain = %s
+              AND gs.active = true
+              AND gs.is_materialized = false
+            ORDER BY te.weight DESC NULLS LAST, gs.created_at DESC
+            LIMIT 10
+        """, (user_id, domain, domain))
+        rows = cur.fetchall()
+    except Exception:
+        return []   # ghost_sources table may not exist yet
+
+    return [
+        GhostMatch(
+            ghost_id=str(row[0]),
+            name=row[1],
+            domain=domain,
+            description=row[2],
+            attributes=row[3] or {},
+            entered_by_id=str(row[4]),
+            entered_by_name=row[5],
+            contact_hint=row[6],
+            location_hint=row[7],
+            community_tags=row[8] or [],
+            trust_weight=float(row[9]) if row[9] else 0.0,
+        )
+        for row in rows
+    ]
+
+
+# ── SUGGESTED CONTACTS ────────────────────────────────────────────────────────
+
+def get_suggested_contacts(
+    cur,
+    user_id: str,
+    domain:  str,
+) -> list[dict]:
+    """
+    When no matched result has a trust path, return people in the user's
+    trust network who have domain experience — so the user knows who to ask.
+
+    These are not recommendations — they are routing hints.
+    """
+    try:
+        cur.execute("""
+            SELECT
+                u.id, u.name, te.weight,
+                COUNT(st.id) AS source_count
+            FROM trust_edges te
+            JOIN users u         ON u.id = te.to_user_id
+            JOIN source_trust st ON st.user_id = te.to_user_id AND st.domain = %s
+            WHERE te.from_user_id = %s
+              AND te.status       = 'active'
+              AND te.domain       = %s
+            GROUP BY u.id, u.name, te.weight
+            ORDER BY te.weight DESC, source_count DESC
+            LIMIT 3
+        """, (domain, user_id, domain))
+        rows = cur.fetchall()
+    except Exception:
+        return []
+
+    return [
+        {
+            'user_id':      str(r[0]),
+            'name':         r[1],
+            'trust_weight': float(r[2]),
+            'domain_visits': int(r[3]),
+        }
+        for r in rows
+    ]
+
+
 # ── MAIN MATCH FUNCTION ───────────────────────────────────────────────────────
+
+@dataclass
+class MatchOutput:
+    """
+    Tiered output from match(). Replaces the flat list.
+    Sources are grouped by trust tier, not just ranked by score.
+    """
+    results:            list[MatchResult]      # all scored sources, sorted by displacement
+    ghost_matches:      list[GhostMatch]       # offline sources entered by reference
+    suggested_contacts: list[dict]             # who to ask if no trust path found
+    no_path_found:      bool                   # true if no result has personal trust signal
+    alpha:              float
+    beta:               float
+    density:            float
+
 
 def match(
     intent:        IntentObject,
@@ -682,7 +926,7 @@ def match(
     conn,
     domain_config: DomainConfig,
     top_k:         int = 5,
-) -> list[MatchResult]:
+) -> MatchOutput:
     """
     Core displacement matching function.
 
@@ -694,7 +938,7 @@ def match(
         top_k:         Results to return
 
     Returns:
-        List of MatchResult sorted by displacement_score descending
+        MatchOutput with tiered results, ghost matches, and suggested contacts
     """
     should_close = conn is None
     if should_close:
@@ -738,7 +982,14 @@ def match(
             )
 
             trust_score  = score_trust_signal(signal, intent_similarity)
+
+            # Bidirectional fit: small boost when source explicitly wants this user
+            fit_score = compute_fit_score(source, intent, domain_config)
             displacement = compute_displacement_score(intent_score, trust_score, alpha, beta)
+            if fit_score > 0.5:
+                # Boost up to +4% for a perfect bidirectional fit
+                displacement = round(min(1.0, displacement + (fit_score - 0.5) * 0.08), 3)
+
             explanation  = build_explanation(
                 intent_score, intent_breakdown,
                 signal, trust_score, intent_similarity,
@@ -759,6 +1010,7 @@ def match(
                 avg_outcome_score=avg_outcome_score,
                 intent_score=intent_score,
                 trust_score=trust_score,
+                fit_score=fit_score,
                 displacement_score=displacement,
                 signal=signal,
                 signal_layer=signal.signal_layer,
@@ -775,7 +1027,27 @@ def match(
                     _layer_rank.get(r2.signal_layer, 99) < _layer_rank.get(r1.signal_layer, 99)):
                 results[i], results[i + 1] = r2, r1
 
-        return results[:top_k]
+        top_results = results[:top_k]
+
+        # Ghost matches — offline sources entered by reference
+        ghost_matches = get_ghost_matches(cur, user_id, domain_config.domain)
+
+        # Determine if any result has a personal trust signal
+        personal_layers = {'direct_trust', 'network_trust', 'community_trust'}
+        no_path_found = not any(r.signal_layer in personal_layers for r in top_results)
+
+        # When no personal path found, suggest people to ask
+        suggested = get_suggested_contacts(cur, user_id, domain_config.domain) if no_path_found else []
+
+        return MatchOutput(
+            results=top_results,
+            ghost_matches=ghost_matches,
+            suggested_contacts=suggested,
+            no_path_found=no_path_found,
+            alpha=alpha,
+            beta=beta,
+            density=density,
+        )
 
     finally:
         cur.close()
@@ -825,23 +1097,30 @@ if __name__ == "__main__":
         print(f"\n{'─' * 60}")
         print(f"Query: \"{query}\"")
         try:
-            intent  = parse_intent(query, config)
-            results = match(intent, user_id, conn, config)
+            intent = parse_intent(query, config)
+            output = match(intent, user_id, conn, config)
 
             print(f"Hard  : {intent.hard_constraints()}")
             print(f"Soft  : {intent.soft_constraints()}")
-            print(f"\nTop {len(results)} results:")
-            for i, r in enumerate(results, 1):
+            print(f"α={output.alpha}  β={output.beta}  density={output.density:.2f}")
+            print(f"\nTop {len(output.results)} results:")
+            for i, r in enumerate(output.results, 1):
                 tl = r.explanation.get("trust_layer", {})
                 il = r.explanation.get("intent_layer", {})
                 print(f"  [{i}] {r.name}")
                 print(f"       disp={r.displacement_score}  "
-                      f"intent={r.intent_score}  trust={r.trust_score}")
+                      f"intent={r.intent_score}  trust={r.trust_score}  fit={r.fit_score}")
                 print(f"       layer={r.signal_layer}  "
                       f"paths={r.signal.path_count}  "
                       f"hops={r.signal.hops}  "
                       f"intent_sim={tl.get('intent_similarity', 1.0)}")
                 print(f"       personalized={il.get('personalized', False)}")
+            if output.ghost_matches:
+                print(f"\n  Ghost sources ({len(output.ghost_matches)}):")
+                for g in output.ghost_matches:
+                    print(f"    ◌ {g.name}  (entered by {g.entered_by_name}, trust={g.trust_weight})")
+            if output.no_path_found and output.suggested_contacts:
+                print(f"\n  No trust path. Ask: {[c['name'] for c in output.suggested_contacts]}")
         except Exception as e:
             import traceback
             print(f"ERROR: {e}")

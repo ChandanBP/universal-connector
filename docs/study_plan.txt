@@ -1,0 +1,92 @@
+Study Plan — Master the Repo in Order                                                        
+                                                                                               
+  Phase 1: Data Model (30 min)                              
+                                                                                               
+  Understand what data exists and why.                                                         
+                                                                                               
+  1. db/schema.sql — the 7 base tables. Read every column. Ask: what role does each table play?
+  2. db/migrations/002_electronics_domain.sql — see how electronics was added without touching
+  engine                                                                                       
+  3. db/migrations/003_architectural_fix.sql — why source_trust replaced interactions in hot
+  path                                                                                         
+  4. db/migrations/004_ghost_community_tenant.sql — the core vision in SQL: ghost_sources,
+  user_community, tenants                                                                      
+                                                            
+  One question to answer: Why are trust_edges and source_trust separate? What would break if   
+  they were merged?                                         
+                                                                                               
+  ---                                                       
+  Phase 2: Domain Config (20 min)
+                                 
+  Understand how the engine stays domain-agnostic.
+                                                                                               
+  5. engine/domains/base.py — FieldDefinition and DomainConfig. This is the contract every     
+  domain must satisfy.                                                                         
+  6. engine/domains/restaurants.py — read one domain config end to end. Notice: hard vs soft,  
+  filter_type, score_weight, similarity_map.                                                   
+  7. engine/domains/electronics.py — second domain. Notice: what changed vs restaurants, what
+  stayed the same.                                                                             
+                                                            
+  One question to answer: What would you need to add to support a "tutors" domain? Where       
+  exactly would the changes go?                             
+                                                                                               
+  ---                                                       
+  Phase 3: Intent Parsing (20 min)
+                                  
+  8. engine/intent_parser.py — how natural language becomes a structured IntentObject. Notice:
+  the LLM prompt is built dynamically from DomainConfig.build_system_prompt(). Zero hardcoded  
+  domain knowledge.
+                                                                                               
+  ---                                                       
+  Phase 4: The Matching Engine (60 min — the core)
+                                                                                               
+  Read engine/matcher.py top to bottom in this order:
+                                                                                               
+  9. SIGNAL_LAYERS dict — the 6 layers and their caps. Understand WHY community_trust cap      
+  (0.45) < domain_expert cap (0.55).                                                           
+  10. filter_candidates() — Step 1: hard constraint SQL. How does domain-agnostic SQL work     
+  without knowing table columns?                                                               
+  11. score_intent() — Step 2: soft matching with personalized taste weights.
+  12. _DIRECT_TRUST_SQL, _NETWORK_TRUST_SQL, _COMMUNITY_TRUST_SQL, _DOMAIN_EXPERT_SQL — the 4  
+  SQL blocks. Each one is a different way of finding "who vouches for this source."            
+  13. find_best_trust_signal() — Step 3: tries all 6 layers in order. Always returns something.
+  14. score_trust_signal() — Step 4B: converts a TrustSignal into a 0–cap score. Read the      
+  community_trust branch.                                                                      
+  15. compute_fit_score() — bidirectional: source declares who they want.                      
+  16. get_ghost_matches() + get_suggested_contacts() — the fallback paths.                     
+  17. match() → MatchOutput — the orchestration function. How tiers are determined. How        
+  alpha/beta shifts with density.                                                              
+                                                                                               
+  Run: python engine/matcher.py against the live DB to see it working.                         
+                                                            
+  ---                                                                                          
+  Phase 5: The API (30 min)                                 
+
+  Read api/main.py in this order:
+
+  18. _assign_tier(), _build_trust_sentence(), _build_trust_path() — presentation layer. How a 
+  TrustSignal becomes "Priya went 2 weeks ago and loved it."
+  19. POST /search — how MatchOutput becomes TieredSearchResponse (confident / community / cold
+   / ghost tiers).                                                                             
+  20. POST /ghost — enter an offline source.
+  21. POST /community/join — declare village/profession membership.                            
+  22. POST /ghost/{id}/materialize — offline → online conversion.                              
+  23. POST /tenant/register + POST /graph/contribute — shared graph API.                       
+                                                                                               
+  ---                                                                                          
+  Phase 6: Run Everything (30 min)                                                             
+                                                                                               
+  24. Apply migrations against your DB in order: 001 → 002 → 003 → 004
+  25. Seed: run python simulation/generator.py then python                                     
+  simulation/community_ghost_generator.py                                                      
+  26. Start API: uvicorn api.main:app --reload --port 8000                                     
+  27. Test the vision in sequence:                                                             
+    - /test/users → pick two users who share a community context                               
+    - /community/join → declare village:Mandya for both                                        
+    - /search for user A → confirm community_matches contains a result with trust_sentence     
+  mentioning village                                                                           
+    - /ghost → enter "my uncle's rice shop in Mandya"                                          
+    - /search again → confirm ghost appears in ghost_matches                                   
+    - /outcome positive → trust graph updates                                                  
+    - /search again → does signal tier promote from community → trusted?                       
+  28. Run tests: python tests/test_trust_scoring.py

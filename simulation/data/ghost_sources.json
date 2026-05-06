@@ -1,0 +1,172 @@
+[
+  {
+    "id": "5bc4f49e-9b3e-4772-a1fd-e687b875fb97",
+    "domain": "restaurants",
+    "name": "Ravi's Udupi Kitchen",
+    "description": "Family-run udupi spot near Mandya bus stand, only locals know about it",
+    "attributes": {
+      "cuisine": [
+        "South Indian"
+      ],
+      "vibe": [
+        "casual",
+        "authentic"
+      ],
+      "occasion": [
+        "casual dining"
+      ],
+      "price_range": "budget",
+      "noise_level": "moderate",
+      "area": "Mandya"
+    },
+    "entered_by": "1a580bc3-bb98-4032-8807-da735617afcc",
+    "contact_hint": "Ask for Ravi anna near the Mandya bus stand, open 7am-2pm",
+    "location_hint": "100m from Mandya old bus stand, no board outside",
+    "community_tags": [
+      "village:Mandya",
+      "south-indian-authentic"
+    ],
+    "is_materialized": false,
+    "materialized_to": null,
+    "active": true,
+    "created_at": "2026-02-21T22:41:52.747290",
+    "updated_at": "2026-04-30T22:41:52.747292"
+  },
+  {
+    "id": "d55f9b79-c4fd-4d16-bca3-989d23c958d0",
+    "domain": "restaurants",
+    "name": "Ammaji's Home Food",
+    "description": "Home-cooked Karnataka meals, only for referrals, WhatsApp order",
+    "attributes": {
+      "cuisine": [
+        "South Indian",
+        "North Karnataka"
+      ],
+      "vibe": [
+        "homely",
+        "authentic"
+      ],
+      "occasion": [
+        "lunch",
+        "casual dining"
+      ],
+      "price_range": "budget",
+      "noise_level": "quiet",
+      "area": "HSR Layout"
+    },
+    "entered_by": "1d5963c2-db48-43e0-8516-f76d0868ba18",
+    "contact_hint": "WhatsApp +91-98XXXXXX \u2014 mention you were referred",
+    "location_hint": "HSR Layout Sector 2, apartment complex, no walk-ins",
+    "community_tags": [
+      "home-food",
+      "referral-only"
+    ],
+    "is_materialized": false,
+    "materialized_to": null,
+    "active": true,
+    "created_at": "2026-02-09T22:41:52.747297",
+    "updated_at": "2026-04-29T22:41:52.747298"
+  },
+  {
+    "id": "b3bf7eb5-8075-43c2-bcc0-2987f5661009",
+    "domain": "restaurants",
+    "name": "Shivanna's Dhaba",
+    "description": "Truck driver dhaba on Tumkur highway, legendary mutton curry",
+    "attributes": {
+      "cuisine": [
+        "North Karnataka",
+        "Non-Veg"
+      ],
+      "vibe": [
+        "rustic",
+        "casual"
+      ],
+      "occasion": [
+        "casual dining"
+      ],
+      "price_range": "budget",
+      "noise_level": "loud",
+      "area": "Tumkur Road"
+    },
+    "entered_by": "54d6982f-365b-4281-a93e-092feffd6962",
+    "contact_hint": "60km on Tumkur NH48, look for green board",
+    "location_hint": "Near Nelamangala toll, on the left side going towards Tumkur",
+    "community_tags": [
+      "village:Tumkur",
+      "highway-dhaba"
+    ],
+    "is_materialized": false,
+    "materialized_to": null,
+    "active": true,
+    "created_at": "2026-02-08T22:41:52.747302",
+    "updated_at": "2026-04-29T22:41:52.747303"
+  },
+  {
+    "id": "742ef510-f05f-4fdf-a031-b619e39ab870",
+    "domain": "restaurants",
+    "name": "Dr. Patel's Dabba Service",
+    "description": "Gujarati food tiffin, only for doctors at Manipal hospital",
+    "attributes": {
+      "cuisine": [
+        "Gujarati"
+      ],
+      "vibe": [
+        "homely"
+      ],
+      "occasion": [
+        "lunch",
+        "tiffin"
+      ],
+      "price_range": "mid",
+      "noise_level": "quiet",
+      "area": "Malleswaram"
+    },
+    "entered_by": "0bcbb0e3-8905-4b9d-af31-ff8fab6da131",
+    "contact_hint": "Call only \u2014 reference from hospital colleagues required",
+    "location_hint": "Delivered to Manipal hospital area, no pickup",
+    "community_tags": [
+      "profession:Doctor",
+      "hospital-community"
+    ],
+    "is_materialized": false,
+    "materialized_to": null,
+    "active": true,
+    "created_at": "2026-02-11T22:41:52.747306",
+    "updated_at": "2026-04-29T22:41:52.747307"
+  },
+  {
+    "id": "ace95d17-d3f1-438d-996e-e73a138a1b36",
+    "domain": "restaurants",
+    "name": "Koramangala Rooftop Mess",
+    "description": "Unmarked mess on 4th floor, beloved by startup founders in Koramangala",
+    "attributes": {
+      "cuisine": [
+        "South Indian",
+        "North Indian"
+      ],
+      "vibe": [
+        "casual",
+        "quirky"
+      ],
+      "occasion": [
+        "lunch",
+        "casual dining"
+      ],
+      "price_range": "budget",
+      "noise_level": "moderate",
+      "area": "Koramangala"
+    },
+    "entered_by": "9839a349-009b-4413-b8f2-f87c36de8f5f",
+    "contact_hint": "Building 5B, 5th Cross, no elevator \u2014 just walk up",
+    "location_hint": "Behind the HDFC bank, 4th floor, no sign",
+    "community_tags": [
+      "neighborhood:Koramangala",
+      "startup-crowd"
+    ],
+    "is_materialized": false,
+    "materialized_to": null,
+    "active": true,
+    "created_at": "2026-03-24T22:41:52.747310",
+    "updated_at": "2026-05-04T22:41:52.747311"
+  }
+]
